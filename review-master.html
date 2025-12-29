@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version Review Hub - Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      border-bottom: 3px solid #cc8b00;
+      padding: 3rem 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 1.125rem;
+    }
+
+    .version-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .version-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #2a2a2a;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .version-card:hover {
+      transform: translateY(-4px);
+      border-color: #cc8b00;
+    }
+
+    .version-header {
+      padding: 2rem;
+      background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .version-title {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: #cc8b00;
+    }
+
+    .version-date {
+      color: #888;
+      font-size: 0.875rem;
+    }
+
+    .version-status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .status-current {
+      background: #1a4d2e;
+      color: #4ade80;
+    }
+
+    .status-archive {
+      background: #2a2a2a;
+      color: #888;
+    }
+
+    .version-content {
+      padding: 2rem;
+    }
+
+    .key-changes {
+      margin-bottom: 2rem;
+    }
+
+    .key-changes h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .key-changes ul {
+      list-style: none;
+    }
+
+    .key-changes li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #b0b0b0;
+    }
+
+    .key-changes li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #cc8b00;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .btn-primary {
+      background: #cc8b00;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #e09b00;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #cc8b00;
+      border: 2px solid #cc8b00;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(204, 139, 0, 0.1);
+    }
+
+    .feedback-section {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 3rem 0;
+      border-left: 4px solid #4a9eff;
+    }
+
+    .feedback-section h2 {
+      color: #4a9eff;
+      margin-bottom: 1.5rem;
+    }
+
+    .feedback-item {
+      background: #151515;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .feedback-item h4 {
+      color: #cc8b00;
+      margin-bottom: 0.75rem;
+    }
+
+    .feedback-quote {
+      border-left: 3px solid #4a9eff;
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: #b0b0b0;
+      font-style: italic;
+    }
+
+    .questions-section {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 3rem 0;
+      border-left: 4px solid #ff6b6b;
+    }
+
+    .questions-section h2 {
+      color: #ff6b6b;
+      margin-bottom: 1.5rem;
+    }
+
+    .question-item {
+      background: #151515;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .question-item h4 {
+      color: #ff6b6b;
+      margin-bottom: 0.75rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .status-pending {
+      background: #4d1a1a;
+      color: #ff6b6b;
+    }
+
+    .comparison-link {
+      display: block;
+      background: #252525;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin: 3rem 0;
+      border: 2px dashed #cc8b00;
+      text-decoration: none;
+      color: #cc8b00;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: all 0.2s;
+    }
+
+    .comparison-link:hover {
+      background: #2a2a2a;
+      border-style: solid;
+    }
+
+    @media (max-width: 768px) {
+      .version-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Version Review Hub</h1>
+      <p class="subtitle">Ampersand Manufacturing Website - Development Timeline</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- VERSION CARDS -->
+    <div class="version-grid">
+      <!-- V2 CARD -->
+      <div class="version-card">
+        <div class="version-header">
+          <h2 class="version-title">Version 2</h2>
+          <p class="version-date">December 29, 2025</p>
+          <span class="version-status status-current">CURRENT FOR REVIEW</span>
+        </div>
+        <div class="version-content">
+          <div class="key-changes">
+            <h3>Key Changes</h3>
+            <ul>
+              <li>Static hero with copper coil image</li>
+              <li>Reframe animation prominently placed</li>
+              <li>Centered text layout (credibility is restraint)</li>
+              <li>Video strip dividers between sections</li>
+              <li>Dark theme maintained</li>
+              <li>Footer updated to 2026</li>
+            </ul>
+          </div>
+          <div class="actions">
+            <a href="index.html" class="btn btn-primary" target="_blank">View Live Site</a>
+            <a href="v2-review.html" class="btn btn-secondary" target="_blank">Detailed Review</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- V1 CARD -->
+      <div class="version-card">
+        <div class="version-header">
+          <h2 class="version-title">Version 1</h2>
+          <p class="version-date">December 23, 2025</p>
+          <span class="version-status status-archive">ARCHIVE</span>
+        </div>
+        <div class="version-content">
+          <div class="key-changes">
+            <h3>Key Changes</h3>
+            <ul>
+              <li>Video hero background</li>
+              <li>Initial dark theme implementation</li>
+              <li>Navigation structure established</li>
+              <li>Content sections defined</li>
+              <li>Technical pages created</li>
+            </ul>
+          </div>
+          <div class="actions">
+            <a href="hero-options.html" class="btn btn-secondary" target="_blank">View Hero Options</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEEDBACK FROM JOE -->
+    <div class="feedback-section">
+      <h2>📧 Joe's Feedback (Dec 23, 2025)</h2>
+
+      <div class="feedback-item">
+        <h4>First Impression</h4>
+        <div class="feedback-quote">"Beautiful, pro, awesome" - Rated 5/5</div>
+      </div>
+
+      <div class="feedback-item">
+        <h4>Reframe Animation</h4>
+        <div class="feedback-quote">"I LOVE it. I want it more prominently placed and used more powerfully."</div>
+        <p><strong>V2 Implementation:</strong> Now prominently placed as dedicated section after hero with "We're different. Here's how." heading</p>
+      </div>
+
+      <div class="feedback-item">
+        <h4>Hero Background Preference</h4>
+        <div class="feedback-quote">"The Hero presents a little bit stronger and better with a background that doesn't move"</div>
+        <div class="feedback-quote">"That page was striking and the copper detail on the inductor was rad"</div>
+        <p><strong>V2 Implementation:</strong> Static copper coil image (hero-copper.jpeg)</p>
+      </div>
+
+      <div class="feedback-item">
+        <h4>Video Usage</h4>
+        <div class="feedback-quote">"I'd like to try video strips separating homepage sections or at bottom"</div>
+        <p><strong>V2 Implementation:</strong> 200px video strips between sections using winding and abstract footage</p>
+      </div>
+
+      <div class="feedback-item">
+        <h4>Design Philosophy</h4>
+        <div class="feedback-quote">"Guiding principle: credibility is restraint"</div>
+        <div class="feedback-quote">"IGNORE white background/blue color notes - keep dark theme"</div>
+        <p><strong>V2 Implementation:</strong> Centered text with no decorative images, dark theme maintained</p>
+      </div>
+
+      <div class="feedback-item">
+        <h4>Technical Content</h4>
+        <div class="feedback-quote">"The 'Capabilities' section needs specifics. What materials do you work with? Core types, wire gauges, special materials, etc."</div>
+        <div class="feedback-quote">"Working on this one. I have made some initial progress, see email notes."</div>
+        <p><strong>Status:</strong> Technical specs implemented based on email outline - <span style="color: #ff6b6b; font-weight: 600;">NEEDS VERIFICATION</span></p>
+      </div>
+    </div>
+
+    <!-- UNANSWERED QUESTIONS -->
+    <div class="questions-section">
+      <h2>❓ Questions from Brian (Dec 23) - Awaiting Joe's Response</h2>
+
+      <div class="question-item">
+        <h4>1. Logo Design <span class="status-badge status-pending">PENDING</span></h4>
+        <p><strong>Question:</strong> "Do you have an Ampersand logo file, or should I design something? (Simple wordmark, or actual '&' symbol treatment?)"</p>
+        <p><strong>Current Status:</strong> Using "AMP." placeholder</p>
+      </div>
+
+      <div class="question-item">
+        <h4>2. Domain Setup <span class="status-badge status-pending">PENDING</span></h4>
+        <p><strong>Question:</strong> "Will this live at ampersandmanufacturing.com? I'll need to set up the email routing for quickquestion@ampersandmanufacturing.com."</p>
+        <p><strong>Current Status:</strong> Email listed on contact page, routing not confirmed</p>
+      </div>
+
+      <div class="question-item">
+        <h4>3. Technical Pages Structure <span class="status-badge status-pending">PENDING</span></h4>
+        <p><strong>Question:</strong> "Your outline has deep content (inductor types, evaluation process, winding methods, materials, etc.). Do you want these as: Separate full pages (better for SEO, feels more substantial), Collapsible accordion sections on fewer pages (easier to navigate), or Some hybrid?"</p>
+        <p><strong>Current Status:</strong> Implemented as separate full pages</p>
+      </div>
+
+      <div class="question-item">
+        <h4>4. Development Priority <span class="status-badge status-pending">PENDING</span></h4>
+        <p><strong>Question:</strong> "Should I build the full homepage + Who We Are + How We Work first, then show you before going deeper into the technical reference pages?"</p>
+        <p><strong>Current Status:</strong> All pages built, awaiting review priority guidance</p>
+      </div>
+
+      <div class="question-item">
+        <h4>5. Technical Specifications Accuracy <span class="status-badge status-pending">CRITICAL</span></h4>
+        <p><strong>Specs to Verify:</strong></p>
+        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+          <li>Wire gauges: AWG 8-44, Litz, foil</li>
+          <li>Core materials: Ferrites, powdered iron, laminations, amorphous, nanocrystalline</li>
+          <li>Insulation: Polyurethane, polyester, Nomex, Kapton, high-temp systems</li>
+          <li>Dimensions: Up to 300mm x 300mm x 250mm</li>
+          <li>Volumes: 10-50,000 units/month, no MOQs</li>
+        </ul>
+        <p style="margin-top: 1rem;"><strong>Action Required:</strong> Joe needs to confirm these match Ampersand's actual capabilities</p>
+      </div>
+    </div>
+
+    <a href="v2-review.html" class="comparison-link">
+      → View Complete V2 Review with Screenshots & Feedback Form
+    </a>
+
+  </div>
+</body>
+</html>

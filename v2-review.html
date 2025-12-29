@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V2 Review - Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin: 3rem 0 1rem;
+      color: #ffffff;
+      border-bottom: 2px solid #cc8b00;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 2rem 0 1rem;
+      color: #cc8b00;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #b0b0b0;
+    }
+
+    .intro {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+      border-left: 4px solid #cc8b00;
+    }
+
+    .change-section {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .screenshot {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid #333;
+    }
+
+    .rationale {
+      background: #151515;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      border-left: 3px solid #4a9eff;
+    }
+
+    .rationale h4 {
+      color: #4a9eff;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .feedback-form {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 3rem;
+      border: 2px solid #cc8b00;
+    }
+
+    .question {
+      margin-bottom: 2rem;
+    }
+
+    .question label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .question textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 12px;
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #e0e0e0;
+      font-family: inherit;
+    }
+
+    .question select {
+      width: 100%;
+      padding: 12px;
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #e0e0e0;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #cc8b00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background: #e09b00;
+    }
+
+    ul {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #b0b0b0;
+    }
+
+    .highlight {
+      color: #cc8b00;
+      font-weight: 600;
+    }
+
+    .full-page-link {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 16px 32px;
+      background: #252525;
+      color: #cc8b00;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 2px solid #cc8b00;
+    }
+
+    .full-page-link:hover {
+      background: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Version 2 Review</h1>
+    <p style="color: #888; margin-bottom: 2rem;">Ampersand Manufacturing Homepage - December 2025</p>
+
+    <div class="intro">
+      <h3>Summary of Changes</h3>
+      <p>This revision implements your core feedback from December 23rd, focusing on <span class="highlight">credibility through restraint</span> and <span class="highlight">static visual impact</span> over motion.</p>
+      <p style="margin-bottom: 0;">All changes are rooted in your guidance: "The Hero presents a little bit stronger and better with a background that doesn't move" and "credibility is restraint."</p>
+    </div>
+
+    <a href="index.html" class="full-page-link" target="_blank">→ View Live Homepage (Opens in New Tab)</a>
+
+    <!-- HERO SECTION -->
+    <h2>1. Static Hero Background</h2>
+    <div class="change-section">
+      <h3>What Changed</h3>
+      <img src=".playwright-mcp/v2-review/01-hero-section.png" alt="Hero section with static copper image" class="screenshot">
+      <p><strong>Before:</strong> Video background (stock-bg-1.mp4)</p>
+      <p><strong>After:</strong> Static copper coil image (hero-copper.jpeg)</p>
+
+      <div class="rationale">
+        <h4>Why This Change</h4>
+        <p><strong>Your Feedback:</strong> "The Hero presents a little bit stronger and better with a background that doesn't move"</p>
+        <p><strong>Your Reaction:</strong> "That page was striking and the copper detail on the inductor was rad"</p>
+        <p><strong>Result:</strong> Immediate technical credibility. The copper winding detail demonstrates precision manufacturing without distraction. Static image creates impact, video would have competed with message.</p>
+      </div>
+    </div>
+
+    <!-- REFRAME ANIMATION -->
+    <h2>2. Reframe Animation - Prominently Placed</h2>
+    <div class="change-section">
+      <h3>What Changed</h3>
+      <img src=".playwright-mcp/v2-review/02-reframe-section.png" alt="Reframe animation section" class="screenshot">
+      <p><strong>Before:</strong> Animation existed but not visible on homepage</p>
+      <p><strong>After:</strong> Dedicated section immediately after hero with heading "We're different. Here's how."</p>
+      <p><strong>Animation Content:</strong></p>
+      <ul>
+        <li>"Your order is too small for us." → "Every order gets our full attention."</li>
+        <li>"We can't guarantee that timeline." → "We deliver when we say we will."</li>
+        <li>"You'll need larger quantities." → "1,000 units? That's our sweet spot."</li>
+        <li>"We'll get back to you... eventually." → "We respond within one business day."</li>
+      </ul>
+
+      <div class="rationale">
+        <h4>Why This Change</h4>
+        <p><strong>Your Feedback:</strong> "Beautiful, pro, awesome. The reframe/strikethrough animation - I LOVE it. I want it more prominently placed and used more powerfully."</p>
+        <p><strong>Result:</strong> Creates immediate differentiation. Shows competitor problems crossed out with Ampersand's solutions typed in real-time. Positions you as the alternative to the pain points buyers actually experience.</p>
+      </div>
+    </div>
+
+    <!-- CENTERED TEXT LAYOUT -->
+    <h2>3. Centered Text Layout (No Background Images)</h2>
+    <div class="change-section">
+      <h3>What Changed</h3>
+      <img src=".playwright-mcp/v2-review/03-who-we-are-centered.png" alt="Who We Are section with centered text" class="screenshot">
+      <p><strong>Before:</strong> Left-aligned text with empty right column (designed for images)</p>
+      <p><strong>After:</strong> Center-aligned, full-width text with optimal reading width</p>
+
+      <div class="rationale">
+        <h4>Why This Change</h4>
+        <p><strong>Your Philosophy:</strong> "Credibility is restraint"</p>
+        <p><strong>Result:</strong> Pure focus on the content. No stock imagery competing for attention. The technical specificity in your copy carries the credibility - no decoration needed. This is intentional minimalism that reflects discipline.</p>
+      </div>
+    </div>
+
+    <!-- VIDEO STRIPS -->
+    <h2>4. Video Strip Dividers</h2>
+    <div class="change-section">
+      <h3>What Changed</h3>
+      <img src=".playwright-mcp/v2-review/04-video-strip-who-we-serve.png" alt="Video strip divider between sections" class="screenshot">
+      <p><strong>Added:</strong> 200px tall video strips between major sections</p>
+      <p><strong>Videos Used:</strong> Winding process and abstract manufacturing footage</p>
+      <p><strong>Treatment:</strong> 40% opacity, muted, with gradient blends for seamless transitions</p>
+
+      <div class="rationale">
+        <h4>Why This Change</h4>
+        <p><strong>Your Feedback:</strong> "I'd like to see 3 options for how photos/videos can be incorporated on this homepage" and wanting to try "video strips separating homepage sections"</p>
+        <p><strong>Result:</strong> Adds visual rhythm and movement without competing with content. The strips are ambient - they provide breathing room and flow between sections. On mobile, they gracefully degrade to subtle gradients for performance.</p>
+      </div>
+    </div>
+
+    <!-- FULL PAGE -->
+    <h2>5. Full Page Flow</h2>
+    <div class="change-section">
+      <h3>Complete Homepage Structure</h3>
+      <img src=".playwright-mcp/v2-review/05-full-page.png" alt="Full page view" class="screenshot">
+      <p><strong>Flow:</strong></p>
+      <ol style="margin-left: 2rem;">
+        <li>Static hero with copper detail (impact)</li>
+        <li>Reframe animation (differentiation)</li>
+        <li>Video strip (rhythm)</li>
+        <li>Who We Are - centered (focus on content)</li>
+        <li>Video strip (rhythm)</li>
+        <li>Who We Serve - centered (focus on content)</li>
+        <li>Video strip (rhythm)</li>
+        <li>How We Work - centered (focus on content)</li>
+        <li>Footer with subtle background image</li>
+      </ol>
+
+      <div class="rationale">
+        <h4>Overall Architecture</h4>
+        <p><strong>Act 1 (Hero):</strong> Immediate visual impact with static technical detail</p>
+        <p><strong>Act 2 (Reframe):</strong> Differentiation through direct comparison</p>
+        <p><strong>Act 3 (Content):</strong> Technical depth with visual rhythm</p>
+        <p><strong>Result:</strong> The page creates a three-act structure where each element serves a purpose. Nothing decorative, everything intentional.</p>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL CHANGES -->
+    <h2>6. Additional Updates</h2>
+    <div class="change-section">
+      <ul>
+        <li><strong>Footer year:</strong> Updated to 2026</li>
+        <li><strong>Contact information:</strong> Verified correct (quickquestion@ampersandmanufacturing.com, 585-500-8786, 2204 McKinley Ave)</li>
+        <li><strong>Dark theme:</strong> Maintained throughout (per your explicit instruction to ignore white/blue color notes)</li>
+        <li><strong>Navigation:</strong> Minimal and disciplined as specified</li>
+      </ul>
+    </div>
+
+    <!-- QUESTIONS FOR JOE -->
+    <h2>Questions for Your Review</h2>
+    <div class="feedback-form">
+      <div class="question">
+        <label>1. Hero Section - Is the static copper image the right choice?</label>
+        <select>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect - keep it</option>
+          <option value="different">Use a different image</option>
+          <option value="adjust">Adjust opacity/treatment</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>2. Reframe Animation - Does the placement and prominence work?</label>
+        <select>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect placement</option>
+          <option value="higher">Move it higher (before hero?)</option>
+          <option value="lower">Move it lower on page</option>
+          <option value="bigger">Make it larger/more prominent</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>3. Centered Text Layout - Does "credibility is restraint" feel right here?</label>
+        <select>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect - clean and intentional</option>
+          <option value="images">Add subtle product images to right side</option>
+          <option value="left">Go back to left-aligned</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>4. Video Strips - Are they adding value or distracting?</label>
+        <select>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect - good rhythm</option>
+          <option value="remove">Remove them - too much</option>
+          <option value="adjust">Adjust opacity/size</option>
+          <option value="different">Use different video footage</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>5. Technical Specifications - IMPORTANT</label>
+        <p style="margin-bottom: 1rem;">The "What We Build" page lists these technical specs:</p>
+        <ul style="margin-bottom: 1rem;">
+          <li>Wire gauges: AWG 8-44, Litz, foil</li>
+          <li>Core materials: Ferrites, powdered iron, laminations, amorphous, nanocrystalline</li>
+          <li>Dimensions: Up to 300mm x 300mm x 250mm</li>
+          <li>Volumes: 10-50,000 units/month, no MOQs</li>
+        </ul>
+        <label>Are these specifications accurate for Ampersand's actual capabilities?</label>
+        <select>
+          <option value="">Select...</option>
+          <option value="accurate">Yes, these are accurate</option>
+          <option value="need-changes">No, I need to provide correct specs</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>6. Overall Impression</label>
+        <textarea placeholder="What's your gut reaction? Does this feel like Ampersand? Does it establish technical legitimacy? What's missing or wrong?"></textarea>
+      </div>
+
+      <div class="question">
+        <label>7. Next Steps</label>
+        <textarea placeholder="What should we prioritize for V3? Any specific changes before going live?"></textarea>
+      </div>
+
+      <button class="btn" onclick="alert('Please save your feedback and send to Brian via email')">Save Feedback (Copy/Email to Brian)</button>
+    </div>
+
+    <div class="intro" style="margin-top: 3rem;">
+      <h3>Technical Notes</h3>
+      <p><strong>Tested:</strong> All features working on desktop and mobile</p>
+      <p><strong>Performance:</strong> Static images load fast, videos are optimized, mobile gets graceful degradation</p>
+      <p><strong>Browser:</strong> Tested on Chrome, Safari, Firefox</p>
+      <p style="margin-bottom: 0;"><strong>Ready to deploy:</strong> Yes, pending your approval</p>
+    </div>
+  </div>
+</body>
+</html>

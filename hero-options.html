@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Hero Layout Options | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .options-nav {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(0,0,0,0.9);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+    }
+    .options-nav h4 {
+      margin-bottom: var(--space-md);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+    .options-nav a {
+      display: block;
+      padding: var(--space-sm) 0;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+    .options-nav a:hover {
+      color: var(--color-accent);
+    }
+    .option-section {
+      min-height: 100vh;
+      position: relative;
+    }
+    .option-label {
+      position: absolute;
+      top: 100px;
+      left: 20px;
+      z-index: 100;
+      background: var(--color-accent);
+      color: var(--color-bg);
+      padding: var(--space-sm) var(--space-lg);
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: 4px;
+    }
+    .option-notes {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      right: 20px;
+      z-index: 100;
+      background: rgba(0,0,0,0.85);
+      padding: var(--space-xl);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      max-width: 600px;
+    }
+    .option-notes h4 {
+      color: var(--color-accent);
+      margin-bottom: var(--space-md);
+    }
+    .option-notes ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .option-notes li {
+      padding: var(--space-sm) 0;
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .option-notes li:last-child {
+      border-bottom: none;
+    }
+    .option-notes li strong {
+      color: var(--color-text-primary);
+    }
+    .divider {
+      height: 100px;
+      background: linear-gradient(to bottom, var(--color-bg), var(--color-surface), var(--color-bg));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .divider span {
+      background: var(--color-surface);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: 4px;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">AMP<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="what-we-build.html" class="nav__link">What We Build</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Submit Drawing / RFQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Options Navigation -->
+  <div class="options-nav">
+    <h4>Jump to Option</h4>
+    <a href="#option-a">A: Abstract Video</a>
+    <a href="#option-b">B: Process Video</a>
+    <a href="#option-c">C: Static Image</a>
+  </div>
+
+  <!-- OPTION A: Abstract Video Background -->
+  <section id="option-a" class="option-section hero">
+    <div class="option-label">Option A</div>
+    <div class="video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/stock-bg-1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <div class="hero__content" style="max-width: 800px;">
+        <h1 class="hero__title">Magnetics That Hold When Production Begins</h1>
+        <p class="hero__tagline" style="font-size: 1.25rem; letter-spacing: 0.15em; text-transform: lowercase; margin-top: var(--space-lg);">controlled · defined · disciplined</p>
+        <div class="hero__cta" style="margin-top: var(--space-2xl);">
+          <a href="contact.html" class="btn btn--primary">Submit Drawing / RFQ</a>
+          <a href="what-we-build.html" class="btn btn--secondary">What We Build</a>
+        </div>
+      </div>
+    </div>
+    <div class="option-notes">
+      <h4>Option A: Abstract Video</h4>
+      <ul>
+        <li><strong>Background:</strong> Ambient/abstract manufacturing footage</li>
+        <li><strong>Pros:</strong> Professional, not distracting, loads fast</li>
+        <li><strong>Cons:</strong> Less specific to magnetics work</li>
+        <li><strong>Best for:</strong> Credibility-first impression</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"><span>Scroll to see next option</span></div>
+
+  <!-- OPTION B: Process Video Background -->
+  <section id="option-b" class="option-section hero">
+    <div class="option-label">Option B</div>
+    <div class="video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/winding-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <div class="hero__content" style="max-width: 800px;">
+        <h1 class="hero__title">Magnetics That Hold When Production Begins</h1>
+        <p class="hero__tagline" style="font-size: 1.25rem; letter-spacing: 0.15em; text-transform: lowercase; margin-top: var(--space-lg);">controlled · defined · disciplined</p>
+        <div class="hero__cta" style="margin-top: var(--space-2xl);">
+          <a href="contact.html" class="btn btn--primary">Submit Drawing / RFQ</a>
+          <a href="what-we-build.html" class="btn btn--secondary">What We Build</a>
+        </div>
+      </div>
+    </div>
+    <div class="option-notes">
+      <h4>Option B: Winding Process Video</h4>
+      <ul>
+        <li><strong>Background:</strong> Close-up of wire winding on core</li>
+        <li><strong>Pros:</strong> Shows actual work, technical feel</li>
+        <li><strong>Cons:</strong> Motion may compete with text</li>
+        <li><strong>Best for:</strong> Technical audience who wants to see the work</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"><span>Scroll to see next option</span></div>
+
+  <!-- OPTION C: Static Image Background -->
+  <section id="option-c" class="option-section hero">
+    <div class="option-label">Option C</div>
+    <div class="image-bg">
+      <img src="assets/images/AdobeStock_456872392.jpeg" alt="Precision inductor manufacturing" loading="lazy">
+    </div>
+    <div class="container">
+      <div class="hero__content" style="max-width: 800px;">
+        <h1 class="hero__title">Magnetics That Hold When Production Begins</h1>
+        <p class="hero__tagline" style="font-size: 1.25rem; letter-spacing: 0.15em; text-transform: lowercase; margin-top: var(--space-lg);">controlled · defined · disciplined</p>
+        <div class="hero__cta" style="margin-top: var(--space-2xl);">
+          <a href="contact.html" class="btn btn--primary">Submit Drawing / RFQ</a>
+          <a href="what-we-build.html" class="btn btn--secondary">What We Build</a>
+        </div>
+      </div>
+    </div>
+    <div class="option-notes">
+      <h4>Option C: Static Image</h4>
+      <ul>
+        <li><strong>Background:</strong> High-quality manufacturing photo</li>
+        <li><strong>Pros:</strong> Fastest load, no motion distraction, sharp detail</li>
+        <li><strong>Cons:</strong> Less dynamic than video</li>
+        <li><strong>Best for:</strong> Clean, fast-loading professional look</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <section style="padding: var(--space-4xl) 0; background: var(--color-surface);">
+    <div class="container container--narrow">
+      <div class="section-header section-header--center">
+        <p class="section-label">Your Choice</p>
+        <h2>Which option works best?</h2>
+        <p class="section-subtitle" style="margin-top: var(--space-lg);">All three use the same content and layout. The only difference is the background treatment. Let us know which direction feels right for Ampersand.</p>
+      </div>
+
+      <div class="services__grid" style="margin-top: var(--space-2xl);">
+        <div class="service-card">
+          <h3 class="service-card__title">Option A</h3>
+          <p>Abstract video. Professional, ambient, not specific to magnetics.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-card__title">Option B</h3>
+          <p>Winding process video. Technical, shows actual work being done.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-card__title">Option C</h3>
+          <p>Static image. Clean, fast, professional photo of manufacturing.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <p style="color: var(--color-text-muted);">Other options: We can also use your own photos/video if you have facility footage you prefer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">AMP<span>.</span></a>
+      <div class="footer__links">
+        <a href="who-we-are.html" class="footer__link">Who We Are</a>
+        <a href="what-we-build.html" class="footer__link">What We Build</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2024 Ampersand Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

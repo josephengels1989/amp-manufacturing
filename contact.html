@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Submit drawings for review or request a quote. Contact Ampersand Manufacturing for custom inductors and transformers.">
+  <title>Submit Drawing / RFQ | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .email-template {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: var(--space-xl);
+      margin-top: var(--space-xl);
+      font-family: monospace;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      color: var(--color-text-secondary);
+    }
+    .email-template strong {
+      color: var(--color-text-primary);
+    }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: var(--space-lg);
+      padding: var(--space-sm) var(--space-lg);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+    }
+    .copy-btn:hover {
+      background: var(--color-border-subtle);
+      color: var(--color-text-primary);
+    }
+    .copy-btn.copied {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">AMP<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="what-we-build.html" class="nav__link">What We Build</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Submit Drawing / RFQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="image-bg">
+      <img src="assets/images/Close up, green wire.jpeg" alt="" loading="lazy">
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Submit Drawing / RFQ</p>
+        <h1>Send us your drawings.</h1>
+        <p class="section-subtitle" style="margin-top: var(--space-lg);">We will review them and tell you what we can do. No sales pitch, no runaround. Just a clear answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section style="padding-top: var(--space-3xl); padding-bottom: var(--space-3xl);">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Email Template -->
+        <div>
+          <p class="section-label">How to Submit</p>
+          <h2 style="margin-top: var(--space-md); margin-bottom: var(--space-lg);">Email us your files</h2>
+          <p style="margin-bottom: var(--space-lg);">Send drawings, specifications, and project details to the email address below. Use this template or write in your own format.</p>
+
+          <div class="email-template" id="email-template">
+<strong>To:</strong> quickquestion@ampersandmanufacturing.com
+<strong>Subject:</strong> Drawing Review Request - [Your Company Name]
+
+<strong>Attached:</strong>
+- Electrical specification or schematic (PDF)
+- Mechanical drawing (PDF or STEP)
+
+<strong>Target volume:</strong> [X units/month or total quantity]
+<strong>Timeline:</strong> [When you need first articles or production]
+<strong>Constraints:</strong> [Environmental, regulatory, or application notes]
+
+<strong>Context:</strong>
+[Brief description of the application and what these components go into]
+          </div>
+
+          <button class="copy-btn" onclick="copyTemplate()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy template</span>
+          </button>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+
+          <div class="contact-info__item">
+            <p class="contact-info__label">Email</p>
+            <p class="contact-info__value"><a href="mailto:quickquestion@ampersandmanufacturing.com">quickquestion@ampersandmanufacturing.com</a></p>
+          </div>
+
+          <div class="contact-info__item">
+            <p class="contact-info__label">Phone</p>
+            <p class="contact-info__value"><a href="tel:+15855008786">585-500-8786</a></p>
+          </div>
+
+          <div class="contact-info__item">
+            <p class="contact-info__label">Address</p>
+            <p class="contact-info__value">
+              2204 McKinley Ave<br>
+              Berkeley, CA 94703
+            </p>
+          </div>
+
+          <div style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+            <h4 style="margin-bottom: var(--space-lg);">What to expect</h4>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--space-md);">We review drawings personally. You will hear back within 1-2 business days with questions, clarifications, or a preliminary assessment.</p>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">If the project fits our capabilities, we will provide a detailed quote and timeline. If it does not, we will tell you why and suggest alternatives if we can.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Need -->
+  <section style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-label">What Helps</p>
+        <h2>The more context, the better</h2>
+      </div>
+      <div class="services__grid" style="margin-top: var(--space-2xl);">
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Drawings & Specs</h3>
+          <p>Electrical schematic, mechanical drawing, or specification sheet. CAD files, PDFs, or whatever you have. We work with what is available.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Volume & Schedule</h3>
+          <p>How many units per month? Is demand steady or variable? When do you need first articles? When does production need to start?</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Application Context</h3>
+          <p>What system does this go into? What operating environment? Knowing the application helps us evaluate feasibility and flag potential issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">AMP<span>.</span></a>
+      <div class="footer__links">
+        <a href="who-we-are.html" class="footer__link">Who We Are</a>
+        <a href="what-we-build.html" class="footer__link">What We Build</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2024 Ampersand Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function copyTemplate() {
+      const template = document.getElementById('email-template');
+      const text = template.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.classList.add('copied');
+        btn.querySelector('span').textContent = 'Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('span').textContent = 'Copy template';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

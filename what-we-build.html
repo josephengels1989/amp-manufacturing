@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Inductors and transformers by core geometry, electrical function, and manufacturing method. Toroidal, bobbin-wound, gapped cores, power inductors, filter inductors, and more.">
+  <title>What We Build | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">AMP<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="what-we-build.html" class="nav__link">What We Build</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Submit Drawing / RFQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hiw-hero">
+    <div class="video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/winding-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Build</p>
+        <h1>Inductors and transformers for systems that matter.</h1>
+        <p class="section-subtitle" style="margin-top: var(--space-lg); max-width: 700px;">Organized by core geometry, electrical function, and manufacturing method. If your design doesn't fit these categories, send it anyway.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Core Geometry -->
+  <section class="about-section" style="background: var(--color-surface);">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">By Core Geometry</p>
+        <h2 style="margin-bottom: var(--space-xl);">How the magnetic circuit is shaped</h2>
+      </div>
+      <div class="services__grid">
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Toroidal</h3>
+          <p>Continuous magnetic path with minimal external field. Low EMI, compact footprint. Common in sensitive analog circuits and space-constrained applications.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Bobbin-Wound</h3>
+          <p>Wound on a plastic or phenolic bobbin, assembled onto E, EFD, ETD, or similar core sets. Standard geometry for many power and isolation transformers.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Gapped Cores</h3>
+          <p>Discrete or distributed air gaps to control inductance and prevent saturation under DC bias. Required for many power inductor and flyback applications.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Laminated Steel</h3>
+          <p>Stacked silicon steel laminations for low-frequency, high-power applications. Common in line-frequency transformers and industrial controls.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Assemblies</h3>
+          <p>Multi-component magnetic assemblies combining inductors, transformers, and interconnect. Built as complete subassemblies ready for integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Electrical Intent -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">By Electrical Intent</p>
+        <h2 style="margin-bottom: var(--space-xl);">What the component does in your circuit</h2>
+      </div>
+      <div class="services__grid">
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Power Inductors</h3>
+          <p>Energy storage for switching converters. Optimized for DC bias capability, low core loss, and thermal performance under continuous load.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Filter Inductors</h3>
+          <p>Smoothing and noise suppression. Common-mode and differential-mode designs for EMI compliance and power quality.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Coupled Inductors</h3>
+          <p>Multiple windings sharing a common core for energy transfer or coupling. Used in multi-phase converters and isolated feedback circuits.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Chokes</h3>
+          <p>High impedance at specific frequencies. Line reactors, current-limiting chokes, and resonant tank components.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Current Sense</h3>
+          <p>Precision current transformers for measurement and protection. Tight ratio accuracy and phase angle specifications.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Isolation Transformers</h3>
+          <p>Galvanic isolation between circuits. Safety-rated designs with creepage, clearance, and dielectric requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Manufacturing Method -->
+  <section class="about-section" style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">By Manufacturing Method</p>
+        <h2 style="margin-bottom: var(--space-xl);">How we build it</h2>
+      </div>
+      <div class="services__grid">
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Layer-Wound / Precision</h3>
+          <p>Controlled layer-by-layer winding with defined insulation between layers. Required for high-voltage isolation and predictable parasitic characteristics.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Toroidal Winding</h3>
+          <p>Through-hole winding on ring cores. Specialized equipment for consistent tension and turn placement on ferrite, powdered iron, and tape-wound cores.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Multi-Winding / Interleaved</h3>
+          <p>Multiple windings with controlled coupling and leakage. Interleaving for reduced proximity effect and improved high-frequency performance.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Heavy-Gauge / Foil</h3>
+          <p>High-current conductors including solid wire, Litz, and copper foil. Termination methods designed for current capacity and mechanical reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specs Summary -->
+  <section class="about-section">
+    <div class="container">
+      <div class="problem__content">
+        <div>
+          <p class="section-label">Technical Range</p>
+          <h2 style="margin-bottom: var(--space-xl);">What we can handle</h2>
+          <div class="audience__list">
+            <div class="audience__item">
+              <p><strong style="color: var(--color-text-primary);">Wire gauges:</strong> AWG 8 through AWG 44, plus Litz and foil</p>
+            </div>
+            <div class="audience__item">
+              <p><strong style="color: var(--color-text-primary);">Core materials:</strong> Ferrites, powdered iron, laminations, amorphous, nanocrystalline</p>
+            </div>
+            <div class="audience__item">
+              <p><strong style="color: var(--color-text-primary);">Insulation:</strong> Polyurethane, polyester, Nomex, Kapton, and high-temp systems</p>
+            </div>
+            <div class="audience__item">
+              <p><strong style="color: var(--color-text-primary);">Dimensions:</strong> Up to 300mm x 300mm x 250mm</p>
+            </div>
+            <div class="audience__item">
+              <p><strong style="color: var(--color-text-primary);">Volumes:</strong> 10 to 50,000 units per month, no MOQs</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <h3>Not sure where your design fits?</h3>
+          <p style="margin-top: var(--space-lg);">These categories cover most of what we build, but not all designs fit neatly into boxes.</p>
+          <p style="margin-top: var(--space-lg);">Send us your drawings and we will tell you what we can do.</p>
+          <a href="contact.html" class="btn btn--primary" style="margin-top: var(--space-xl);">Submit Drawing / RFQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section class="about-section" style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle);">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-label">Learn More</p>
+        <h2>How we approach the work</h2>
+      </div>
+      <div class="services__grid" style="margin-top: var(--space-2xl); max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">How We Work</h3>
+          <p>Our evaluation process, manufacturing approach, and what makes us different from other suppliers.</p>
+          <a href="how-we-work.html" class="btn btn--secondary" style="margin-top: var(--space-lg);">Read more</a>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <h3 class="service-card__title">Who We Are</h3>
+          <p>The philosophy behind our process. Why discipline matters. What we focus on that others overlook.</p>
+          <a href="who-we-are.html" class="btn btn--secondary" style="margin-top: var(--space-lg);">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">AMP<span>.</span></a>
+      <div class="footer__links">
+        <a href="who-we-are.html" class="footer__link">Who We Are</a>
+        <a href="what-we-build.html" class="footer__link">What We Build</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2024 Ampersand Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
