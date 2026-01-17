@@ -22,36 +22,33 @@
         <span></span>
       </button>
       <div class="nav__links">
+        <div class="nav__menu">
+          <button class="nav__menu-toggle" aria-label="Browse pages">
+            Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav__menu-dropdown">
+            <a href="who-we-are.html" class="nav__menu-link">Who We Are</a>
+            <a href="how-we-work.html" class="nav__menu-link">How We Work</a>
+            <a href="what-we-build.html" class="nav__menu-link">What We Build</a>
+            <a href="design-evaluation.html" class="nav__menu-link nav__menu-link--active">Design Evaluation</a>
+            <div class="nav__menu-divider"></div>
+            <a href="contact.html" class="nav__menu-link">Contact</a>
+          </div>
+        </div>
         <a href="what-we-build.html" class="nav__link">What We Build</a>
         <a href="contact.html" class="nav__link nav__link--cta">Submit Drawing / RFQ</a>
       </div>
     </div>
   </nav>
 
-  <!-- Side Navigation -->
-  <button class="side-nav__toggle" aria-label="Toggle navigation">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </button>
-  <aside class="side-nav">
-    <nav class="side-nav__list">
-      <a href="home.html" class="side-nav__link">Home</a>
-      <a href="who-we-are.html" class="side-nav__link">Who We Are</a>
-      <a href="how-we-work.html" class="side-nav__link">How We Work</a>
-      <a href="what-we-build.html" class="side-nav__link">What We Build</a>
-      <a href="design-evaluation.html" class="side-nav__link side-nav__link--active">Design Evaluation</a>
-      <a href="contact.html" class="side-nav__link">Contact</a>
-    </nav>
-  </aside>
-
   <!-- Main Content -->
   <section class="prose-page">
     <div class="container">
       <div class="prose-page__header">
-        <p class="section-label">How We Evaluate Inductor Designs for Production</p>
+        <h1 class="prose-page__title">How We Evaluate Inductor Designs for Production</h1>
       </div>
       <div class="prose-page__content">
         <p>This page describes how Ampersand evaluates inductor designs for manufacturability.</p>
