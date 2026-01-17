@@ -128,6 +128,11 @@
       font-size: 1rem;
     }
 
+    .question textarea::placeholder {
+      font-size: 1.05rem;
+      color: #666;
+    }
+
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -188,13 +193,13 @@
       <p style="margin-bottom: 0;">All changes are rooted in your guidance: "The Hero presents a little bit stronger and better with a background that doesn't move" and "credibility is restraint."</p>
     </div>
 
-    <a href="index.html" class="full-page-link" target="_blank">→ View Live Homepage (Opens in New Tab)</a>
+    <a href="home.html" class="full-page-link" target="_blank">→ View Live Homepage (Opens in New Tab)</a>
 
     <!-- HERO SECTION -->
     <h2>1. Static Hero Background</h2>
     <div class="change-section">
       <h3>What Changed</h3>
-      <img src=".playwright-mcp/v2-review/01-hero-section.png" alt="Hero section with static copper image" class="screenshot">
+      <a href="home.html#hero" target="_blank" class="full-page-link">→ View Live Hero Section (Opens in New Tab)</a>
       <p><strong>Before:</strong> Video background (stock-bg-1.mp4)</p>
       <p><strong>After:</strong> Static copper coil image (hero-copper.jpeg)</p>
 
@@ -210,7 +215,7 @@
     <h2>2. Reframe Animation - Prominently Placed</h2>
     <div class="change-section">
       <h3>What Changed</h3>
-      <img src=".playwright-mcp/v2-review/02-reframe-section.png" alt="Reframe animation section" class="screenshot">
+      <a href="home.html#reframe" target="_blank" class="full-page-link">→ View Live Reframe Section (Opens in New Tab)</a>
       <p><strong>Before:</strong> Animation existed but not visible on homepage</p>
       <p><strong>After:</strong> Dedicated section immediately after hero with heading "We're different. Here's how."</p>
       <p><strong>Animation Content:</strong></p>
@@ -232,7 +237,7 @@
     <h2>3. Centered Text Layout (No Background Images)</h2>
     <div class="change-section">
       <h3>What Changed</h3>
-      <img src=".playwright-mcp/v2-review/03-who-we-are-centered.png" alt="Who We Are section with centered text" class="screenshot">
+      <a href="home.html#who-we-are" target="_blank" class="full-page-link">→ View Live Who We Are Section (Opens in New Tab)</a>
       <p><strong>Before:</strong> Left-aligned text with empty right column (designed for images)</p>
       <p><strong>After:</strong> Center-aligned, full-width text with optimal reading width</p>
 
@@ -247,7 +252,7 @@
     <h2>4. Video Strip Dividers</h2>
     <div class="change-section">
       <h3>What Changed</h3>
-      <img src=".playwright-mcp/v2-review/04-video-strip-who-we-serve.png" alt="Video strip divider between sections" class="screenshot">
+      <a href="home.html#who-we-serve" target="_blank" class="full-page-link">→ View Live Video Strip (Opens in New Tab)</a>
       <p><strong>Added:</strong> 200px tall video strips between major sections</p>
       <p><strong>Videos Used:</strong> Winding process and abstract manufacturing footage</p>
       <p><strong>Treatment:</strong> 40% opacity, muted, with gradient blends for seamless transitions</p>
@@ -263,7 +268,7 @@
     <h2>5. Full Page Flow</h2>
     <div class="change-section">
       <h3>Complete Homepage Structure</h3>
-      <img src=".playwright-mcp/v2-review/05-full-page.png" alt="Full page view" class="screenshot">
+      <a href="home.html" target="_blank" class="full-page-link">→ View Full Live Page (Opens in New Tab)</a>
       <p><strong>Flow:</strong></p>
       <ol style="margin-left: 2rem;">
         <li>Static hero with copper detail (impact)</li>
@@ -299,10 +304,10 @@
 
     <!-- QUESTIONS FOR JOE -->
     <h2>Questions for Your Review</h2>
-    <div class="feedback-form">
+    <form id="v2-review-form" class="feedback-form">
       <div class="question">
         <label>1. Hero Section - Is the static copper image the right choice?</label>
-        <select>
+        <select name="hero_section" required>
           <option value="">Select...</option>
           <option value="perfect">Perfect - keep it</option>
           <option value="different">Use a different image</option>
@@ -312,7 +317,7 @@
 
       <div class="question">
         <label>2. Reframe Animation - Does the placement and prominence work?</label>
-        <select>
+        <select name="reframe_animation" required>
           <option value="">Select...</option>
           <option value="perfect">Perfect placement</option>
           <option value="higher">Move it higher (before hero?)</option>
@@ -323,7 +328,7 @@
 
       <div class="question">
         <label>3. Centered Text Layout - Does "credibility is restraint" feel right here?</label>
-        <select>
+        <select name="centered_layout" required>
           <option value="">Select...</option>
           <option value="perfect">Perfect - clean and intentional</option>
           <option value="images">Add subtle product images to right side</option>
@@ -333,7 +338,7 @@
 
       <div class="question">
         <label>4. Video Strips - Are they adding value or distracting?</label>
-        <select>
+        <select name="video_strips" required>
           <option value="">Select...</option>
           <option value="perfect">Perfect - good rhythm</option>
           <option value="remove">Remove them - too much</option>
@@ -352,7 +357,7 @@
           <li>Volumes: 10-50,000 units/month, no MOQs</li>
         </ul>
         <label>Are these specifications accurate for Ampersand's actual capabilities?</label>
-        <select>
+        <select name="tech_specs" required>
           <option value="">Select...</option>
           <option value="accurate">Yes, these are accurate</option>
           <option value="need-changes">No, I need to provide correct specs</option>
@@ -361,16 +366,91 @@
 
       <div class="question">
         <label>6. Overall Impression</label>
-        <textarea placeholder="What's your gut reaction? Does this feel like Ampersand? Does it establish technical legitimacy? What's missing or wrong?"></textarea>
+        <textarea name="overall_impression" placeholder="What's your gut reaction? Does this feel like Ampersand? Does it establish technical legitimacy? What's missing or wrong?" required></textarea>
       </div>
 
       <div class="question">
         <label>7. Next Steps</label>
-        <textarea placeholder="What should we prioritize for V3? Any specific changes before going live?"></textarea>
+        <textarea name="next_steps" placeholder="What should we prioritize for V3? Any specific changes before going live?" required></textarea>
       </div>
 
-      <button class="btn" onclick="alert('Please save your feedback and send to Brian via email')">Save Feedback (Copy/Email to Brian)</button>
-    </div>
+      <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Branding & Business Questions</h3>
+
+      <div class="question">
+        <label>8. Logo Design</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Currently using "AMP." as placeholder. Do you have an Ampersand logo, or should I design one?</p>
+        <select name="logo_design" required>
+          <option value="">Select...</option>
+          <option value="have-logo">I have a logo file to send you</option>
+          <option value="wordmark">Design a simple wordmark (just "AMPERSAND")</option>
+          <option value="symbol">Design an "&" symbol treatment</option>
+          <option value="amp-placeholder">Keep "AMP." as-is for now</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>9. Domain Name</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Will this site live at ampersandmanufacturing.com? I'll need to set up email routing for quickquestion@ampersandmanufacturing.com.</p>
+        <select name="domain_name" required>
+          <option value="">Select...</option>
+          <option value="yes-confirmed">Yes, ampersandmanufacturing.com</option>
+          <option value="different">Different domain (I'll specify below)</option>
+          <option value="not-sure">Not sure yet</option>
+        </select>
+        <textarea name="domain_details" placeholder="If different domain or other details, specify here..." style="margin-top: 0.5rem;"></textarea>
+      </div>
+
+      <div class="question">
+        <label>10. Content Removals</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Per your feedback, I removed: the 7-step process timeline, "What We Believe" section, and origin story. Do these removals feel right?</p>
+        <select name="content_removals" required>
+          <option value="">Select...</option>
+          <option value="correct">Yes, these removals are correct</option>
+          <option value="restore-some">Restore some of these (I'll specify below)</option>
+          <option value="other-removals">Remove other things too (I'll specify below)</option>
+        </select>
+        <textarea name="content_removal_notes" placeholder="Any specific content to restore or remove..." style="margin-top: 0.5rem;"></textarea>
+      </div>
+
+      <div class="question">
+        <label>11. Navigation</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">The minimal navigation only shows "What We Build" and "Submit Drawing / RFQ". Is this sufficient?</p>
+        <select name="navigation" required>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect - keep minimal</option>
+          <option value="add-pages">Add more pages to nav (I'll specify below)</option>
+          <option value="reorganize">Reorganize the navigation</option>
+        </select>
+        <textarea name="navigation_notes" placeholder="Which pages to add or how to reorganize..." style="margin-top: 0.5rem;"></textarea>
+      </div>
+
+      <div class="question">
+        <label>12. Copy & Messaging</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Does the actual text content resonate? Is it too technical, too vague, too formal, etc?</p>
+        <textarea name="copy_messaging" placeholder="Your thoughts on the messaging tone and content..." required></textarea>
+      </div>
+
+      <div class="question">
+        <label>13. Contact Approach</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Instead of a contact form, the page provides an email template that opens in the user's email client. Does this work for your business?</p>
+        <select name="contact_approach" required>
+          <option value="">Select...</option>
+          <option value="perfect">Perfect - prefer email template</option>
+          <option value="add-form">Add a traditional contact form</option>
+          <option value="both">Offer both options</option>
+        </select>
+        <textarea name="contact_notes" placeholder="Any specific requirements for contact/RFQ collection..." style="margin-top: 0.5rem;"></textarea>
+      </div>
+
+      <div class="question">
+        <label>14. Overall Site Structure</label>
+        <p style="margin-bottom: 1rem; color: var(--color-text-secondary);">Should there be more/fewer pages? Different organization? Missing content?</p>
+        <textarea name="site_structure" placeholder="Your thoughts on overall page structure and organization..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit Feedback to Brian</button>
+      <p id="submit-status" style="margin-top: 1rem; display: none;"></p>
+    </form>
 
     <div class="intro" style="margin-top: 3rem;">
       <h3>Technical Notes</h3>
@@ -380,5 +460,50 @@
       <p style="margin-bottom: 0;"><strong>Ready to deploy:</strong> Yes, pending your approval</p>
     </div>
   </div>
+
+  <script>
+    document.getElementById('v2-review-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const button = form.querySelector('button[type="submit"]');
+      const status = document.getElementById('submit-status');
+
+      // Disable button and show loading
+      button.disabled = true;
+      button.textContent = 'Sending...';
+      status.style.display = 'block';
+      status.style.color = '#cc8b00';
+      status.textContent = 'Sending your feedback...';
+
+      // Collect form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('/api/submit-v2-review', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          status.style.color = '#4ade80';
+          status.textContent = '✓ Feedback sent successfully! Thank you, Joe.';
+          form.reset();
+          button.textContent = 'Sent!';
+        } else {
+          throw new Error('Failed to send');
+        }
+      } catch (error) {
+        status.style.color = '#ff6b6b';
+        status.textContent = '✗ Failed to send. Please try again or email Brian directly.';
+        button.disabled = false;
+        button.textContent = 'Submit Feedback to Brian';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="How Ampersand evaluates inductor designs for manufacturability. Our 6-step process covers core geometry, winding method, insulation, materials, process definition, and production context.">
+  <title>Design Evaluation | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/home.html" class="nav__logo">AMP<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="what-we-build.html" class="nav__link">What We Build</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Submit Drawing / RFQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Side Navigation -->
+  <button class="side-nav__toggle" aria-label="Toggle navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <aside class="side-nav">
+    <nav class="side-nav__list">
+      <a href="home.html" class="side-nav__link">Home</a>
+      <a href="who-we-are.html" class="side-nav__link">Who We Are</a>
+      <a href="how-we-work.html" class="side-nav__link">How We Work</a>
+      <a href="what-we-build.html" class="side-nav__link">What We Build</a>
+      <a href="design-evaluation.html" class="side-nav__link side-nav__link--active">Design Evaluation</a>
+      <a href="contact.html" class="side-nav__link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <section class="prose-page">
+    <div class="container">
+      <div class="prose-page__header">
+        <p class="section-label">How We Evaluate Inductor Designs for Production</p>
+      </div>
+      <div class="prose-page__content">
+        <p>This page describes how Ampersand evaluates inductor designs for manufacturability.</p>
+
+        <p>It is intended for engineering teams responsible for products in or near release, not exploratory design work.</p>
+
+        <p>Our evaluation process exists to answer a single question:</p>
+
+        <p><strong>Can this design be built repeatedly, without drift, at the required volume and duration?</strong></p>
+
+        <h2>What This Review Is and Is Not</h2>
+
+        <p><strong>This review is:</strong></p>
+        <ul>
+          <li>A manufacturing feasibility assessment</li>
+          <li>A risk identification step before samples or RFQ</li>
+          <li>A way to surface constraints early</li>
+        </ul>
+
+        <p><strong>This review is not:</strong></p>
+        <ul>
+          <li>A consulting design service</li>
+          <li>A speculative prototype exercise</li>
+          <li>A guarantee of acceptance without revision</li>
+        </ul>
+
+        <p>Designs that cannot be stabilized for production are identified early and revised or declined.</p>
+
+        <h2>Step 1: Core Geometry & Mechanical Feasibility</h2>
+        <p>We begin by confirming that the proposed geometry can be built and assembled repeatedly.</p>
+
+        <p>We review:</p>
+        <ul>
+          <li>Core shape and material (ferrite, powdered iron, laminated steel)</li>
+          <li>Gapping method (distributed vs discrete, tolerance sensitivity)</li>
+          <li>Mechanical interfaces (bobbin fit, clamping, housing constraints)</li>
+          <li>Mounting orientation and stress points</li>
+        </ul>
+
+        <p>At this stage, we are verifying that the geometry is manufacturable without operator-dependent variation.</p>
+
+        <p>If a design depends on manual tuning or undefined mechanical compliance, we flag it for discussion with you.</p>
+
+        <h2>Step 2: Winding Method & Conductor Selection</h2>
+        <p>Next, we evaluate whether the winding can be executed consistently under production conditions.</p>
+
+        <p>We assess:</p>
+        <ul>
+          <li>Required winding method (layered, toroidal, interleaved, multi-winding)</li>
+          <li>Wire gauge, insulation type, and availability</li>
+          <li>Turn density and fill margin</li>
+          <li>Termination method and strain relief</li>
+        </ul>
+
+        <p>Winding approaches are selected for repeatability under thermal and electrical load.</p>
+
+        <h2>Step 3: Insulation, Dielectric, and Thermal Margins</h2>
+        <p>We review electrical compliance in parallel with long-term reliability.</p>
+
+        <p>We look at:</p>
+        <ul>
+          <li>Insulation system and temperature class</li>
+          <li>Creepage and clearance margins</li>
+          <li>Expected thermal rise under continuous operation</li>
+          <li>Interaction between winding density and heat dissipation</li>
+        </ul>
+
+        <p>Margins are evaluated against real operating conditions rather than lab-only scenarios.</p>
+
+        <p>If thermal or dielectric margins are too narrow to tolerate production variation, we recommend revisions before proceeding.</p>
+
+        <h2>Step 4: Material Availability & Supply Stability</h2>
+        <p>We do not approve a design without confirming that materials can be sourced affordably and consistently over time.</p>
+
+        <p>We review:</p>
+        <ul>
+          <li>Core material availability and alternates</li>
+          <li>Magnet wire types and insulation systems</li>
+          <li>Sensitivity to supplier or lot variation</li>
+        </ul>
+
+        <p>Acceptable material equivalents are identified in advance to reduce future disruption.</p>
+
+        <p>Designs that rely on fragile or single-source materials are flagged early, and we discuss this with you.</p>
+
+        <h2>Step 5: Process Definition & Inspection Strategy</h2>
+        <p>Before a design progresses, we confirm that it can be supported by a defined process.</p>
+
+        <p>This includes:</p>
+        <ul>
+          <li>Clear build sequence</li>
+          <li>Identifiable inspection points</li>
+          <li>Test coverage aligned with risk</li>
+          <li>Traceability requirements by program</li>
+        </ul>
+
+        <p>Documentation is one of our leading values. If a process cannot be documented it cannot be scaled.</p>
+
+        <h2>Step 6: Volume, Duration, and Change Control</h2>
+        <p>Finally, we review the intended production context.</p>
+
+        <p>We confirm:</p>
+        <ul>
+          <li>Expected monthly volume range</li>
+          <li>Program duration</li>
+          <li>Change tolerance over time</li>
+          <li>Requirements for revision control and notification</li>
+        </ul>
+
+        <p>Designs intended for sustained production are evaluated differently than short-run builds.</p>
+
+        <h2>Outcomes of the Evaluation</h2>
+        <p>After review, one of the following paths is defined:</p>
+        <ul>
+          <li>Proceed to pilot build</li>
+          <li>Proceed with recommended design adjustments</li>
+          <li>Defer pending clarified constraints</li>
+          <li>Decline due to manufacturability risk</li>
+        </ul>
+
+        <p>Each outcome is defined through direct technical discussion. We review findings together, resolve open questions, and agree on the path forward before work proceeds.</p>
+
+        <h2>What to Submit for Review</h2>
+        <p>To initiate an evaluation, teams typically send us an email with:</p>
+        <ul>
+          <li>Electrical specification or drawing</li>
+          <li>Mechanical drawing (PDF or STEP)</li>
+          <li>Target volumes and timeline</li>
+          <li>Known environmental or regulatory constraints</li>
+        </ul>
+
+        <h2>A Note on Non-Standard Assemblies</h2>
+        <p>We evaluate non-standard geometries, hybrid cores, and mechanically integrated assemblies on a program basis. We would be honored to have a look at your drawings and confer with you.</p>
+
+        <div class="prose-page__cta">
+          <a href="contact.html" class="btn btn--primary">Send us an email →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/home.html" class="footer__logo">AMP<span>.</span></a>
+      <div class="footer__links">
+        <a href="who-we-are.html" class="footer__link">Who We Are</a>
+        <a href="how-we-work.html" class="footer__link">How We Work</a>
+        <a href="what-we-build.html" class="footer__link">What We Build</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Ampersand Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

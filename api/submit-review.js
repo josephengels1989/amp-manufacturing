@@ -85,7 +85,7 @@ export default async function handler(req, res) {
     let htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
         <div style="background: #0a0a0a; padding: 30px; text-align: center;">
-          <h1 style="color: #c9a227; margin: 0; font-size: 24px;">ANT Website Review</h1>
+          <h1 style="color: #c9a227; margin: 0; font-size: 24px;">Ampersand Website Review</h1>
           <p style="color: #888; margin: 10px 0 0;">Submitted by ${reviewerName}</p>
         </div>
     `;
@@ -115,13 +115,13 @@ export default async function handler(req, res) {
 
     htmlContent += `
         <div style="background: #f5f5f5; padding: 20px; text-align: center; color: #888; font-size: 12px;">
-          Submitted from ANT Manufacturing website review form
+          Submitted from Ampersand Manufacturing website review form
         </div>
       </div>
     `;
 
     // Build plain text version
-    let textContent = `ANT Website Review\nSubmitted by: ${reviewerName}\n\n`;
+    let textContent = `Ampersand Website Review\nSubmitted by: ${reviewerName}\n\n`;
     sections.forEach(section => {
       const hasContent = section.fields.some(f => f.value && f.value.trim());
       if (!hasContent) return;
@@ -136,9 +136,9 @@ export default async function handler(req, res) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'ANT Website <onboarding@resend.dev>',
+      from: 'Ampersand Website <onboarding@resend.dev>',
       to: process.env.REVIEW_EMAIL || 'brian@example.com',
-      subject: `ANT Website Review from ${reviewerName}`,
+      subject: `Ampersand Website Review from ${reviewerName}`,
       html: htmlContent,
       text: textContent,
     });
