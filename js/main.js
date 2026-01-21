@@ -66,6 +66,13 @@ const animateOnScroll = () => {
 // Initialize animations when DOM is ready
 document.addEventListener('DOMContentLoaded', animateOnScroll);
 
+// Force autoplay on all videos (removes play button)
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.video-strip video').forEach(video => {
+    video.play().catch(() => {});
+  });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
