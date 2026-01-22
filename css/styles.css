@@ -1576,3 +1576,35 @@ section {
 .specs-table tr:hover td {
   background: var(--color-surface);
 }
+
+/* ========================================
+   Capability Rows
+   ======================================== */
+.capability-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.capability-row--last {
+  border-bottom: none;
+}
+
+.capability-row h3 {
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.capability-row p {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 640px) {
+  .capability-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
