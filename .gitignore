@@ -1,0 +1,15 @@
+# Large source video files (unused)
+assets/images/*.mov
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "name": "ant-manufacturing",
+  "private": true,
+  "description": "ANT Manufacturing - Custom Toroidal Inductors",
+  "dependencies": {
+    "resend": "^2.0.0"
+  }
+}

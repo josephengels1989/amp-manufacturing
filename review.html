@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Site Review | ANT Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .review-page {
+      padding-top: 100px;
+      padding-bottom: var(--space-4xl);
+    }
+    .review-intro {
+      max-width: 700px;
+      margin-bottom: var(--space-4xl);
+    }
+    .review-intro h1 {
+      margin-bottom: var(--space-lg);
+    }
+    .review-section {
+      margin-bottom: var(--space-4xl);
+      padding: var(--space-2xl);
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    .review-section__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .review-section__title {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-xs);
+    }
+    .review-section__page {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+    }
+    .review-section__link {
+      flex-shrink: 0;
+      font-size: 0.875rem;
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    .review-question {
+      margin-bottom: var(--space-xl);
+    }
+    .review-question:last-child {
+      margin-bottom: 0;
+    }
+    .review-question label {
+      display: block;
+      font-size: 1rem;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .review-question .hint {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+    }
+    .review-question textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: var(--space-md);
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--color-text-primary);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      resize: vertical;
+    }
+    .review-question textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+    .review-question textarea.large {
+      min-height: 180px;
+    }
+    .rating-group {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .rating-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      cursor: pointer;
+    }
+    .rating-option input {
+      accent-color: var(--color-accent);
+      width: 18px;
+      height: 18px;
+    }
+    .content-section {
+      background: var(--color-surface-elevated);
+      border-color: var(--color-accent-muted);
+    }
+    .content-section .review-section__title {
+      color: var(--color-accent);
+    }
+    .submit-section {
+      text-align: center;
+      padding: var(--space-3xl);
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    .submit-section h2 {
+      margin-bottom: var(--space-lg);
+    }
+    .submit-section p {
+      margin-bottom: var(--space-xl);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .reviewer-field {
+      max-width: 300px;
+      margin: 0 auto var(--space-xl);
+    }
+    .reviewer-field input {
+      width: 100%;
+      padding: var(--space-md);
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--color-text-primary);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .progress-bar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--color-border);
+      z-index: 99;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      background: var(--color-accent);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">ANT<span>.</span></a>
+      <div class="nav__links">
+        <span style="color: var(--color-text-muted); font-size: 0.875rem;">Site Review Form</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="progress-bar">
+    <div class="progress-bar__fill" id="progress-fill"></div>
+  </div>
+
+  <main class="review-page">
+    <div class="container container--narrow">
+      <form id="review-form" action="/api/submit-review" method="POST">
+
+        <div class="review-intro">
+          <p class="section-label">Website Review</p>
+          <h1>Help me get this right.</h1>
+          <p>I've built a draft of the ANT Manufacturing website. Before I finalize it, I need your input on the messaging, tone, and content.</p>
+          <p style="margin-top: var(--space-md);">Take your time with this. Your answers will directly shape how customers see ANT. There are no wrong answers. I just need your honest perspective.</p>
+        </div>
+
+        <!-- SECTION: Overall Feel -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Overall Impression</p>
+              <h2 class="review-section__title">First Reactions</h2>
+            </div>
+            <a href="/" target="_blank" class="review-section__link">View Homepage &rarr;</a>
+          </div>
+
+          <div class="review-question">
+            <label>Spend 30 seconds looking at the homepage. What three words come to mind?</label>
+            <p class="hint">Don't overthink it. First impressions matter.</p>
+            <textarea name="first_impressions" placeholder="e.g., Professional, Trustworthy, Technical..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>Does this feel like ANT? Rate from 1-5.</label>
+            <p class="hint">1 = "This doesn't represent us at all" / 5 = "This is exactly who we are"</p>
+            <div class="rating-group">
+              <label class="rating-option"><input type="radio" name="brand_accuracy" value="1"> 1</label>
+              <label class="rating-option"><input type="radio" name="brand_accuracy" value="2"> 2</label>
+              <label class="rating-option"><input type="radio" name="brand_accuracy" value="3"> 3</label>
+              <label class="rating-option"><input type="radio" name="brand_accuracy" value="4"> 4</label>
+              <label class="rating-option"><input type="radio" name="brand_accuracy" value="5"> 5</label>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>What's missing or feels off?</label>
+            <textarea name="whats_missing" placeholder="Anything that doesn't sit right, or something important that's not being communicated..."></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION: Homepage Hero -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Homepage</p>
+              <h2 class="review-section__title">Hero Section & Headline</h2>
+            </div>
+            <a href="/" target="_blank" class="review-section__link">View Section &rarr;</a>
+          </div>
+
+          <div class="review-question">
+            <label>Current headline: "Too small for the big shops. Too consistent for the small ones."</label>
+            <p class="hint">Does this capture ANT's positioning? Would you say it differently?</p>
+            <textarea name="headline_feedback" placeholder="Your thoughts on the headline..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>The subtext mentions "1,500 inductors" as an example. Is that the right number to use?</label>
+            <p class="hint">What's a realistic order size that represents your sweet spot?</p>
+            <textarea name="order_size" placeholder="e.g., 'Actually 500-1,000 is more typical' or 'That's about right'"></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION: Problem/Reframe -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Homepage</p>
+              <h2 class="review-section__title">The Problem We Solve</h2>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>I'm positioning ANT as the solution for companies "stuck in the middle." Does that resonate?</label>
+            <p class="hint">Is this actually the pain point your customers have? Or is there a different problem you solve?</p>
+            <textarea name="problem_positioning" placeholder="Your thoughts..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>The animated section shows complaints customers have heard from other vendors, then reframes them. Are these accurate?</label>
+            <p class="hint">"Your order is too small" / "We can't guarantee that timeline" / etc.</p>
+            <textarea name="complaints_feedback" placeholder="Add any real complaints you've heard, or note if any of these feel off..."></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION: About Page -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">About Page</p>
+              <h2 class="review-section__title">Who We Are</h2>
+            </div>
+            <a href="/about.html" target="_blank" class="review-section__link">View About Page &rarr;</a>
+          </div>
+
+          <div class="review-question">
+            <label>Current opening line: "We're not here just to sell an inductor. We're here to build a relationship."</label>
+            <p class="hint">Does this capture the spirit of ANT?</p>
+            <textarea name="about_opening" placeholder="Your reaction to this positioning..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>The "What We Believe" section lists four principles. Do these ring true?</label>
+            <p class="hint">Every order deserves attention / Clear communication / Quality isn't negotiable / The work matters</p>
+            <textarea name="beliefs_feedback" placeholder="Would you add, remove, or change any of these?"></textarea>
+          </div>
+        </div>
+
+        <!-- CONTENT: Origin Story -->
+        <div class="review-section content-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Content Needed</p>
+              <h2 class="review-section__title">Your Origin Story</h2>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>How did ANT get started? Tell us the story.</label>
+            <p class="hint">What were you doing before? What problem did you see? What made you decide to start this? Don't worry about making it sound polished. Just tell it naturally.</p>
+            <textarea name="origin_story" class="large" placeholder="Write freely here. We'll help shape it into copy."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>Why "ANT"? Is there meaning behind the name?</label>
+            <textarea name="name_meaning" placeholder="The story behind the name, if there is one..."></textarea>
+          </div>
+        </div>
+
+        <!-- CONTENT: Team Bios -->
+        <div class="review-section content-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Content Needed</p>
+              <h2 class="review-section__title">Team Bios</h2>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>Joe's Bio</label>
+            <p class="hint">What's your background? What did you do before ANT? What drives you? What should customers know about you?</p>
+            <textarea name="joe_bio" class="large" placeholder="Joe's story..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>Quinn's Bio</label>
+            <p class="hint">Same questions: background, what you bring to ANT, what makes your role unique.</p>
+            <textarea name="quinn_bio" class="large" placeholder="Quinn's story..."></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION: How It Works -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">How It Works Page</p>
+              <h2 class="review-section__title">The Process</h2>
+            </div>
+            <a href="/how-it-works.html" target="_blank" class="review-section__link">View Page &rarr;</a>
+          </div>
+
+          <div class="review-question">
+            <label>I've outlined a 7-step process. Does this accurately reflect how you work?</label>
+            <p class="hint">Initial Conversation → Drawing Review → Quote → Material Sourcing → Production → Testing → Delivery</p>
+            <textarea name="process_feedback" placeholder="Any steps missing or out of order? Anything that works differently?"></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>The "Capabilities" section needs specifics. What materials do you work with?</label>
+            <p class="hint">Core types, wire gauges, special materials, etc.</p>
+            <textarea name="materials" placeholder="List the materials/capabilities..."></textarea>
+          </div>
+        </div>
+
+        <!-- CONTENT: Contact Info -->
+        <div class="review-section content-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Content Needed</p>
+              <h2 class="review-section__title">Contact Information</h2>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>What email should customers use to reach you?</label>
+            <textarea name="contact_email" placeholder="e.g., hello@antmfg.com, joe@antmfg.com"></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>Phone number? (optional, only if you want it public)</label>
+            <textarea name="contact_phone" placeholder="Leave blank if you prefer email-only contact"></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>What location should we display?</label>
+            <p class="hint">Currently shows "California, USA." Is that right? More specific?</p>
+            <textarea name="contact_location" placeholder="e.g., 'Bay Area, California' or 'Sacramento, CA'"></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION: Final Thoughts -->
+        <div class="review-section">
+          <div class="review-section__header">
+            <div>
+              <p class="review-section__page">Final Thoughts</p>
+              <h2 class="review-section__title">Anything Else?</h2>
+            </div>
+          </div>
+
+          <div class="review-question">
+            <label>What's the one thing a customer should remember after visiting this site?</label>
+            <textarea name="key_takeaway" placeholder="The single most important impression..."></textarea>
+          </div>
+
+          <div class="review-question">
+            <label>Any other feedback, concerns, or ideas?</label>
+            <textarea name="other_feedback" class="large" placeholder="Anything we didn't ask about that you want to mention..."></textarea>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-section">
+          <h2>Ready to submit?</h2>
+          <p>Your responses will be sent directly to me. I'll use them to refine the site before launch.</p>
+
+          <div class="reviewer-field">
+            <input type="text" name="reviewer_name" placeholder="Your name" required>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Submit Review</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">ANT<span>.</span></a>
+      <p class="footer__copy">Review form for internal use only.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Progress bar based on scroll
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      document.getElementById('progress-fill').style.width = progress + '%';
+    });
+
+    // Form submission handling
+    const form = document.getElementById('review-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          form.innerHTML = `
+            <div style="text-align: center; padding: var(--space-4xl) var(--space-xl);">
+              <h2 style="color: var(--color-accent); margin-bottom: var(--space-lg);">Thank you!</h2>
+              <p style="font-size: 1.25rem; margin-bottom: var(--space-xl);">Your feedback has been submitted.</p>
+              <p>I'll incorporate your input and follow up with any questions.</p>
+              <a href="/" class="btn btn--secondary" style="margin-top: var(--space-2xl);">View the Site</a>
+            </div>
+          `;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        alert('Something went wrong. Please try again or email your responses directly.');
+      }
+    });
+  </script>
+</body>
+</html>

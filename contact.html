@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Get in touch with ANT Manufacturing. Tell us what you're working on and we'll respond personally.">
+  <title>Contact | ANT Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Ampersand<span> Manufacturing</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="how-it-works.html" class="nav__link">How It Works</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Start a Conversation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="image-bg">
+      <img src="assets/images/Close up, green wire.jpeg" alt="" loading="lazy">
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Contact</p>
+        <h1>Let's see if we're the right fit.</h1>
+        <p class="section-subtitle" style="margin-top: var(--space-lg);">Tell us what you're working on. We'll respond personally, not with an auto-reply, not next week. If we can help, we'll tell you how. If we can't, we'll tell you that too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section style="padding-top: var(--space-3xl);">
+    <div class="container">
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" action="/api/submit-contact" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="message">What are you working on?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project: quantities, specs, timeline, challenges..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Other ways to reach us</h3>
+          <div class="contact-info__item">
+            <p class="contact-info__label">Email</p>
+            <p class="contact-info__value"><a href="mailto:hello@antmfg.com">hello@antmfg.com</a></p>
+          </div>
+          <div class="contact-info__item">
+            <p class="contact-info__label">Response Time</p>
+            <p class="contact-info__value">Within one business day</p>
+          </div>
+          <div class="contact-info__item">
+            <p class="contact-info__label">Location</p>
+            <p class="contact-info__value">California, USA</p>
+          </div>
+          <div style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">Not sure if we can help? Reach out anyway. We'd rather have a quick conversation than leave you wondering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
+      <div class="footer__links">
+        <a href="about.html" class="footer__link">About</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2024 ANT Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
