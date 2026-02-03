@@ -15,7 +15,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo">ANT<span>.</span></a>
+      <a href="/" class="nav__logo">Ampersand<span> Manufacturing</span></a>
       <button class="nav__toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -38,15 +38,14 @@
     </div>
     <div class="container">
       <div class="section-header">
-        <p class="section-label">How It Works</p>
         <h1>From first conversation to delivery.</h1>
-        <p class="section-subtitle" style="margin-top: var(--space-lg); max-width: 700px;">We've designed our process around clarity and trust. No surprises, no runaround. Here's what to expect when you work with us.</p>
+        <p class="section-subtitle" style="margin-top: var(--space-lg); max-width: 700px; color: #3a3a3a; font-weight: 600; font-size: 1.5rem;">We've designed our process around clarity and trust. No surprises, no runaround. Here's what to expect when you work with us.</p>
       </div>
     </div>
   </section>
 
   <!-- Process Timeline -->
-  <section class="timeline-section">
+  <section class="timeline-section" style="padding-bottom: var(--space-2xl);">
     <div class="container container--narrow">
       <div class="timeline">
         <div class="timeline-item animate-on-scroll">
@@ -82,7 +81,7 @@
   </section>
 
   <!-- What We Need -->
-  <section style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+  <section style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); padding-top: var(--space-2xl); padding-bottom: var(--space-2xl);">
     <div class="container">
       <div class="problem__content">
         <div>
@@ -126,55 +125,78 @@
     </div>
   </section>
 
-  <!-- Capabilities (Placeholder) -->
-  <section>
-    <div class="container">
-      <div class="section-header section-header--center">
-        <p class="section-label">Capabilities</p>
-        <h2>What we can handle</h2>
-        <p class="section-subtitle"><!-- PLACEHOLDER: Add specific capabilities, materials, spec ranges here --></p>
+  <!-- Capabilities -->
+  <section style="padding: var(--space-2xl) 0 var(--space-3xl) 0; background: #0d0d0d; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 30% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 70%); pointer-events: none;"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <p style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.25em; color: #c9a227; margin-bottom: var(--space-sm);">Technical Capabilities</p>
+        <h2 style="color: #f0ece4; font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; letter-spacing: 0.02em;">What we can handle</h2>
       </div>
-      <div class="services__grid">
-        <div class="service-card animate-on-scroll">
-          <h3 class="service-card__title">Batch Sizes</h3>
-          <p>Optimized for 1,000 to 2,000 units per month. Smaller and larger runs considered on a case-by-case basis.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.04); max-width: 1000px; margin: 0 auto;">
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Core Materials</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">Ferrite (750–15,000μ)<br>Powdered Iron<br>MPP &middot; High Flux<br>Kool Mμ / Sendust<br>XFlux &middot; Nanocrystalline<br>Amorphous Alloys</p>
         </div>
-        <div class="service-card animate-on-scroll">
-          <h3 class="service-card__title">Specifications</h3>
-          <p>Custom dimensions, non-standard specs, mixed SKUs. We build to your requirements, not a catalog.</p>
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Wire</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">Enameled Copper (2–46 AWG)<br>Litz Wire (Types 1–3)<br>Rectangular &middot; Foil<br>Triple-Insulated Safety<br>Aluminum</p>
         </div>
-        <div class="service-card animate-on-scroll">
-          <h3 class="service-card__title">Materials</h3>
-          <p><!-- PLACEHOLDER: What materials do you work with? Cores, wire types, etc. --></p>
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Specifications</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">Sub-μH to 100+ mH<br>mA to hundreds of amps<br>50 Hz – hundreds of MHz<br>Custom dimensions<br>Mixed SKUs</p>
+        </div>
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Production</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">Prototypes &middot; First Articles<br>1,000–2,000+ units/month<br>Mixed batches<br>Variable schedules<br>Scalable</p>
+        </div>
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Finishing</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">Varnish &middot; Epoxy &middot; Cased<br>Through-hole &middot; SMT<br>Chassis &middot; Flying leads<br>RoHS compliant<br>UL / CSA available</p>
+        </div>
+        <div style="background: #0d0d0d; padding: var(--space-xl) var(--space-lg);">
+          <h3 style="color: #f0ece4; font-size: 0.95rem; margin-bottom: var(--space-md); font-weight: 500;">Quality</h3>
+          <p style="color: #888; font-size: 0.85rem; line-height: 1.8; margin: 0;">100% tested before ship<br>Verified to your specs<br>Full traceability<br>Proactive communication<br>–55°C to +155°C rated</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section style="background: var(--color-surface); border-top: 1px solid var(--color-border-subtle);">
+  <section style="padding: var(--space-3xl) 0;">
     <div class="container container--narrow">
-      <div class="section-header section-header--center">
-        <p class="section-label">FAQ</p>
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
         <h2>Common Questions</h2>
       </div>
-      <div class="about-content">
-        <div class="process-item animate-on-scroll" style="display: block;">
-          <h3 class="process-item__title">What's your minimum order quantity?</h3>
-          <p>We're optimized for 1,000 to 2,000 units per month, but we'll consider smaller runs if they make sense for both of us. Reach out and let's talk about your needs.</p>
-        </div>
-        <div class="process-item animate-on-scroll" style="display: block;">
-          <h3 class="process-item__title">How quickly can you turn around an order?</h3>
-          <p>Typical lead times depend on specs, materials, and current capacity. We'll give you a realistic timeline upfront and keep you updated throughout.</p>
-        </div>
-        <div class="process-item animate-on-scroll" style="display: block;">
-          <h3 class="process-item__title">Can you work with our existing drawings?</h3>
-          <p>Yes. CAD files, PDFs, spec sheets, even hand-drawn sketches. We'll review what you have and ask clarifying questions as needed.</p>
-        </div>
-        <div class="process-item animate-on-scroll" style="display: block;">
-          <h3 class="process-item__title">What if our requirements change mid-project?</h3>
-          <p>We adapt. Let us know what's changing and we'll adjust the timeline and approach accordingly. Clear communication goes both ways.</p>
-        </div>
+      <div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--color-border);">
+        <details style="border-bottom: 1px solid var(--color-border); padding: var(--space-lg) 0; cursor: pointer;">
+          <summary style="font-size: 1.05rem; font-weight: 500; color: var(--color-text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            What's your minimum order quantity?
+            <span style="color: var(--color-accent); font-size: 1.25rem; font-weight: 300; transition: transform 0.2s;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-md); color: var(--color-text-secondary); line-height: 1.7; padding-right: var(--space-xl);">We're optimized for 1,000 to 2,000 units per month, but we'll consider smaller runs if they make sense for both of us. Reach out and let's talk about your needs.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--color-border); padding: var(--space-lg) 0; cursor: pointer;">
+          <summary style="font-size: 1.05rem; font-weight: 500; color: var(--color-text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            How quickly can you turn around an order?
+            <span style="color: var(--color-accent); font-size: 1.25rem; font-weight: 300;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-md); color: var(--color-text-secondary); line-height: 1.7; padding-right: var(--space-xl);">Typical lead times depend on specs, materials, and current capacity. We'll give you a realistic timeline upfront and keep you updated throughout.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--color-border); padding: var(--space-lg) 0; cursor: pointer;">
+          <summary style="font-size: 1.05rem; font-weight: 500; color: var(--color-text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            Can you work with our existing drawings?
+            <span style="color: var(--color-accent); font-size: 1.25rem; font-weight: 300;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-md); color: var(--color-text-secondary); line-height: 1.7; padding-right: var(--space-xl);">Yes. CAD files, PDFs, spec sheets, even hand-drawn sketches. We'll review what you have and ask clarifying questions as needed.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--color-border); padding: var(--space-lg) 0; cursor: pointer;">
+          <summary style="font-size: 1.05rem; font-weight: 500; color: var(--color-text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            What if our requirements change mid-project?
+            <span style="color: var(--color-accent); font-size: 1.25rem; font-weight: 300;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-md); color: var(--color-text-secondary); line-height: 1.7; padding-right: var(--space-xl);">We adapt. Let us know what's changing and we'll adjust the timeline and approach accordingly. Clear communication goes both ways.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -193,7 +215,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="/" class="footer__logo">ANT<span>.</span></a>
+      <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
       <div class="footer__links">
         <a href="about.html" class="footer__link">About</a>
         <a href="how-it-works.html" class="footer__link">How It Works</a>

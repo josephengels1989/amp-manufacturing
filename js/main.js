@@ -1,99 +1,53 @@
-// Reframe Typer Animation
+// Typer Animation
 (function() {
-  const reframes = [
-    { negative: '"Too small for the big shops"', positive: 'The perfect size for us' },
-    { negative: '"Nobody takes our orders seriously"', positive: 'Every order gets our full attention' },
-    { negative: '"Mixed specs are a hassle"', positive: 'Mixed runs are our specialty' },
-    { negative: '"Overseas means quality uncertainty"', positive: 'U.S.-based production you can trust' },
-    { negative: '"We get lost in the queue"', positive: "You're a partner, not a number" }
+  var words = [
+    'partnership.',
+    'new ideas.',
+    'repeat orders.',
+    'a higher bar.'
   ];
 
-  let currentIndex = 0;
-  let completedReframes = [];
+  var el = document.getElementById('typer-text');
+  if (!el) return;
 
-  const negativeTextEl = document.querySelector('.reframe-typer__negative-text');
-  const positiveTextEl = document.querySelector('.reframe-typer__positive-text');
-  const listEl = document.getElementById('reframe-list');
+  var wordIndex = 0;
+  var charIndex = 0;
+  var deleting = false;
 
-  if (!negativeTextEl || !positiveTextEl || !listEl) return;
+  function tick() {
+    var current = words[wordIndex];
 
-  function typeText(element, text, callback) {
-    let i = 0;
-    element.textContent = '';
-
-    function type() {
-      if (i < text.length) {
-        element.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 40 + Math.random() * 30);
-      } else if (callback) {
-        callback();
+    if (!deleting) {
+      el.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        setTimeout(function() { deleting = true; tick(); }, 2000);
+        return;
       }
+      setTimeout(tick, 50 + Math.random() * 40);
+    } else {
+      el.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 30);
     }
-    type();
   }
 
-  function showNegative(text, callback) {
-    negativeTextEl.classList.remove('struck');
-    negativeTextEl.textContent = text;
-    setTimeout(callback, 1200);
-  }
-
-  function strikeNegative(callback) {
-    negativeTextEl.classList.add('struck');
-    setTimeout(callback, 600);
-  }
-
-  function clearActive(callback) {
-    positiveTextEl.textContent = '';
-    negativeTextEl.textContent = '';
-    negativeTextEl.classList.remove('struck');
-    setTimeout(callback, 300);
-  }
-
-  function addToList(negative, positive) {
-    completedReframes.push({ negative, positive });
-    renderList();
-  }
-
-  function renderList() {
-    // Show last 3 completed reframes
-    const toShow = completedReframes.slice(-3);
-    listEl.innerHTML = toShow.map(item => `
-      <div class="reframe-typer__list-item">
-        <span class="negative">${item.negative}</span>
-        <span class="positive">${item.positive}</span>
-      </div>
-    `).join('');
-  }
-
-  function runCycle() {
-    const current = reframes[currentIndex];
-
-    showNegative(current.negative, function() {
-      strikeNegative(function() {
-        typeText(positiveTextEl, current.positive, function() {
-          setTimeout(function() {
-            addToList(current.negative, current.positive);
-            currentIndex = (currentIndex + 1) % reframes.length;
-            clearActive(runCycle);
-          }, 2000);
-        });
-      });
-    });
-  }
-
-  // Start animation when element is in view
-  const observer = new IntersectionObserver(function(entries) {
+  var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         observer.disconnect();
-        setTimeout(runCycle, 500);
+        setTimeout(tick, 500);
       }
     });
   }, { threshold: 0.3 });
 
-  observer.observe(document.querySelector('.reframe-typer'));
+  observer.observe(el.parentElement);
 })();
 
 // Mobile Navigation Toggle
@@ -107,6 +61,23 @@
     links.classList.toggle('nav__links--open');
     toggle.classList.toggle('nav__toggle--active');
   });
+})();
+
+// Nav scroll state
+(function() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  function checkScroll() {
+    if (window.scrollY > 50) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
 })();
 
 // Scroll Animations

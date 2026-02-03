@@ -8,8 +8,8 @@
   <title>ANT Manufacturing | Custom Toroidal Inductors</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body>
   <!-- Navigation -->
@@ -33,22 +33,16 @@
   <section class="hero">
     <div class="video-bg">
       <video autoplay muted loop playsinline>
-        <source src="assets/videos/stock-bg-1.mp4" type="video/mp4">
+        <source src="assets/videos/stock-bg-1.mp4?v=2" type="video/mp4">
       </video>
     </div>
     <div class="container">
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="hero__tagline">Custom Toroidal Inductors</p>
-          <h1 class="hero__title">Too small for the big shops.<br>Too consistent for the small ones.</h1>
-          <p class="hero__subtitle">We specialize in the production runs everyone else ignores: small batches, mixed specs, non-standard dimensions. Your 1,500 inductors matter as much as someone else's 50,000.</p>
-          <div class="hero__cta">
-            <a href="contact.html" class="btn btn--primary">Start a Conversation</a>
-            <a href="how-it-works.html" class="btn btn--secondary">See How It Works</a>
-          </div>
-        </div>
-        <div class="hero__image">
-          <img src="assets/images/hero-copper-nobg.png" alt="Copper toroidal inductor winding detail" loading="eager">
+      <div class="hero__content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h1 class="hero__title">Custom Inductors & Transformers</h1>
+        <p class="hero__subtitle" style="margin-left: auto; margin-right: auto;">We begin with the part. Then we serve.</p>
+        <div class="hero__cta" style="justify-content: center;">
+          <a href="how-it-works.html" class="btn btn--primary">See How It Works</a>
+          <a href="contact.html" class="btn btn--secondary">Start a Conversation</a>
         </div>
       </div>
     </div>
@@ -59,143 +53,108 @@
     <div class="container">
       <div class="problem__content">
         <div class="problem__text">
-          <h2>The middle ground has been underserved. Until now.</h2>
-          <p>You need a few thousand inductors a month. Custom specs. Maybe mixed batches. The big winding shops aren't interested because your volume doesn't move the needle. The small shops can't deliver consistently.</p>
-          <p>You're stuck between prototype-scale and mass production, and nobody's built to serve you.</p>
-          <p><strong style="color: var(--color-text-primary);">We are.</strong></p>
+          <h2>It starts with the part.</h2>
+          <p>Custom specs. Multiple part numbers. Non-standard dimensions. Most shops walk away from complexity. We walk toward it. A hundred units or a hundred thousand.</p>
+          <p>Every inductor we wind carries someone's production schedule, someone's reputation, someone's promise to their own customer. The part is just copper and ferrite.</p>
         </div>
         <div class="problem__visual">
-          <div class="reframe-typer">
-            <div class="reframe-typer__active">
-              <p class="reframe-typer__negative"><span class="reframe-typer__negative-text"></span></p>
-              <p class="reframe-typer__positive"><span class="reframe-typer__positive-text"></span><span class="reframe-typer__cursor">|</span></p>
-            </div>
-            <div class="reframe-typer__list" id="reframe-list"></div>
-          </div>
+          <h2 class="problem__typer">It ends with <span id="typer-text"></span><span class="typer-cursor">|</span></h2>
+          <img src="assets/images/AdobeStock_501601066.jpeg" alt="Toroidal inductor on circuit board">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="services">
+  <section class="services services--dark">
     <div class="container">
       <div class="section-header section-header--center">
-        <p class="section-label">What We Do</p>
-        <h2 class="section-title">Toroidal inductors. Small to mid-size runs. Done right.</h2>
+        <p class="section-label animate-on-scroll">What We Do</p>
       </div>
       <div class="services__grid">
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Custom Specifications</h3>
-          <p>Non-standard dimensions, unique requirements, specs that don't fit the catalog. We build to your drawings, not ours.</p>
+        <div class="service-item animate-on-scroll">
+          <span class="service-item__number">01</span>
+          <h3 class="service-item__title">Custom Specifications</h3>
+          <p>Your drawings. Your dimensions. Your requirements. We build to spec, not to catalog.</p>
         </div>
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Small Batch Production</h3>
-          <p>1,000 to 2,000 units per month, taken seriously. Every order gets the same attention, and no project is an inconvenience.</p>
+        <div class="service-item animate-on-scroll">
+          <span class="service-item__number">02</span>
+          <h3 class="service-item__title">Flexible Production</h3>
+          <p>One hundred or one hundred thousand. The run size doesn't change how seriously we take it.</p>
         </div>
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 3h5v5"></path>
-              <path d="M8 3H3v5"></path>
-              <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path>
-              <path d="m15 9 6-6"></path>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Mixed Runs</h3>
-          <p>Multiple SKUs, variable specs, changing requirements. All handled without friction. We adapt when you need us to.</p>
+        <div class="service-item animate-on-scroll">
+          <span class="service-item__number">03</span>
+          <h3 class="service-item__title">Mixed Runs</h3>
+          <p>Multiple SKUs. Variable specs. Shifting requirements. We like it when you give us a challenge.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Product Showcase -->
-  <section class="showcase">
-    <div class="container">
-      <figure class="showcase__figure">
-        <img src="assets/images/mixed-batch.jpeg" alt="Variety of custom toroidal inductors and magnetic components" loading="lazy">
-        <figcaption>Custom specs. Mixed batches. Non-standard dimensions. We build what you need.</figcaption>
-      </figure>
-    </div>
-  </section>
 
   <!-- Process Section -->
-  <section class="process">
+  <section class="process process--refined">
     <div class="container">
       <div class="section-header section-header--center">
         <p class="section-label">How We Work</p>
         <h2 class="section-title">Partnership, not transactions.</h2>
-        <p class="section-subtitle">We review your drawings. Source materials on your behalf. Test products. Think alongside you. When something changes (and it will), we adapt.</p>
       </div>
       <div class="process__list">
         <div class="process-item animate-on-scroll">
-          <div class="process-item__number">1</div>
-          <div class="process-item__content">
-            <h3 class="process-item__title">Clear Communication</h3>
-            <p>Real-time responses. No timezone delays. No emails disappearing into the void. When you reach out, we answer.</p>
-          </div>
+          <span class="process-item__number">01</span>
+          <h3 class="process-item__title">Clear Communication</h3>
+          <p>When you reach out, we answer. No emails into the void. No waiting days for a response. Real conversations, real time.</p>
         </div>
         <div class="process-item animate-on-scroll">
-          <div class="process-item__number">2</div>
-          <div class="process-item__content">
-            <h3 class="process-item__title">U.S.-Based Production</h3>
-            <p>No language barriers. No tariff uncertainty. No quality questions. Domestic manufacturing with accountability.</p>
-          </div>
+          <span class="process-item__number">02</span>
+          <h3 class="process-item__title">Global Reach, Local Roots</h3>
+          <p>U.S.-owned, based in Berkeley, with partnerships that span the globe. You get accountability here and capability everywhere.</p>
         </div>
         <div class="process-item animate-on-scroll">
-          <div class="process-item__number">3</div>
-          <div class="process-item__content">
-            <h3 class="process-item__title">Predictable Quality</h3>
-            <p>Consistent specs, consistent delivery. You stop worrying about this part of your operation. It's handled.</p>
-          </div>
+          <span class="process-item__number">03</span>
+          <h3 class="process-item__title">Predictable Quality</h3>
+          <p>Consistent specs. Consistent delivery. You stop worrying about this part of your operation. It's handled.</p>
         </div>
         <div class="process-item animate-on-scroll">
-          <div class="process-item__number">4</div>
-          <div class="process-item__content">
-            <h3 class="process-item__title">Ownership Mentality</h3>
-            <p>Your order isn't a transaction. We take ownership of the work and stay in it with you until it's right.</p>
-          </div>
+          <span class="process-item__number">04</span>
+          <h3 class="process-item__title">Ownership Mentality</h3>
+          <p>Your order isn't a line item. We take ownership of the work and stay in it with you until it's right.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Audience Section -->
-  <section class="audience">
+  <!-- Industries Section -->
+  <section class="industries industries--dark">
     <div class="container">
-      <div class="audience__content">
-        <div class="audience__text">
-          <p class="section-label">Who We Serve</p>
-          <h2 class="section-title">Built for companies that got ignored.</h2>
-          <p style="margin-top: var(--space-lg);">Our customers are small to mid-size assembly and manufacturing companies, often U.S. based, that need toroidal inductors but don't want to maintain an in-house winding operation.</p>
+      <div class="section-header section-header--center">
+        <p class="section-label animate-on-scroll">Industries We Serve</p>
+        <h2 class="section-title" style="color: #fff;">Wherever the part matters, we belong.</h2>
+      </div>
+      <div class="industries__grid">
+        <div class="industries__item animate-on-scroll">
+          <h3>Power & Energy</h3>
+          <p>Power supplies, inverters, renewable energy systems. The backbone of the grid.</p>
         </div>
-        <div class="audience__list">
-          <div class="audience__item">
-            <p>You've been burned by overseas outsourcing: tariffs, quality uncertainty, emails that disappear into the void.</p>
-          </div>
-          <div class="audience__item">
-            <p>You've been dismissed by domestic shops chasing bigger fish.</p>
-          </div>
-          <div class="audience__item">
-            <p>You need reliable production without committing to massive quantities.</p>
-          </div>
-          <div class="audience__item">
-            <p>You come to us because we answer. We deliver. We care whether it works.</p>
-          </div>
+        <div class="industries__item animate-on-scroll">
+          <h3>Medical Devices</h3>
+          <p>Imaging equipment, patient monitors, surgical tools. Zero margin for error.</p>
+        </div>
+        <div class="industries__item animate-on-scroll">
+          <h3>Aerospace & Defense</h3>
+          <p>Avionics, guidance systems, satellite communications. Specs that don't bend.</p>
+        </div>
+        <div class="industries__item animate-on-scroll">
+          <h3>Telecommunications</h3>
+          <p>Signal filtering, base stations, networking hardware. Always on, always clean.</p>
+        </div>
+        <div class="industries__item animate-on-scroll">
+          <h3>EV & Automotive</h3>
+          <p>Charging infrastructure, onboard power, motor drives. The future runs on copper.</p>
+        </div>
+        <div class="industries__item animate-on-scroll">
+          <h3>Industrial Automation</h3>
+          <p>Robotics, PLCs, motion control. Machines that can't afford downtime.</p>
         </div>
       </div>
     </div>
