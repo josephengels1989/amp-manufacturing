@@ -313,18 +313,20 @@ section {
 .hero__image {
   position: absolute;
   right: -5%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 80px;
+  bottom: 0;
   width: 50%;
-  height: 90vh;
   z-index: 1;
   pointer-events: none;
+  display: flex;
+  align-items: flex-start;
 }
 
 .hero__image img {
-  object-fit: contain;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: right top;
 }
 
 .hero__title {
@@ -390,11 +392,11 @@ section {
   .hero__image {
     position: absolute;
     right: -15%;
-    top: auto;
-    bottom: 0;
+    top: 80px;
+    bottom: auto;
     transform: none;
-    width: 70%;
-    height: 55vh;
+    width: 55%;
+    height: auto;
     opacity: 1;
   }
 
@@ -724,55 +726,29 @@ a.service-item:hover .service-item__number {
 }
 
 .process__headline {
-  display: flex;
-  align-items: baseline;
-  gap: 0;
-  max-width: calc(100% - 4rem);
-}
-
-.process__headline .process__arrow {
-  flex: 1;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.15);
-  position: relative;
-  top: -2px;
-  margin: 0 var(--space-lg);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
-}
-
-.process__headline .process__arrow::after {
-  content: '';
-  position: absolute;
-  right: -4px;
-  top: -3px;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
-  transform: rotate(45deg);
-}
-
-.process__headline.visible .process__arrow {
-  transform: scaleX(1);
+  max-width: 680px;
 }
 
 .process--refined .btn--learn-more {
-  color: rgba(255, 255, 255, 0.3);
-  margin-top: 0;
-  white-space: nowrap;
-  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: var(--space-xl);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
   opacity: 0;
-  transition: opacity 0.6s ease 2.6s, color 0.25s ease;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, color 0.3s ease;
 }
 
-.process__headline.visible .btn--learn-more {
+.process--refined .btn--learn-more.visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .process--refined .btn--learn-more:hover {
-  color: #fff;
+  color: #a07850;
 }
 
 .process__list {
