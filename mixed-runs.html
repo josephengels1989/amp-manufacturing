@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Mixed production runs with multiple SKUs, variable specs, and shifting requirements. Ampersand Manufacturing handles the complexity so you don't have to.">
+  <title>Mixed Runs | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <style>
+    .pg-hero {
+      background: #050505;
+      padding: 160px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pg-hero__content {
+      max-width: 700px;
+    }
+    .pg-hero__label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #a07850;
+      margin-bottom: var(--space-xl);
+    }
+    .pg-hero__title {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      color: #f0ece4;
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: var(--space-xl);
+    }
+    .pg-hero__subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 550px;
+    }
+
+    .pg-section {
+      padding: var(--space-4xl) 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .pg-section--dark { background: #111; }
+    .pg-section--darker { background: #050505; }
+
+    .pg-section__header {
+      max-width: 650px;
+      margin-bottom: var(--space-3xl);
+    }
+    .pg-section__number {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.1em;
+      font-family: var(--font-mono);
+      margin-bottom: var(--space-sm);
+    }
+    .pg-section__title {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: rgba(240, 236, 228, 0.85);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: var(--font-display);
+    }
+    .pg-section__text {
+      color: rgba(255,255,255,0.5);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+    .pg-section__text p {
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-lg);
+    }
+    .pg-section__text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Scenario Cards */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+    }
+    @media (min-width: 768px) {
+      .scenario-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1024px) {
+      .scenario-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .scenario-card {
+      padding: var(--space-xl);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 2px;
+      position: relative;
+    }
+    .scenario-card__label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #a07850;
+      margin-bottom: var(--space-md);
+    }
+    .scenario-card__title {
+      font-size: 1.1rem;
+      color: rgba(240, 236, 228, 0.9);
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+      line-height: 1.3;
+    }
+    .scenario-card__desc {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Process Steps */
+    .process-flow {
+      margin-top: var(--space-3xl);
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: var(--space-xl);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      align-items: start;
+    }
+    .process-step:last-child {
+      border-bottom: none;
+    }
+    @media (min-width: 768px) {
+      .process-step {
+        grid-template-columns: 120px 1fr;
+      }
+    }
+    .process-step__num {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: rgba(160, 120, 80, 0.3);
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .process-step__title {
+      font-size: 1.05rem;
+      color: rgba(240, 236, 228, 0.9);
+      font-weight: 500;
+      margin-bottom: var(--space-xs);
+    }
+    .process-step__desc {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+      max-width: 600px;
+    }
+    @media (min-width: 768px) {
+      .stats-row {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .stat-item {
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+    .stat-item__number {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      color: #a07850;
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+    }
+    .stat-item__label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* Quote Block */
+    .quote-block {
+      border-left: 2px solid rgba(160, 120, 80, 0.3);
+      padding-left: var(--space-xl);
+      margin-top: var(--space-3xl);
+      max-width: 600px;
+    }
+    .quote-block__text {
+      font-size: 1.15rem;
+      color: rgba(240, 236, 228, 0.7);
+      font-style: italic;
+      line-height: 1.7;
+      font-family: var(--font-display);
+      margin-bottom: var(--space-md);
+    }
+    .quote-block__attr {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.05em;
+    }
+
+    .pg-cta {
+      background: #050505;
+      padding: var(--space-4xl) 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .pg-cta__inner {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .pg-cta__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      color: rgba(240, 236, 228, 0.85);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-xl);
+      font-family: var(--font-display);
+    }
+    .pg-cta__text {
+      color: rgba(255,255,255,0.45);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-3xl);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Ampersand<span> Manufacturing</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="how-it-works.html" class="nav__link">How It Works</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Start a Conversation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pg-hero">
+    <div class="container">
+      <div class="pg-hero__content">
+        <p class="pg-hero__label">03 &mdash; Mixed Runs</p>
+        <h1 class="pg-hero__title">We like it when you give us a challenge.</h1>
+        <p class="pg-hero__subtitle">Multiple SKUs. Variable specs. Shifting requirements. Other manufacturers call this a headache. We call it Tuesday.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Reality -->
+  <section class="pg-section pg-section--dark">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">The reality</p>
+        <h2 class="pg-section__title">Your BOM isn't one line item. Why should your inductor order be?</h2>
+      </div>
+      <div class="pg-section__text">
+        <p>Real production is messy. A single product might need three different inductors across two board revisions. A product family might share a form factor but require different inductance values, current ratings, or winding configurations.</p>
+        <p>Most manufacturers want clean, simple, single-SKU orders. We built our operation for the opposite — because that's what our customers actually need.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scenarios -->
+  <section class="pg-section pg-section--darker">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">Real-world scenarios</p>
+        <h2 class="pg-section__title">The kinds of orders we handle every week</h2>
+      </div>
+
+      <div class="scenario-grid">
+        <div class="scenario-card">
+          <p class="scenario-card__label">Multi-SKU</p>
+          <h3 class="scenario-card__title">8 part numbers, one purchase order</h3>
+          <p class="scenario-card__desc">Different inductance values, different current ratings, same core family. One shipment, one point of contact, zero confusion.</p>
+        </div>
+        <div class="scenario-card">
+          <p class="scenario-card__label">Split quantities</p>
+          <h3 class="scenario-card__title">500 of this, 50 of that, 2,000 of the other</h3>
+          <p class="scenario-card__desc">Variable quantities across the order. We don't force you into uniform batch sizes. You order what you need.</p>
+        </div>
+        <div class="scenario-card">
+          <p class="scenario-card__label">Rev changes</p>
+          <h3 class="scenario-card__title">Updated specs on parts 3 and 7, mid-order</h3>
+          <p class="scenario-card__desc">Engineering changes happen. We adapt without starting over, without drama, without punitive change fees.</p>
+        </div>
+        <div class="scenario-card">
+          <p class="scenario-card__label">Product families</p>
+          <h3 class="scenario-card__title">Same platform, six power variants</h3>
+          <p class="scenario-card__desc">A family of products sharing mechanical specs but requiring different electrical characteristics. We manage the matrix.</p>
+        </div>
+        <div class="scenario-card">
+          <p class="scenario-card__label">Prototypes + production</p>
+          <h3 class="scenario-card__title">25 samples of the new design, 1,000 of the current one</h3>
+          <p class="scenario-card__desc">Development and production running in parallel. Different specs, different quantities, same order, same timeline.</p>
+        </div>
+        <div class="scenario-card">
+          <p class="scenario-card__label">Custom packaging</p>
+          <h3 class="scenario-card__title">Each SKU labeled, separated, and documented</h3>
+          <p class="scenario-card__desc">Mixed doesn't mean mixed up. Every part number arrives clearly identified with its own test data and traceability records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Manage It -->
+  <section class="pg-section pg-section--dark">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">Our process</p>
+        <h2 class="pg-section__title">How we keep complexity from becoming your problem</h2>
+      </div>
+
+      <div class="process-flow">
+        <div class="process-step">
+          <span class="process-step__num">01</span>
+          <div>
+            <h3 class="process-step__title">Single intake, complete picture</h3>
+            <p class="process-step__desc">Send us everything — all SKUs, all specs, all quantities. We build a master production plan that accounts for dependencies, shared materials, and optimal sequencing.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">02</span>
+          <div>
+            <h3 class="process-step__title">Intelligent scheduling</h3>
+            <p class="process-step__desc">We sequence production to minimize changeover time and maximize material efficiency. Parts that share cores or wire gauges run together. Your order moves faster because we plan smarter.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">03</span>
+          <div>
+            <h3 class="process-step__title">Per-SKU quality verification</h3>
+            <p class="process-step__desc">Each part number is tested independently against its own specification. No batch assumptions. No shortcuts because "it's basically the same part." It's not — and we know that.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">04</span>
+          <div>
+            <h3 class="process-step__title">Organized delivery</h3>
+            <p class="process-step__desc">Every SKU arrives labeled, separated, and accompanied by its own documentation. Your receiving team knows exactly what's in every box without opening it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Mindset -->
+  <section class="pg-section pg-section--darker">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">The mindset</p>
+        <h2 class="pg-section__title">Complexity is a service, not a surcharge.</h2>
+      </div>
+      <div class="pg-section__text">
+        <p>Some manufacturers charge a premium for mixed orders because they see them as a nuisance — extra setup, extra paperwork, extra risk. We see them differently. Mixed runs are where we prove our value. They're the orders that separate a real manufacturing partner from a vendor who just fills purchase orders.</p>
+        <p>The harder your order is to get right, the more you need someone who takes it personally.</p>
+      </div>
+
+      <div class="quote-block">
+        <p class="quote-block__text">"The way you treat any order tells people everything about who you are."</p>
+        <p class="quote-block__attr">&mdash; Ampersand Manufacturing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pg-cta">
+    <div class="container">
+      <div class="pg-cta__inner">
+        <h2 class="pg-cta__title">Send us the complicated order. We'll make it simple.</h2>
+        <p class="pg-cta__text">Multiple part numbers, variable quantities, tight timelines. Tell us what you need — we'll show you how we'd handle it.</p>
+        <a href="contact.html" class="btn btn--gold">Start a Conversation &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
+      <div class="footer__links">
+        <a href="about.html" class="footer__link">About</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2025 ANT Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Custom toroidal inductors and transformers built to your exact specifications. Your drawings, your dimensions, your requirements — we build to spec, not to catalog.">
+  <title>Custom Specifications | Ampersand Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <style>
+    .pg-hero {
+      background: #050505;
+      padding: 160px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pg-hero__content {
+      max-width: 700px;
+    }
+    .pg-hero__label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #a07850;
+      margin-bottom: var(--space-xl);
+    }
+    .pg-hero__title {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      color: #f0ece4;
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: var(--space-xl);
+    }
+    .pg-hero__subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 550px;
+    }
+
+    /* Content Sections */
+    .pg-section {
+      padding: var(--space-4xl) 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .pg-section--dark { background: #111; }
+    .pg-section--darker { background: #050505; }
+
+    .pg-section__header {
+      max-width: 650px;
+      margin-bottom: var(--space-3xl);
+    }
+    .pg-section__number {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.1em;
+      font-family: var(--font-mono);
+      margin-bottom: var(--space-sm);
+    }
+    .pg-section__title {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: rgba(240, 236, 228, 0.85);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: var(--font-display);
+    }
+    .pg-section__text {
+      color: rgba(255,255,255,0.5);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+    .pg-section__text p {
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-lg);
+    }
+    .pg-section__text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: grid;
+      gap: 0;
+      margin-top: var(--space-3xl);
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: rgba(160, 120, 80, 0.25);
+    }
+    @media (min-width: 768px) {
+      .timeline::before {
+        left: 24px;
+      }
+    }
+    .timeline__step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      align-items: start;
+    }
+    .timeline__marker {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #a07850;
+      margin-top: 6px;
+      margin-left: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 768px) {
+      .timeline__marker {
+        margin-left: 20px;
+      }
+    }
+    .timeline__label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #a07850;
+      margin-bottom: var(--space-xs);
+      font-weight: 500;
+    }
+    .timeline__title {
+      font-size: 1.1rem;
+      color: rgba(240, 236, 228, 0.9);
+      font-weight: 500;
+      margin-bottom: var(--space-xs);
+    }
+    .timeline__desc {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Spec Grid */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+    }
+    @media (min-width: 768px) {
+      .spec-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .spec-card {
+      padding: var(--space-xl);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 2px;
+    }
+    .spec-card__title {
+      font-size: 1rem;
+      color: rgba(240, 236, 228, 0.9);
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+    }
+    .spec-card__text {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Promise / CTA */
+    .pg-cta {
+      background: #050505;
+      padding: var(--space-4xl) 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .pg-cta__inner {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .pg-cta__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      color: rgba(240, 236, 228, 0.85);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-xl);
+      font-family: var(--font-display);
+    }
+    .pg-cta__text {
+      color: rgba(255,255,255,0.45);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-3xl);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Ampersand<span> Manufacturing</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="how-it-works.html" class="nav__link">How It Works</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Start a Conversation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pg-hero">
+    <div class="container">
+      <div class="pg-hero__content">
+        <p class="pg-hero__label">01 &mdash; Custom Specifications</p>
+        <h1 class="pg-hero__title">Your drawings. Your dimensions. Your part.</h1>
+        <p class="pg-hero__subtitle">We don't sell from a catalog. Every inductor and transformer we build starts with your specifications — and stays faithful to them through delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="pg-section pg-section--dark">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">The reality</p>
+        <h2 class="pg-section__title">Most manufacturers want you to fit their process. We fit ours to you.</h2>
+      </div>
+      <div class="pg-section__text">
+        <p>Standard catalogs work when your application is standard. But the engineers we work with aren't building standard things. They're building power systems, medical equipment, defense hardware — products where the inductor isn't interchangeable, it's integral.</p>
+        <p>When your specs call for a non-standard core size, a specific winding pattern, or tolerances tighter than what's on the shelf — that's not a problem for us. That's the work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Handle -->
+  <section class="pg-section pg-section--darker">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">Capabilities</p>
+        <h2 class="pg-section__title">What we build to</h2>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3 class="spec-card__title">Non-Standard Dimensions</h3>
+          <p class="spec-card__text">OD, ID, height — if it's on your drawing, we match it. No rounding to the nearest catalog size. No compromises on form factor.</p>
+        </div>
+        <div class="spec-card">
+          <h3 class="spec-card__title">Winding Configurations</h3>
+          <p class="spec-card__text">Single-layer, multi-layer, sectored, bifilar, progressive. We wind to your schematic, not to our convenience.</p>
+        </div>
+        <div class="spec-card">
+          <h3 class="spec-card__title">Core Materials</h3>
+          <p class="spec-card__text">Ferrite, iron powder, amorphous, nanocrystalline, MPP, sendust. We source what your application demands.</p>
+        </div>
+        <div class="spec-card">
+          <h3 class="spec-card__title">Tight Tolerances</h3>
+          <p class="spec-card__text">Inductance, DCR, leakage, saturation current — we test and verify every parameter you specify. Not spot checks. Every unit.</p>
+        </div>
+        <div class="spec-card">
+          <h3 class="spec-card__title">Insulation & Compliance</h3>
+          <p class="spec-card__text">UL, CE, RoHS, hi-pot requirements. We build to your regulatory environment, not just your electrical requirements.</p>
+        </div>
+        <div class="spec-card">
+          <h3 class="spec-card__title">Termination & Mounting</h3>
+          <p class="spec-card__text">Through-hole leads, flying leads, header pins, surface mount bases. Whatever your PCB layout or assembly process requires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="pg-section pg-section--dark">
+    <div class="container">
+      <div class="pg-section__header">
+        <p class="pg-section__number">From drawing to doorstep</p>
+        <h2 class="pg-section__title">How a custom order moves</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__step">
+          <div class="timeline__marker"></div>
+          <div>
+            <p class="timeline__label">Day 1</p>
+            <h3 class="timeline__title">You send us your drawings</h3>
+            <p class="timeline__desc">Specifications, schematics, target parameters — whatever you have. We review the same day.</p>
+          </div>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__marker"></div>
+          <div>
+            <p class="timeline__label">Days 1–2</p>
+            <h3 class="timeline__title">Engineering review & quote</h3>
+            <p class="timeline__desc">We assess manufacturability, flag any questions, and return a detailed quote. No weeks of silence. No generic pricing.</p>
+          </div>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__marker"></div>
+          <div>
+            <p class="timeline__label">Days 3–7</p>
+            <h3 class="timeline__title">Prototype production</h3>
+            <p class="timeline__desc">First articles built to your exact spec. Tested, measured, documented. You approve before we scale.</p>
+          </div>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__marker"></div>
+          <div>
+            <p class="timeline__label">Week 2–4</p>
+            <h3 class="timeline__title">Full production run</h3>
+            <p class="timeline__desc">Every unit wound, tested, and inspected against your requirements. Regular updates throughout — you'll never have to ask where things stand.</p>
+          </div>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__marker"></div>
+          <div>
+            <p class="timeline__label">Delivery</p>
+            <h3 class="timeline__title">Shipped with full documentation</h3>
+            <p class="timeline__desc">Test reports, certificates of conformance, traceability records. The parts arrive ready for your production floor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promise -->
+  <section class="pg-cta">
+    <div class="container">
+      <div class="pg-cta__inner">
+        <h2 class="pg-cta__title">If it's on your drawing, we'll build it. If it's not possible, we'll tell you why — and what we'd do instead.</h2>
+        <p class="pg-cta__text">Send us your specs. We'll respond personally with a real assessment, not a form letter.</p>
+        <a href="contact.html" class="btn btn--gold">Send Us Your Drawings &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
+      <div class="footer__links">
+        <a href="about.html" class="footer__link">About</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; 2025 ANT Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>

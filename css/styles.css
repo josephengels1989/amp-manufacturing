@@ -671,6 +671,27 @@ section {
   line-height: 1.7;
 }
 
+a.service-item {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+a.service-item:hover {
+  border-color: #a07850;
+}
+
+a.service-item:hover .service-item__title {
+  color: #a07850;
+  transition: color 0.3s ease;
+}
+
+a.service-item:hover .service-item__number {
+  color: #a07850;
+  transition: color 0.3s ease;
+}
+
 /* ========================================
    How We Work / Process
    ======================================== */
