@@ -391,11 +391,11 @@ section {
 @media (max-width: 1023px) {
   .hero__image {
     position: absolute;
-    right: -15%;
+    right: 0;
     top: 80px;
     bottom: auto;
     transform: none;
-    width: 55%;
+    width: 36%;
     height: auto;
     opacity: 1;
   }
