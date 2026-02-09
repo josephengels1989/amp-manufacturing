@@ -349,6 +349,10 @@ section {
   text-transform: lowercase;
 }
 
+.hero__accent {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .hero__cta {
   display: flex;
   gap: var(--space-lg);
