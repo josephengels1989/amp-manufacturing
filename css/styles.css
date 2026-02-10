@@ -711,12 +711,19 @@ a.service-item:hover .service-item__number {
    ======================================== */
 .process--refined {
   background: #111;
-  padding: var(--space-xl) 0 var(--space-2xl) 0;
+  padding: var(--space-xl) 0 var(--space-xl) 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .process--refined .section-header {
   text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.process--refined .section-header .btn--learn-more {
+  align-self: flex-end;
 }
 
 .process--refined .section-label {
@@ -743,18 +750,19 @@ a.service-item:hover .service-item__number {
 
 .process--refined .btn--learn-more {
   display: inline-block;
-  margin-top: var(--space-xl);
-  background: #b8975a;
-  color: #0a0a0a;
-  padding: 0.85rem 2.2rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  margin-top: var(--space-3xl);
+  background: transparent;
+  color: #b8975a;
+  border: 1px solid #b8975a;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: 2px;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, background 0.3s ease;
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, background 0.3s ease, color 0.3s ease;
 }
 
 .process--refined .btn--learn-more.visible {
@@ -763,7 +771,7 @@ a.service-item:hover .service-item__number {
 }
 
 .process--refined .btn--learn-more:hover {
-  background: #c9a76a;
+  background: #b8975a;
   color: #0a0a0a;
 }
 
@@ -959,9 +967,9 @@ a.service-item:hover .service-item__number {
 }
 
 .cta-section--dark {
-  background: #050505;
+  background: #0a0a0a;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: var(--space-4xl) 0;
+  padding: var(--space-2xl) 0 var(--space-3xl) 0;
 }
 
 .cta-section--dark h2 {
