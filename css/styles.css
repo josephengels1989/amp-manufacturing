@@ -294,13 +294,14 @@ section {
    Hero Section
    ======================================== */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 40px;
   position: relative;
   overflow: hidden;
-  background: #050505;
+  background: #0a0a0a;
 }
 
 .hero__content {
@@ -326,7 +327,7 @@ section {
   width: 100%;
   max-height: 100%;
   object-fit: contain;
-  object-position: right top;
+  object-position: right center;
 }
 
 .hero__title {
@@ -586,18 +587,19 @@ section {
    Services / What We Do
    ======================================== */
 .services--dark {
-  background: #111;
-  padding: 0 0 var(--space-3xl) 0;
+  background: #0a0a0a;
+  padding: 0 0 var(--space-2xl) 0;
   position: relative;
+  overflow: hidden;
 }
 
 .services__intro {
-  background: url('../assets/images/grid-texture.png') repeat;
+  background: none;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding: var(--space-3xl) calc(50vw - 50%);
-  padding-bottom: var(--space-xl);
-  margin-bottom: var(--space-lg);
+  padding: var(--space-2xl) calc(50vw - 50%);
+  padding-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 .services--dark .section-label {
@@ -642,14 +644,13 @@ section {
   font-size: 0.85rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: var(--space-3xl);
-  padding-top: var(--space-3xl);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: left;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-weight: 500;
   font-family: var(--font-sans);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .service-item {
@@ -710,7 +711,7 @@ a.service-item:hover .service-item__number {
    ======================================== */
 .process--refined {
   background: #111;
-  padding: var(--space-3xl) 0;
+  padding: var(--space-xl) 0 var(--space-2xl) 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -743,14 +744,17 @@ a.service-item:hover .service-item__number {
 .process--refined .btn--learn-more {
   display: inline-block;
   margin-top: var(--space-xl);
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  background: #b8975a;
+  color: #0a0a0a;
+  padding: 0.85rem 2.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 500;
+  border-radius: 3px;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, color 0.3s ease;
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, background 0.3s ease;
 }
 
 .process--refined .btn--learn-more.visible {
@@ -759,7 +763,8 @@ a.service-item:hover .service-item__number {
 }
 
 .process--refined .btn--learn-more:hover {
-  color: #a07850;
+  background: #c9a76a;
+  color: #0a0a0a;
 }
 
 .process__list {
