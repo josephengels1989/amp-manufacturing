@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Decisions: Typography</title>
+  <style>
+    body { font-family: 'Georgia', serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #2a2a2a; line-height: 1.7; }
+    h1 { font-size: 1.8rem; border-bottom: 2px solid #b8975a; padding-bottom: 12px; }
+    h2 { font-size: 1.3rem; margin-top: 2rem; color: #444; }
+    .study { background: #f9f7f4; border-left: 3px solid #b8975a; padding: 16px 20px; margin: 20px 0; }
+    .study strong { display: block; margin-bottom: 4px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #ddd; }
+    th { background: #f2f0ed; font-weight: 600; }
+    .decision { background: #0a0a0a; color: #f0ece4; padding: 20px; border-radius: 4px; margin: 20px 0; }
+    .decision strong { color: #b8975a; }
+  </style>
+</head>
+<body>
+
+<h1>Design Decisions: Typography</h1>
+<p>This document records the research-backed reasoning behind the font and typographic choices on ampmanufacturing.com.</p>
+
+<h2>1. Body &amp; Display Font: Baskerville</h2>
+
+<div class="study">
+  <strong>The Errol Morris / New York Times Experiment (2012)</strong>
+  <p>The single largest study on font and believability ever conducted.</p>
+  <ul>
+    <li><strong>Sample size:</strong> 45,000+ respondents</li>
+    <li><strong>Researchers:</strong> Errol Morris (filmmaker/NYT contributor), David Dunning (Cornell psychology professor)</li>
+    <li><strong>Method:</strong> Readers took what appeared to be a quiz on the NYT website. They read a passage and indicated whether they agreed. The passage was randomly displayed in one of six typefaces. Readers had no idea the font was the variable being tested.</li>
+  </ul>
+
+  <p><strong>Fonts tested:</strong> Baskerville, Computer Modern, Georgia, Helvetica, Comic Sans, Trebuchet</p>
+
+  <table>
+    <tr><th>Font</th><th>Weighted Agreement Score</th></tr>
+    <tr><td><strong>Baskerville</strong></td><td><strong>0.885</strong></td></tr>
+    <tr><td>Computer Modern</td><td>0.853</td></tr>
+    <tr><td>Helvetica</td><td>0.767</td></tr>
+    <tr><td>Trebuchet</td><td>0.753</td></tr>
+    <tr><td>Georgia</td><td>0.724</td></tr>
+    <tr><td>Comic Sans</td><td>0.715</td></tr>
+  </table>
+
+  <p><strong>Result:</strong> Baskerville had the highest rate of agreement AND the lowest rate of disagreement. The p-value was 0.0068, confirming statistical significance. Dunning called the effect "rather large" given the uncontrolled online environment: "It is clear in the data that Baskerville is different from the other fonts."</p>
+
+  <p><strong>Why it works:</strong> Baskerville is a 250-year-old transitional serif designed by John Baskerville in 1757. Its sharp, high-contrast letterforms carry associations with established printing, academia, and historical gravitas without feeling decorative or attention-seeking.</p>
+</div>
+
+<div class="study">
+  <strong>Supporting research:</strong>
+  <ul>
+    <li><strong>Monotype/Neurons neuroscience study (2022-2023):</strong> 400+ participants across 8 countries. Serif typefaces scored +9% on trustworthiness.</li>
+    <li><strong>Piovesan et al. meta-analysis (2023):</strong> Reviewed 34 studies covering 635 typefaces. Serif typefaces were consistently associated with formality, tradition, stability, and authority.</li>
+    <li><strong>Song &amp; Schwarz (Yale/Michigan, 2008-2010):</strong> Processing fluency research. Statements in clear, high-contrast fonts are judged as more true. "If it's easy to read, it's easy to do, pretty, good, and true."</li>
+  </ul>
+</div>
+
+<div class="decision">
+  <strong>Our decision:</strong> Both body and display fonts are set to Libre Baskerville (Google Fonts web version of Baskerville). This is the single most empirically validated choice for maximizing reader belief and trust.
+</div>
+
+<h2>2. Lowercase Tagline: "the core of what we build is trust"</h2>
+
+<div class="study">
+  <strong>The premium brand pattern</strong>
+  <p>All-lowercase typography is a deliberate design choice used by premium and luxury brands to signal confidence, sophistication, and understatement. The logic: when you're confident in what you are, you don't need to shout.</p>
+  <ul>
+    <li><strong>Apple</strong> uses lowercase across product pages, taglines, and marketing copy.</li>
+    <li><strong>Aesop</strong> (luxury skincare) uses all-lowercase for product names and descriptions.</li>
+    <li><strong>Glossier, Mejuri, Everlane</strong> and other premium DTC brands follow the same pattern.</li>
+  </ul>
+  <p>Uppercase signals authority through volume. Lowercase signals authority through restraint. For a manufacturing company that wants to project quiet confidence and craftsmanship rather than aggressive salesmanship, lowercase is the more credible register.</p>
+</div>
+
+<div class="decision">
+  <strong>Our decision:</strong> The hero tagline uses CSS <code>text-transform: lowercase</code> to render "the core of what we build is trust" in all lowercase. This aligns with the understated, premium positioning of the brand.
+</div>
+
+<hr style="margin-top: 3rem;">
+<p><em>This document will be updated as new research-backed design decisions are made.</em></p>
+
+</body>
+</html>
