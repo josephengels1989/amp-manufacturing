@@ -330,25 +330,22 @@ section {
   object-position: right bottom;
 }
 
-.hero__title {
+.hero__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.35);
   margin-bottom: var(--space-xl);
-  color: #f0ece4;
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
-  line-height: 1.08;
 }
 
-.hero__subtitle {
-  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
-  max-width: 600px;
+.hero__title {
   margin-bottom: var(--space-xl);
-  color: rgba(240, 236, 228, 0.7);
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: lowercase;
+  color: rgba(240, 236, 228, 0.55);
   font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  line-height: 1.08;
 }
 
 .hero__accent {
@@ -1405,9 +1402,9 @@ a.service-item:hover .service-item__number {
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.hero__title { animation-delay: 0.15s; }
-.hero__subtitle { animation-delay: 0.35s; }
-.hero__cta { animation-delay: 0.55s; }
+.hero__label { animation-delay: 0.1s; }
+.hero__title { animation-delay: 0.25s; }
+.hero__cta { animation-delay: 0.45s; }
 
 /* Section label shimmer animation */
 @keyframes shimmerFocus {
