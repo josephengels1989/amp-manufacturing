@@ -341,17 +341,19 @@ section {
 }
 
 .hero__subtitle {
-  font-size: 1rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
   max-width: 600px;
   margin-bottom: var(--space-xl);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(240, 236, 228, 0.7);
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: lowercase;
+  font-family: var(--font-display);
 }
 
 .hero__accent {
-  color: rgba(255, 255, 255, 0.75);
+  color: #c9a227;
+  font-weight: 500;
 }
 
 .hero__cta {
