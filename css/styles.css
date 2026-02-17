@@ -715,14 +715,18 @@ a.service-item:hover .service-item__number {
 }
 
 .process--refined .section-header {
-  text-align: left !important;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .process--refined .section-header .btn--learn-more {
-  align-self: flex-end;
+  align-self: center;
+}
+
+.process--refined .section-subtitle {
+  color: rgba(240, 236, 228, 0.95);
 }
 
 .process--refined .section-label {
