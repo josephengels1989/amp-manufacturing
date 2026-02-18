@@ -360,12 +360,13 @@ section {
 }
 
 .hero__subtitle {
-  color: rgba(240, 236, 228, 0.7);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  color: rgba(240, 236, 228, 0.85);
+  font-size: 1.35rem;
+  line-height: 1.5;
   margin-bottom: var(--space-2xl);
-  max-width: 500px;
+  max-width: 550px;
   font-family: var(--font-display);
+  font-weight: 300;
 }
 
 .hero__cta {
