@@ -349,8 +349,18 @@ section {
 }
 
 .hero__accent {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0px,
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  background-size: 100% 3px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: #B85C33;
-  font-weight: 500;
 }
 
 .hero__cta {
@@ -362,7 +372,8 @@ section {
 
 /* Gold CTA button */
 .btn--gold {
-  background: #B85C33;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 3px), #B85C33;
+  background-size: 100% 3px, 100% 100%;
   color: #0a0a0a;
   padding: 0.85rem 2.2rem;
   font-size: 0.82rem;
