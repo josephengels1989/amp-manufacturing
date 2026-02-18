@@ -359,6 +359,15 @@ section {
     0 4px 0 rgba(0,0,0,0.25);
 }
 
+.hero__subtitle {
+  color: rgba(240, 236, 228, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-2xl);
+  max-width: 500px;
+  font-family: var(--font-display);
+}
+
 .hero__cta {
   display: flex;
   gap: var(--space-lg);
