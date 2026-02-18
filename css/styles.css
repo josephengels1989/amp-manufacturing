@@ -349,18 +349,14 @@ section {
 }
 
 .hero__accent {
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.3) 0px,
-    rgba(0, 0, 0, 0.3) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  background-size: 100% 3px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   color: #B85C33;
+  font-weight: 500;
+  text-shadow:
+    2px 0 0 rgba(0,0,0,0.4),
+    4px 0 0 rgba(0,0,0,0.2),
+    1px 2px 0 rgba(0,0,0,0.3),
+    3px 2px 0 rgba(0,0,0,0.2),
+    0 4px 0 rgba(0,0,0,0.25);
 }
 
 .hero__cta {
