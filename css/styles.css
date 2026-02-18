@@ -145,7 +145,7 @@ p {
 }
 
 section {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 /* ========================================
@@ -157,7 +157,7 @@ section {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: var(--space-3xl) 0;
+  padding: var(--space-lg) 0;
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: background 0.4s ease, border-color 0.4s ease;
@@ -568,7 +568,7 @@ section {
    Showcase Section
    ======================================== */
 .showcase {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 .showcase__figure {
@@ -821,7 +821,7 @@ a.service-item:hover .service-item__number {
    ======================================== */
 .industries--dark {
   background: #111;
-  padding: var(--space-4xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 .industries--dark .section-label {
