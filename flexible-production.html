@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260215">
+  <link rel="stylesheet" href="css/styles.css?v=20260220">
   <style>
     .pg-hero {
       background: #050505;
@@ -27,7 +27,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.3em;
-      color: #a07850;
+      color: #B87333;
       margin-bottom: var(--space-xl);
     }
     .pg-hero__title {
@@ -114,7 +114,7 @@
     }
     .scale-item__number {
       font-size: clamp(2.5rem, 5vw, 3.5rem);
-      color: #a07850;
+      color: #B87333;
       font-family: var(--font-display);
       font-weight: 600;
       letter-spacing: -0.03em;
@@ -159,8 +159,8 @@
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .compare-col__title--highlight {
-      color: #a07850;
-      border-bottom-color: rgba(160, 120, 80, 0.25);
+      color: #B87333;
+      border-bottom-color: rgba(184, 115, 51, 0.25);
     }
     .compare-item {
       margin-bottom: var(--space-lg);
@@ -192,7 +192,7 @@
     }
     .benefit-item__icon {
       font-size: 1.5rem;
-      color: #a07850;
+      color: #B87333;
       font-weight: 300;
       line-height: 1.4;
     }
@@ -236,7 +236,7 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="nav nav--scrolled">
+  <nav class="nav">
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Ampersand<span> Manufacturing</span></a>
       <button class="nav__toggle" aria-label="Toggle menu">
@@ -245,9 +245,9 @@
         <span></span>
       </button>
       <div class="nav__links">
-        <a href="about.html" class="nav__link">Who We Are</a>
+        <a href="about.html" class="nav__link">About</a>
         <a href="how-it-works.html" class="nav__link">How We Work</a>
-        <a href="contact.html" class="nav__link nav__link--cta">Start a Conversation</a>
+        <a href="contact.html" class="nav__link nav__link--cta">Send Us Your Spec</a>
       </div>
     </div>
   </nav>
@@ -382,11 +382,20 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
-      <div class="footer__links">
-        <a href="about.html" class="footer__link">About</a>
-        <a href="how-it-works.html" class="footer__link">How We Work</a>
-        <a href="contact.html" class="footer__link">Contact</a>
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
+          <p class="footer__location">Berkeley, California</p>
+        </div>
+        <div class="footer__contact">
+          <a href="tel:5855008786" class="footer__contact-link">585-500-8786</a>
+          <a href="mailto:joe@ampmanufacturing.com" class="footer__contact-link">joe@ampmanufacturing.com</a>
+        </div>
+        <div class="footer__links">
+          <a href="about.html" class="footer__link">About</a>
+          <a href="how-it-works.html" class="footer__link">How We Work</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
       </div>
       <p class="footer__copy">&copy; 2026 Ampersand Manufacturing.</p>
     </div>
