@@ -5,15 +5,15 @@
    ======================================== */
 :root {
   /* Colors */
-  --color-bg: #fafafa;
+  --color-bg: #0a0a0a;
   --color-surface: #f2f0ed;
   --color-surface-elevated: #ffffff;
   --color-border: #e0ddd8;
   --color-border-subtle: #eae7e3;
 
-  --color-text-primary: #2a2a2a;
-  --color-text-secondary: #666666;
-  --color-text-muted: #999999;
+  --color-text-primary: #f0ece4;
+  --color-text-secondary: rgba(255, 255, 255, 0.55);
+  --color-text-muted: rgba(255, 255, 255, 0.35);
 
   --color-accent: #8a8a8a;
   --color-accent-hover: #6e6e6e;
@@ -1009,7 +1009,7 @@ a.service-item:hover .service-item__number {
 .footer {
   padding: var(--space-2xl) 0;
   background: #1a1a1a;
-  border-top: 2px solid #B85C33;
+  border-top: 2px solid #B87333;
   color: #f5f5f5;
 }
 
@@ -1581,7 +1581,7 @@ a.service-item:hover .service-item__number {
 /* Hero */
 .hero-home {
   background: #0a0a0a;
-  padding: 140px 0 80px;
+  padding: 180px 0 100px;
   overflow: hidden;
 }
 
