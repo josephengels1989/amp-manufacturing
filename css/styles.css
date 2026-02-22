@@ -1738,14 +1738,17 @@ a.service-item:hover .service-item__number {
 
 .metrics-home__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .metric-item {
-  text-align: left;
+  text-align: center !important;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .metric-item__number {
@@ -1756,6 +1759,7 @@ a.service-item:hover .service-item__number {
   color: #B87333;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .metric-item__label {
@@ -1763,6 +1767,7 @@ a.service-item:hover .service-item__number {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.45);
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Client Proof */
