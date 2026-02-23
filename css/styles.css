@@ -1009,7 +1009,7 @@ a.service-item:hover .service-item__number {
 .footer {
   padding: var(--space-2xl) 0;
   background: #1a1a1a;
-  border-top: 2px solid #B87333;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   color: #f5f5f5;
 }
 
