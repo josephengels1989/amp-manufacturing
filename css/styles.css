@@ -1210,8 +1210,10 @@ a.service-item:hover .service-item__number {
 .about-hero {
   position: relative;
   overflow: hidden;
-  padding-top: 120px;
-  padding-bottom: var(--space-4xl);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
 }
 
 .about-hero .container {
@@ -1581,7 +1583,7 @@ a.service-item:hover .service-item__number {
 /* Hero */
 .hero-home {
   background: #0a0a0a;
-  padding: 180px 0 100px;
+  padding: 140px 0 70px;
   overflow: hidden;
 }
 
@@ -1666,7 +1668,7 @@ a.service-item:hover .service-item__number {
 /* Capabilities */
 .capabilities-home {
   background: #111;
-  padding: 6rem 0;
+  padding: 4.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
