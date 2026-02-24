@@ -1123,7 +1123,7 @@ a.service-item:hover .service-item__number {
 
 @media (min-width: 768px) {
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
   }
 }
 

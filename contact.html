@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260223c">
+  <link rel="stylesheet" href="css/styles.css?v=20260224f">
 </head>
 <body>
   <!-- Navigation -->
@@ -32,60 +32,29 @@
     </div>
   </nav>
 
-  <!-- Contact Hero -->
-  <section style="background: #050505; padding: 140px 0 40px;">
-    <div class="container">
+  <!-- Contact -->
+  <section style="background: #050505; padding: 140px 0 var(--space-3xl); position: relative; overflow: hidden;">
+    <!-- Toroid image -->
+    <img src="assets/images/hero-copper-nobg-new.png" alt="" style="position: absolute; right: 0; top: 140px; width: clamp(240px, 24vw, 360px); opacity: 1; pointer-events: none; user-select: none;">
+    <div class="container" style="position: relative; z-index: 1;">
       <div style="max-width: 700px;">
         <h1 style="color: #f0ece4; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; font-size: clamp(2.25rem, 4.5vw, 3.5rem);">Send us your drawings.</h1>
-        <p style="margin-top: var(--space-lg); color: rgba(255,255,255,0.45); font-size: 1.05rem; line-height: 1.7; max-width: 560px;">Joe Engels, Co-CEO, responds to every inquiry within one business day.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Form Section -->
-  <section style="padding: var(--space-2xl) 0 var(--space-3xl);">
-    <div class="container">
-      <div class="contact-grid" style="align-items: start;">
-        <form id="contact-form" class="contact-form" action="/api/submit-contact" method="POST" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="email" style="color: var(--color-text-primary);">Your email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message" style="color: var(--color-text-primary);">Describe the inductor or transformer you need, quantities, timeline as you understand it...</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="files" style="color: var(--color-text-primary);">Attach drawings or specifications</label>
-            <label for="files" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: var(--space-lg) var(--space-md); font-family: inherit; font-size: 0.9rem; color: var(--color-text-muted); background: var(--color-surface); border: 1px dashed var(--color-border); border-radius: var(--radius-md); cursor: pointer; transition: border-color 0.2s;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
-              Choose files or drag here
-            </label>
-            <input type="file" id="files" name="files" multiple accept=".pdf,.dxf,.dwg,.step,.stp,.iges,.igs,.jpg,.jpeg,.png" style="display: none;">
-            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 4px;">PDF, DXF, DWG, STEP, IGES, or images. Multiple files OK.</p>
-          </div>
-          <button type="submit" class="btn btn--copper" style="width: 100%; justify-content: center; padding: 1rem 2rem; font-size: 0.95rem;">Send to Joe</button>
-          <p style="font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">This does not go to a shared team inbox. It goes to Joe's inbox. You'll hear back from Joe within 1 business day.</p>
-        </form>
+        <p style="margin-top: var(--space-lg); color: rgba(255,255,255,0.45); font-size: 1.05rem; line-height: 1.7; max-width: 520px;">Joe Engels, Co-Founder, responds to all new inquiries within one business day.</p>
+        <p style="margin-top: var(--space-md); color: rgba(255,255,255,0.3); font-size: 0.9rem; line-height: 1.7; max-width: 520px;">Your drawings go to the same people who wind your coils.</p>
 
-        <div class="contact-info">
-          <h3>Reach Joe directly</h3>
-          <div class="contact-info__item">
-            <p class="contact-info__label">Email</p>
-            <p class="contact-info__value"><a href="mailto:joe@ampmanufacturing.com">joe@ampmanufacturing.com</a></p>
-          </div>
-          <div class="contact-info__item">
-            <p class="contact-info__label">Phone</p>
-            <p class="contact-info__value"><a href="tel:+15104737714">510-473-7714</a></p>
-          </div>
-          <div class="contact-info__item">
-            <p class="contact-info__label">Address</p>
-            <p class="contact-info__value">2204 McKinley Avenue<br>Berkeley, California</p>
-          </div>
-          <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border);">
-            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.7;">Currently supplying NK Technologies, San Jose. 150,000+ units delivered across six product lines.</p>
-          </div>
+        <!-- Email -->
+        <div style="margin-top: var(--space-2xl);">
+          <a href="mailto:joe@ampmanufacturing.com?subject=New%20inquiry" style="font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.6rem); color: var(--color-accent); text-decoration: none; transition: color 0.2s;">joe@ampmanufacturing.com</a>
         </div>
+
+        <!-- Phone -->
+        <div style="margin-top: var(--space-lg);">
+          <a href="tel:+15104737714" style="font-size: 1.1rem; color: var(--color-accent); text-decoration: none; transition: color 0.2s;">510-473-7714</a>
+        </div>
+
+        <!-- Address -->
+        <p style="margin-top: var(--space-lg); color: rgba(255,255,255,0.35); font-size: 0.95rem; line-height: 1.6;">2204 McKinley Avenue<br>Berkeley, California</p>
       </div>
     </div>
   </section>
