@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260220">
+  <link rel="stylesheet" href="css/styles.css?v=20260224m">
 </head>
 <body>
   <!-- Navigation -->
@@ -35,51 +35,75 @@
   <!-- How We Work -->
   <section style="background: #050505; padding: 160px 0 var(--space-2xl);">
     <div class="container container--narrow">
-      <div style="margin-bottom: var(--space-3xl);">
-        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3em; color: #B87333; margin-bottom: var(--space-xl);">How We Work</p>
-        <h1 style="color: #f0ece4; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; font-size: clamp(2.25rem, 4.5vw, 3.5rem);">Conversation to doorstep.</h1>
-        <p style="margin-top: var(--space-xl); max-width: 600px; color: rgba(255,255,255,0.45); font-size: 1.1rem; line-height: 1.7;">First production in about two months, repeat orders in as little as two weeks.</p>
+      <div style="margin-bottom: var(--space-2xl);">
+        <h1 style="color: #f0ece4; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; font-size: clamp(2.25rem, 4.5vw, 3.5rem);">Five steps from drawing to delivery.</h1>
+        <p style="margin-top: var(--space-xl); max-width: 600px; color: rgba(255,255,255,0.55); font-size: 1.1rem; line-height: 1.7;">First production in about two months. Repeat orders in as little as two weeks.</p>
       </div>
-      <div class="timeline">
-        <div class="timeline-item animate-on-scroll">
-          <h3>1. Initial Conversation</h3>
-          <p>Tell us what you need: requirements, quantities, timeline, application. We'll scope the job and confirm what we can deliver.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>2. Drawing Review</h3>
-          <p>Send us your drawings, schematics, or reference documentation. We review for manufacturability, flag clearance problems, thermal concerns, or material availability, and come back with specific technical questions.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>3. Quote & Timeline</h3>
-          <p>Initial quote within 24 hours. Line-item pricing, fully inclusive, with lead times for every line.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>4. Material Sourcing</h3>
-          <p>We source cores, wire, and insulation materials through established suppliers. If your application requires a specific core manufacturer or wire type, we coordinate with them directly.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>5. Production</h3>
-          <p>Winding, assembly, and in-process verification. First orders typically take about two months from samples to delivery. Repeat orders run as fast as two weeks. You'll get progress updates at each milestone: material receipt, winding completion, testing, and ship date confirmation.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>6. Testing & Verification</h3>
-          <p>Every unit tested for inductance, DCR, and hi-pot. If your application requires saturation current, leakage inductance, or core loss verification, we test those too. Full test data ships with every batch.</p>
-        </div>
-        <div class="timeline-item animate-on-scroll">
-          <h3>7. Delivery</h3>
-          <p>Shipped with full documentation: test reports, certificates of conformance, traceability records. Your drawings stay on file. Reorders are seamless.</p>
-        </div>
+
+      <div style="max-width: 620px; margin-bottom: var(--space-2xl);">
+        <p style="color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">Every custom inductor starts with a drawing. Core geometry, wire gauge, turn count, tolerances. We read the full spec before we quote because the details determine everything: how long production takes, what materials we need to source, and whether the finished part will perform reliably under load. If we spot a tight winding window or a core material with long lead times, we raise it during review. That conversation upfront saves weeks later.</p>
+
+        <p style="color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">In magnetics, two inductors with the same footprint can behave completely differently depending on core material, winding method, and wire selection. A ferrite core and a silicon-iron core the same size will saturate at different flux densities and suit different operating frequencies. The wire gauge determines how much current the coil handles before losses become a real problem. Getting these details right at the drawing stage is what separates a part that runs for ten years from one that causes field returns. We put the time in early because our name ships with every batch.</p>
+
+        <p style="color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.8;">Our team is small enough that the person reviewing your drawing is the same person tracking your production run. Your specs, test history, and documentation stay with one group from first quote forward. That means less gets lost between departments, and reorders move fast because we already know your parts. Once your drawings are on file and your first run is qualified, the second order is just a phone call.</p>
       </div>
-      <p style="margin-top: var(--space-2xl); color: rgba(255,255,255,0.35); font-size: 0.95rem;">See our full <a href="technical-capabilities.html" style="color: #B87333; text-decoration: underline; text-underline-offset: 3px;">technical capabilities</a>.</p>
+
+      <div style="border-top: 1px solid rgba(184, 115, 51, 0.25); margin-bottom: var(--space-xl);"></div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-xl);">
+
+        <div style="display: flex; gap: var(--space-lg); align-items: baseline;">
+          <span style="font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: #B87333; line-height: 1; min-width: 36px;">1</span>
+          <div>
+            <h3 style="color: #f0ece4; margin-bottom: 0.5rem;">Drawing Review</h3>
+            <p style="color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 540px;">Send us your drawings or schematics. We review for manufacturability and come back with specific questions on clearances, materials, and tolerances.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-lg); align-items: baseline;">
+          <span style="font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: #B87333; line-height: 1; min-width: 36px;">2</span>
+          <div>
+            <h3 style="color: #f0ece4; margin-bottom: 0.5rem;">Quote</h3>
+            <p style="color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 540px;">Quote within 24 hours. Line-item pricing with lead times for every part number.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-lg); align-items: baseline;">
+          <span style="font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: #B87333; line-height: 1; min-width: 36px;">3</span>
+          <div>
+            <h3 style="color: #f0ece4; margin-bottom: 0.5rem;">Production</h3>
+            <p style="color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 540px;">Core sourcing, winding, and assembly. Progress updates at each milestone: material receipt, winding completion, and ship date.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-lg); align-items: baseline;">
+          <span style="font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: #B87333; line-height: 1; min-width: 36px;">4</span>
+          <div>
+            <h3 style="color: #f0ece4; margin-bottom: 0.5rem;">Testing</h3>
+            <p style="color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 540px;">Every unit tested for inductance, DCR, and hi-pot. Full test data ships with every batch.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-lg); align-items: baseline;">
+          <span style="font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: #B87333; line-height: 1; min-width: 36px;">5</span>
+          <div>
+            <h3 style="color: #f0ece4; margin-bottom: 0.5rem;">Delivery</h3>
+            <p style="color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 540px;">Shipped with test reports, certificates of conformance, and traceability records. Your drawings stay on file. Reorders are seamless.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin-top: var(--space-2xl); color: rgba(255,255,255,0.4); font-size: 0.95rem;">See our full <a href="technical-capabilities.html" style="color: #B87333; text-decoration: underline; text-underline-offset: 3px;">technical capabilities</a>.</p>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section">
+  <section class="cta-section cta-section--dark">
     <div class="container">
       <div class="cta-section__inner">
-        <h2>Send us your drawings.</h2>
-        <a href="contact.html" class="btn btn--primary">Send Us Your Drawings</a>
+        <h2>Ready to get started?</h2>
+        <a href="mailto:joe@ampmanufacturing.com?subject=New%20inquiry" class="btn--copper" style="text-decoration: none;">Send Us Your Drawings</a>
       </div>
     </div>
   </section>
@@ -90,10 +114,10 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="/" class="footer__logo">Ampersand<span> Manufacturing</span></a>
-          <p class="footer__location">Berkeley, California</p>
+          <p class="footer__location">2204 McKinley Avenue, Berkeley, California</p>
         </div>
         <div class="footer__contact">
-          <a href="tel:5855008786" class="footer__contact-link">585-500-8786</a>
+          <a href="tel:5104737714" class="footer__contact-link">510-473-7714</a>
           <a href="mailto:joe@ampmanufacturing.com" class="footer__contact-link">joe@ampmanufacturing.com</a>
         </div>
         <div class="footer__links">
