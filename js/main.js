@@ -1,100 +1,124 @@
-// Typer Animation
+// Ampersand Manufacturing - Main JS
 (function() {
-  var words = [
-    'partnership.',
-    'new ideas.',
-    'repeat orders.',
-    'a higher bar.'
-  ];
+  'use strict';
 
-  var el = document.getElementById('typer-text');
-  if (!el) return;
+  // ============================================
+  // Scroll animations (fade-in on scroll)
+  // ============================================
+  function initScrollAnimations() {
+    const elements = document.querySelectorAll('.fade-in');
+    if (!elements.length) return;
 
-  var wordIndex = 0;
-  var charIndex = 0;
-  var deleting = false;
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-  function tick() {
-    var current = words[wordIndex];
-
-    if (!deleting) {
-      el.textContent = current.substring(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        setTimeout(function() { deleting = true; tick(); }, 2000);
-        return;
-      }
-      setTimeout(tick, 50 + Math.random() * 40);
-    } else {
-      el.textContent = current.substring(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(tick, 400);
-        return;
-      }
-      setTimeout(tick, 30);
-    }
+    elements.forEach(function(el) {
+      observer.observe(el);
+    });
   }
 
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        observer.disconnect();
-        setTimeout(tick, 500);
-      }
+  // ============================================
+  // Accordion
+  // ============================================
+  function initAccordions() {
+    const items = document.querySelectorAll('.accordion__item');
+    items.forEach(function(item) {
+      const trigger = item.querySelector('.accordion__trigger');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', function() {
+        const isOpen = item.classList.contains('open');
+        const parent = item.closest('.accordion');
+        if (parent) {
+          parent.querySelectorAll('.accordion__item').forEach(function(sibling) {
+            sibling.classList.remove('open');
+            const content = sibling.querySelector('.accordion__content');
+            if (content) content.style.maxHeight = null;
+          });
+        }
+        if (!isOpen) {
+          item.classList.add('open');
+          const content = item.querySelector('.accordion__content');
+          if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
     });
-  }, { threshold: 0.3 });
-
-  observer.observe(el.parentElement);
-})();
-
-// Mobile Navigation Toggle
-(function() {
-  const toggle = document.querySelector('.nav__toggle');
-  const links = document.querySelector('.nav__links');
-
-  if (!toggle || !links) return;
-
-  toggle.addEventListener('click', function() {
-    links.classList.toggle('nav__links--open');
-    toggle.classList.toggle('nav__toggle--active');
-  });
-})();
-
-// Nav scroll state
-(function() {
-  const nav = document.querySelector('.nav');
-  if (!nav) return;
-
-  function checkScroll() {
-    if (window.scrollY > 50) {
-      nav.classList.add('nav--scrolled');
-    } else {
-      nav.classList.remove('nav--scrolled');
-    }
   }
 
-  window.addEventListener('scroll', checkScroll, { passive: true });
-  checkScroll();
-})();
+  // ============================================
+  // Animated counters
+  // ============================================
+  function initCounters() {
+    const counters = document.querySelectorAll('[data-count]');
+    if (!counters.length) return;
 
-// Scroll Animations
-(function() {
-  const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
 
-  if (!elements.length) return;
+    counters.forEach(function(el) { observer.observe(el); });
+  }
 
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const pre = el.getAttribute('data-prefix') || '';
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = pre + current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  // ============================================
+  // Smooth scroll for anchor links
+  // ============================================
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }
 
-  elements.forEach(function(el) {
-    observer.observe(el);
-  });
+  // ============================================
+  // Initialize
+  // ============================================
+  function init() {
+    initScrollAnimations();
+    initAccordions();
+    initCounters();
+    initSmoothScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

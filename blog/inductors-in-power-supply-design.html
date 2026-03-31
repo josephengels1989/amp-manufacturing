@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Role of Inductors in Power Supply Design | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="How inductors function in buck, boost, and buck-boost power supply topologies. Learn about energy storage, current smoothing, ripple reduction, and core material selection.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Inductors in Power Supply Design</span>
+      </div>
+      <p class="hero-page__eyebrow">Applications</p>
+      <h1 class="hero-page__title">The Role of Inductors in Power Supply Design</h1>
+      <p class="hero-page__desc">Inductors are the energy storage backbone of every switching power supply. Understanding how they behave in common topologies is essential for reliable, efficient power conversion.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/power_supply.jpg" alt="Circuit board with power supply inductors and components" class="article__hero-img">
+
+          <div class="article__content">
+
+            <h2>Why Power Supplies Need Inductors</h2>
+            <p>A switching power supply converts one DC voltage to another by rapidly switching current on and off, then filtering the result into a smooth output. The inductor is the component that makes this possible. It stores energy in its magnetic field during the switch-on period and releases that energy to the load during the switch-off period. This store-and-release cycle, repeated tens of thousands to millions of times per second, is the operating principle behind every buck, boost, and buck-boost converter.</p>
+            <p>The inductor smooths pulsed energy into continuous current, acting as a low-pass filter that passes the DC component while rejecting the switching frequency and its harmonics.</p>
+
+            <h2>Fundamental Inductor Behavior</h2>
+            <p>An inductor resists changes in current. When voltage is applied across an inductor, the current ramps up gradually rather than jumping instantly. The rate of current change is governed by the inductance value: V = L &times; (dI/dt). A higher inductance value means the current changes more slowly for a given applied voltage.</p>
+            <p>This property is exactly what makes inductors useful in power conversion. The inductor absorbs the sharp voltage transitions from the switching element and converts them into smooth, ramping current waveforms. The output capacitor then filters the remaining ripple to produce a clean DC voltage.</p>
+
+            <h2>Common Power Supply Topologies</h2>
+
+            <h3>Buck Converter (Step-Down)</h3>
+            <p>The buck converter reduces a higher input voltage to a lower output voltage. When the switch closes, the full input voltage minus the output voltage appears across the inductor, and current ramps up. When the switch opens, the inductor drives current through the freewheeling diode to maintain flow, and the current ramps down. The output voltage is proportional to the duty cycle: V<sub>out</sub> = V<sub>in</sub> &times; D, where D is the fraction of the switching period that the switch is on.</p>
+            <p>Buck converters are the most common switching topology. They power everything from 5V USB chargers to 1.0V processor core rails. The inductor in a buck converter typically carries the full load current plus a superimposed triangular ripple component.</p>
+
+            <h3>Boost Converter (Step-Up)</h3>
+            <p>The boost converter raises a lower input voltage to a higher output voltage. When the switch closes, the input voltage appears across the inductor, and current ramps up, storing energy in the magnetic field. When the switch opens, the inductor voltage adds to the input voltage, driving energy through the diode to the output capacitor at a voltage higher than the input. The relationship is: V<sub>out</sub> = V<sub>in</sub> / (1 - D).</p>
+            <p>Boost converters are common in battery-powered devices (boosting a 3.7V lithium cell to 5V), LED drivers, and power factor correction (PFC) stages in AC-DC power supplies.</p>
+
+            <h3>Buck-Boost Converter</h3>
+            <p>The buck-boost converter can produce an output voltage that is either higher or lower than the input. In its basic form, the output is inverted (negative polarity). Variations like the SEPIC and Cuk topologies maintain positive polarity. The operating relationship is: V<sub>out</sub> = V<sub>in</sub> &times; D / (1 - D).</p>
+            <p>These topologies are used when the input voltage range overlaps with the desired output voltage, such as a battery-powered system where the cell voltage starts above the output rail and drops below it as the battery discharges.</p>
+
+            <div class="callout callout--copper">
+              <p class="callout__title">Key Principle</p>
+              <p>In every topology, the inductor serves the same fundamental role: it stores energy during one phase of the switching cycle and delivers it during the other phase. The topology determines the voltage and current waveforms that the inductor experiences.</p>
+            </div>
+
+            <h2>Critical Inductor Parameters for Power Design</h2>
+
+            <h3>Inductance Value</h3>
+            <p>The inductance value determines the ripple current amplitude. Higher inductance reduces ripple. Lower inductance increases ripple but allows faster transient response. The design equation for a buck converter is: L = (V<sub>in</sub> - V<sub>out</sub>) &times; D / (f<sub>sw</sub> &times; &Delta;I<sub>L</sub>), where f<sub>sw</sub> is the switching frequency and &Delta;I<sub>L</sub> is the desired peak-to-peak ripple current.</p>
+            <p>Most designs target a ripple current between 20% and 40% of the full load current. This range balances efficiency, output voltage ripple, and transient response speed.</p>
+
+            <h3>Saturation Current (I<sub>sat</sub>)</h3>
+            <p>Saturation current is the DC current at which the inductance drops by a defined percentage, typically 20% to 30% from its initial value. When the core saturates, permeability drops sharply, inductance falls, and current can spike rapidly. In a power supply, hitting saturation can cause the controller to lose regulation, overshoot, or damage the switching MOSFET.</p>
+            <p>The saturation current must exceed the peak inductor current under all operating conditions, including startup, load transients, and worst-case input voltage. A safe design margin is 20% above the maximum expected peak current.</p>
+
+            <h3>Ripple Current</h3>
+            <p>The triangular AC current superimposed on the DC current flowing through the inductor is called ripple current. It causes additional core losses (due to the changing flux) and additional copper losses (due to AC resistance effects like skin effect and proximity effect). Higher ripple current also means higher peak current, which pushes the operating point closer to saturation.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Effect of Increasing Value</th>
+                  <th>Typical Range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inductance (L)</td>
+                  <td>Lower ripple current, slower transient response</td>
+                  <td>1 &micro;H to 10 mH</td>
+                </tr>
+                <tr>
+                  <td>Saturation Current (I<sub>sat</sub>)</td>
+                  <td>Higher current handling before inductance rolloff</td>
+                  <td>0.5 A to 50+ A</td>
+                </tr>
+                <tr>
+                  <td>DCR</td>
+                  <td>Higher conduction loss and heat generation</td>
+                  <td>1 m&Omega; to 50+ &Omega;</td>
+                </tr>
+                <tr>
+                  <td>Switching Frequency</td>
+                  <td>Smaller inductor needed, but higher core losses</td>
+                  <td>50 kHz to 2 MHz</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Core Material Selection for Power Applications</h2>
+            <p>The core material determines the inductor's loss characteristics, saturation behavior, and frequency range. Power supply inductors operate at switching frequencies from 50 kHz to several megahertz, with significant AC flux swing. The core must handle this without excessive loss.</p>
+
+            <h3>Ferrite</h3>
+            <p>Ferrite cores are the standard choice for power supply inductors above 100 kHz. They offer very low core losses at high frequencies due to their high electrical resistivity, which suppresses eddy currents. Saturation flux density is moderate (typically 350 to 500 mT), which means ferrite inductors need more core volume for a given energy storage requirement compared to metal alloy cores. MnZn ferrites (power ferrites) cover the 20 kHz to 2 MHz range. NiZn ferrites extend into the tens of megahertz for RF applications.</p>
+
+            <h3>Powdered Iron</h3>
+            <p>Powdered iron cores offer higher saturation flux density (up to 1.0 T) than ferrite, with a distributed air gap that provides soft saturation characteristics. The inductance rolls off gradually as current increases, rather than falling sharply as it does in ferrite. This makes powdered iron a good choice for applications with large current transients. Core losses are higher than ferrite, so powdered iron is best suited for lower switching frequencies (below 500 kHz).</p>
+
+            <h3>Silicon-Iron (Grain-Oriented)</h3>
+            <p>Silicon-iron cores provide the highest saturation flux density (1.6 to 2.0 T) of any commonly used core material. They are used in high-power, lower-frequency applications where the energy storage requirement demands maximum flux density. Tape-wound toroidal cores in 3% grain-oriented silicon-iron are standard for power-frequency inductors and current transformers. Core losses are higher than ferrite at frequencies above 50 kHz, so silicon-iron is typically used at frequencies below 100 kHz.</p>
+
+            <div class="callout callout--steel">
+              <p class="callout__title">Material Selection Summary</p>
+              <p>High frequency (100 kHz+): ferrite. Moderate frequency with high current: powdered iron. Low frequency with maximum flux density: silicon-iron. Each material has a frequency and flux density range where it performs best.</p>
+            </div>
+
+            <h2>Ripple Current and Output Voltage Quality</h2>
+            <p>The inductor ripple current flows into the output capacitor, creating voltage ripple on the output rail. The relationship is: &Delta;V<sub>out</sub> &asymp; &Delta;I<sub>L</sub> / (8 &times; f<sub>sw</sub> &times; C<sub>out</sub>) for a buck converter. The output voltage ripple is proportional to the inductor ripple current and inversely proportional to both the switching frequency and the output capacitance.</p>
+            <p>For sensitive loads (processors, ADCs, precision analog circuits), output ripple must be kept low. This can be achieved by increasing inductance (to reduce &Delta;I<sub>L</sub>), increasing switching frequency, increasing output capacitance, or some combination of all three.</p>
+
+            <h2>Continuous vs. Discontinuous Conduction Mode</h2>
+            <p>When the inductor current never reaches zero during the switching cycle, the converter operates in continuous conduction mode (CCM). When the current reaches zero and stays at zero for part of the cycle, the converter is in discontinuous conduction mode (DCM).</p>
+            <p>CCM operation provides lower peak currents, lower ripple, and more predictable behavior. Most power supplies are designed to remain in CCM at full load. At light loads, the inductor current may drop to zero, transitioning the converter into DCM. The boundary between CCM and DCM occurs when the ripple current amplitude equals twice the DC load current.</p>
+            <p>A higher inductance value keeps the converter in CCM down to lighter loads. However, a physically larger inductor may be needed, increasing cost and board space. Designers must balance CCM range against physical size and cost.</p>
+
+            <h2>Thermal Considerations</h2>
+            <p>The total power dissipated in the inductor is the sum of copper losses (I&sup2;R from DCR) and core losses (from the AC flux swing). Both contribute to temperature rise. The inductor must operate below its maximum rated temperature (typically 125&deg;C or 155&deg;C depending on the wire insulation class) under worst-case conditions: maximum ambient temperature, maximum load current, and maximum input voltage.</p>
+            <p>Toroidal inductors have excellent thermal characteristics due to their large surface-to-volume ratio and even heat distribution. The entire winding is exposed to air, promoting convective cooling. In forced-air environments, toroids perform even better because the donut shape allows airflow through the center hole.</p>
+
+            <h2>Practical Design Workflow</h2>
+            <ol>
+              <li><strong>Define requirements:</strong> Input voltage range, output voltage, maximum load current, switching frequency, acceptable output ripple</li>
+              <li><strong>Calculate inductance:</strong> Use the topology equation to find the minimum inductance for your target ripple current</li>
+              <li><strong>Determine peak current:</strong> I<sub>peak</sub> = I<sub>load</sub> + (&Delta;I<sub>L</sub> / 2). This sets the saturation current requirement.</li>
+              <li><strong>Select core material:</strong> Match the switching frequency to the optimal material</li>
+              <li><strong>Size the core:</strong> Ensure the core can store the required energy: E = &frac12; &times; L &times; I<sub>peak</sub>&sup2;</li>
+              <li><strong>Choose wire gauge:</strong> Balance DCR (lower is better) against fill factor (thicker wire fills the window faster)</li>
+              <li><strong>Verify thermal performance:</strong> Calculate total losses and ensure the temperature rise stays within limits</li>
+            </ol>
+
+            <div class="callout callout--copper">
+              <p class="callout__title">Custom Inductors for Power Applications</p>
+              <p>Ampersand Manufacturing builds custom inductors optimized for your specific power supply requirements. Send us your electrical specifications, including voltage, current, frequency, and form factor constraints. We will recommend a core material, wire gauge, and winding configuration matched to your design.</p>
+            </div>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin:var(--s4) auto var(--s6);max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/understanding-dcr" class="sidebar__link">Understanding DCR in Inductor Design</a>
+            <a href="/blog/emi-filtering-custom-inductors" class="sidebar__link">EMI Filtering with Custom Inductors</a>
+            <a href="/blog/custom-transformers-power-efficiency" class="sidebar__link">Custom Transformers and Power Efficiency</a>
+            <a href="/blog/bobbin-wound-vs-toroidal" class="sidebar__link">Bobbin-Wound vs. Toroidal Inductors</a>
+          </div>
+
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item">
+                <div class="spec-list__label">Core Materials</div>
+                <div class="spec-list__value">Ferrite, Iron, Silicon-Iron</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Wire Range</div>
+                <div class="spec-list__value">5 to 45 AWG</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Production Volume</div>
+                <div class="spec-list__value">1,000 to 100,000 pcs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

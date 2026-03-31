@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Cases for Custom Magnetic Components | Ampersand Manufacturing</title>
+  <meta name="description" content="Real-world applications for custom inductors and transformers: current sensing, power supply filtering, EMI suppression, energy storage, signal isolation, and motor drive filtering.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <!-- ============================================
+       Hero
+       ============================================ -->
+  <section class="hero-page">
+    <div class="container">
+      <p class="hero-page__eyebrow">Applications</p>
+      <h1 class="hero-page__title">Use Cases for Custom Magnetic Components</h1>
+      <p class="hero-page__desc">Custom inductors and transformers serve critical roles across power electronics, sensing, and signal processing. These six applications represent the most common reasons engineers specify custom magnetic components.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 1: Current Sensing
+       ============================================ -->
+  <section class="bg-dark" id="current-sensing">
+    <div class="container">
+      <div class="content-image-block fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--copper">Use Case 1</span>
+          <h2 class="mt-4">Current Sensing</h2>
+          <p>Current transformers measure AC current flowing through a conductor by inducing a proportional current in a secondary winding. The primary conductor passes through the center of a toroidal core. The secondary winding, wrapped around the core, outputs a scaled-down current that is safe to measure with standard instrumentation.</p>
+          <p>Accuracy depends on the core material. High-permeability cores like 1J85 (Permalloy) minimize magnetizing current error and produce linear output across a wide current range. Our current sensing toroids use 1J85 cores with permeability above 100,000, wound with 750 to 1,500 turns of 34 AWG wire.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">1J85 (Permalloy)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Wire</div>
+              <div class="spec-list__value">34 AWG, copper or nickel</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Turns</div>
+              <div class="spec-list__value">750 to 1,500</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Sizes</div>
+              <div class="spec-list__value">0.8" to 2.25" OD</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/core-materials#permalloy" class="btn btn--outline-copper">Learn about 1J85 cores</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+
+      <div class="callout callout--copper mt-8 fade-in">
+        <p class="callout__title">In Production</p>
+        <p>We manufacture current sensing transformers for NK Technologies in San Jose, CA. NK Technologies produces current sensors for building automation, HVAC monitoring, and industrial power management. Our assemblies are used in their production line across multiple product families.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 2: Power Supply Filtering
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="power-supply-filtering">
+    <div class="container">
+      <div class="content-image-block content-image-block--reverse fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--steel">Use Case 2</span>
+          <h2 class="mt-4">Power Supply Filtering</h2>
+          <p>Every AC/DC power supply includes filter inductors to smooth the rectified output voltage. Filter chokes block high-frequency ripple while passing DC current to the load. The inductor stores energy during the switching on-time and releases it during the off-time, reducing voltage variation at the output.</p>
+          <p>Core material depends on the switching frequency. Ferrite cores excel in switching power supplies operating at 50 kHz to 500 kHz, where their low core loss keeps efficiency high. Silicon-iron cores are used in line-frequency filter chokes (50/60 Hz) where high saturation flux density is needed to handle large DC currents.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">Ferrite or Silicon-Iron</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Wire</div>
+              <div class="spec-list__value">18 to 26 AWG copper</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Turns</div>
+              <div class="spec-list__value">50 to 750</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Key Parameter</div>
+              <div class="spec-list__value">Low DCR, high saturation</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/core-materials#ferrite" class="btn btn--outline-copper">Learn about ferrite cores</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 3: EMI Suppression
+       ============================================ -->
+  <section class="bg-dark section-border-t" id="emi-suppression">
+    <div class="container">
+      <div class="content-image-block fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--copper">Use Case 3</span>
+          <h2 class="mt-4">EMI Suppression</h2>
+          <p>Electromagnetic interference (EMI) is unwanted electrical noise that travels through power lines and signal cables. Common mode chokes and EMI filter inductors block this noise by presenting high impedance to high-frequency signals while allowing the desired DC or low-frequency power to pass through unimpeded.</p>
+          <p>A common mode choke consists of two windings on a single toroidal core, wound in opposite directions. Normal differential-mode current (the power the circuit needs) produces opposing magnetic fields that cancel out, so the choke presents zero impedance to normal operation. Common-mode noise (both lines carrying noise in the same direction) sees the full inductance of both windings, and the choke blocks it.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">Ferrite (MnZn or NiZn)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Wire</div>
+              <div class="spec-list__value">26 to 34 AWG copper</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Winding</div>
+              <div class="spec-list__value">Bifilar (two wires wound together)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Frequency Target</div>
+              <div class="spec-list__value">100 kHz to 30 MHz</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/custom-inductors" class="btn btn--outline-copper">View inductor capabilities</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 4: Energy Storage Inductors
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="energy-storage">
+    <div class="container">
+      <div class="content-image-block content-image-block--reverse fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--steel">Use Case 4</span>
+          <h2 class="mt-4">Energy Storage Inductors</h2>
+          <p>In DC/DC converter topologies (buck, boost, buck-boost), the inductor is the primary energy storage element. During the switch on-time, current ramps up and energy is stored in the magnetic field. During the off-time, the stored energy is released to the output. This charge-discharge cycle happens at the switching frequency, typically 100 kHz to 1 MHz.</p>
+          <p>The critical design parameter is the saturation current. If the peak inductor current causes the core to saturate, inductance drops sharply, current spikes, and the converter loses regulation. Core material selection must ensure that the peak flux density stays well below the saturation limit across all operating conditions, including startup transients and load steps.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">Ferrite (gapped)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Wire</div>
+              <div class="spec-list__value">18 to 26 AWG copper</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Key Parameter</div>
+              <div class="spec-list__value">Saturation current, energy storage (1/2 LI&sup2;)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Frequency</div>
+              <div class="spec-list__value">100 kHz to 1 MHz</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/core-materials#ferrite" class="btn btn--outline-copper">Learn about ferrite cores</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 5: Signal Isolation
+       ============================================ -->
+  <section class="bg-dark section-border-t" id="signal-isolation">
+    <div class="container">
+      <div class="content-image-block fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--copper">Use Case 5</span>
+          <h2 class="mt-4">Signal Isolation</h2>
+          <p>Isolation transformers provide galvanic separation between two circuits. There is no direct electrical connection between the primary and secondary windings. Energy transfers solely through the magnetic field in the core. This isolation protects sensitive circuits from ground loops, voltage spikes, and fault currents.</p>
+          <p>In medical devices, isolation transformers are a safety requirement. They prevent hazardous leakage current from reaching the patient. In industrial controls, isolation prevents ground-loop-induced noise from corrupting measurement signals. The isolation barrier must withstand the specified hi-pot voltage (typically 1,500 to 4,000 VAC) without breakdown.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">Ferrite or Silicon-Iron</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Insulation</div>
+              <div class="spec-list__value">Multi-layer, hi-pot rated</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Safety Standards</div>
+              <div class="spec-list__value">IEC 60601 (medical), IEC 60950</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Applications</div>
+              <div class="spec-list__value">Medical, industrial, telecom</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/custom-transformers" class="btn btn--outline-copper">View transformer capabilities</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Use Case 6: Motor Drive Filtering
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="motor-drive-filtering">
+    <div class="container">
+      <div class="content-image-block content-image-block--reverse fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--steel">Use Case 6</span>
+          <h2 class="mt-4">Motor Drive Filtering</h2>
+          <p>Variable frequency drives (VFDs) control motor speed by synthesizing an AC output from high-frequency pulse-width-modulated (PWM) switching. The output waveform contains significant high-frequency harmonics that can damage motor insulation, cause bearing currents, generate audible noise, and produce electromagnetic interference.</p>
+          <p>Output chokes (also called dV/dt filters or load reactors) are placed between the VFD and the motor. These inductors slow down the voltage rise time of the PWM pulses, reducing peak voltage stress on the motor windings. They also filter harmonic content, producing a smoother current waveform that reduces motor heating and acoustic noise.</p>
+          <h4 class="mt-8 mb-4">Typical Specifications</h4>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Core Material</div>
+              <div class="spec-list__value">Silicon-Iron (high saturation)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Wire</div>
+              <div class="spec-list__value">18 AWG copper (heavy gauge)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Current Rating</div>
+              <div class="spec-list__value">High (continuous motor current)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Environment</div>
+              <div class="spec-list__value">Industrial: heat, vibration, dust</div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/core-materials#silicon-iron" class="btn btn--outline-copper">Learn about silicon-iron cores</a>
+          </div>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Summary: Matching Application to Component
+       ============================================ -->
+  <section class="bg-dark section-border-t">
+    <div class="container">
+      <div class="section-header--center fade-in">
+        <p class="eyebrow">Summary</p>
+        <h2>Application to Component at a Glance</h2>
+      </div>
+
+      <div class="fade-in" style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Application</th>
+              <th>Core Material</th>
+              <th>Wire Gauge</th>
+              <th>Key Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Current Sensing</td>
+              <td>1J85 (Permalloy)</td>
+              <td>34 AWG</td>
+              <td>High permeability, accuracy</td>
+            </tr>
+            <tr>
+              <td>Power Supply Filtering</td>
+              <td>Ferrite or Silicon-Iron</td>
+              <td>18 to 26 AWG</td>
+              <td>Low DCR, high saturation</td>
+            </tr>
+            <tr>
+              <td>EMI Suppression</td>
+              <td>Ferrite</td>
+              <td>26 to 34 AWG</td>
+              <td>High impedance at RF</td>
+            </tr>
+            <tr>
+              <td>Energy Storage</td>
+              <td>Ferrite (gapped)</td>
+              <td>18 to 26 AWG</td>
+              <td>Saturation margin, low loss</td>
+            </tr>
+            <tr>
+              <td>Signal Isolation</td>
+              <td>Ferrite or Silicon-Iron</td>
+              <td>26 to 34 AWG</td>
+              <td>Hi-pot rating, safety compliance</td>
+            </tr>
+            <tr>
+              <td>Motor Drive Filtering</td>
+              <td>Silicon-Iron</td>
+              <td>18 AWG</td>
+              <td>High current, rugged environment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA
+       ============================================ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Have an application that needs a custom magnetic component?</h2>
+      <p>Send us your specifications, operating conditions, and performance requirements. We will recommend the right core material, wire gauge, and winding configuration for your application.</p>
+      <a href="/contact" class="btn btn--copper btn--lg">Get in Touch</a>
+      <div class="cta-contact">
+        <a href="mailto:joe@ampmanufacturing.com" class="cta-contact__item">joe@ampmanufacturing.com</a>
+        <a href="tel:5104737714" class="cta-contact__item">510-473-7714</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

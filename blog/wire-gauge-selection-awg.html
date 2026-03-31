@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wire Gauge Selection for Custom Inductors: AWG Explained | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="A practical guide to the AWG wire gauge system for inductor design. Covers current capacity, resistance per length, DCR impact, and how core window area constrains gauge choice.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Wire Gauge Selection (AWG)</span>
+      </div>
+      <p class="hero-page__eyebrow">Wire &amp; Materials</p>
+      <h1 class="hero-page__title">Wire Gauge Selection for Custom Inductors: AWG Explained</h1>
+      <p class="hero-page__desc">Wire gauge directly affects DC resistance, heat generation, and whether your winding will physically fit on the core. Here is a practical guide to selecting the right AWG for your application.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/man_soldering.jpg" alt="Various gauges of magnet wire used in custom inductor winding" class="article__hero-img">
+          <div class="article__content">
+
+            <h2>The AWG System</h2>
+            <p>The American Wire Gauge (AWG) system is the standard wire sizing system used in North America for non-ferrous electrically conducting wire. It defines the physical diameter of the bare conductor before any insulation is applied.</p>
+            <p>The AWG system has one characteristic that trips up newcomers: the numbering runs backwards. A larger AWG number means a thinner wire. 18 AWG is thick (about 1 mm diameter). 34 AWG is hair-thin (about 0.16 mm diameter). This inverse relationship comes from the drawing process used to manufacture wire. Each increase in gauge number corresponds to one additional pass through a drawing die, which reduces the diameter.</p>
+
+            <h3>The Mathematical Relationship</h3>
+            <p>The AWG system follows a geometric progression. Every 6 gauge increase doubles the resistance (and halves the cross-sectional area). Every 3 gauge increase roughly doubles the resistance. The exact relationship:</p>
+            <p><strong>Diameter (inches) = 0.005 x 92^((36 - AWG) / 39)</strong></p>
+            <p>For practical engineering work, the reference table below is more useful than the formula.</p>
+
+            <h2>AWG Reference Table for Copper Magnet Wire</h2>
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>AWG</th>
+                  <th>Bare Dia. (in)</th>
+                  <th>Bare Dia. (mm)</th>
+                  <th>Area (circ. mils)</th>
+                  <th>Ohm/1000 ft (20&deg;C)</th>
+                  <th>Ohm/meter (20&deg;C)</th>
+                  <th>Max Current (A)*</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>14</strong></td>
+                  <td>0.0641</td>
+                  <td>1.628</td>
+                  <td>4,107</td>
+                  <td>2.525</td>
+                  <td>0.00828</td>
+                  <td>5.9</td>
+                </tr>
+                <tr>
+                  <td><strong>16</strong></td>
+                  <td>0.0508</td>
+                  <td>1.291</td>
+                  <td>2,583</td>
+                  <td>4.016</td>
+                  <td>0.01317</td>
+                  <td>3.7</td>
+                </tr>
+                <tr>
+                  <td><strong>18</strong></td>
+                  <td>0.0403</td>
+                  <td>1.024</td>
+                  <td>1,624</td>
+                  <td>6.385</td>
+                  <td>0.02095</td>
+                  <td>2.3</td>
+                </tr>
+                <tr>
+                  <td><strong>20</strong></td>
+                  <td>0.0320</td>
+                  <td>0.812</td>
+                  <td>1,022</td>
+                  <td>10.15</td>
+                  <td>0.03331</td>
+                  <td>1.5</td>
+                </tr>
+                <tr>
+                  <td><strong>22</strong></td>
+                  <td>0.0254</td>
+                  <td>0.644</td>
+                  <td>642</td>
+                  <td>16.14</td>
+                  <td>0.05296</td>
+                  <td>0.92</td>
+                </tr>
+                <tr>
+                  <td><strong>24</strong></td>
+                  <td>0.0201</td>
+                  <td>0.511</td>
+                  <td>404</td>
+                  <td>25.67</td>
+                  <td>0.08421</td>
+                  <td>0.58</td>
+                </tr>
+                <tr>
+                  <td><strong>26</strong></td>
+                  <td>0.0159</td>
+                  <td>0.405</td>
+                  <td>254</td>
+                  <td>40.81</td>
+                  <td>0.1339</td>
+                  <td>0.36</td>
+                </tr>
+                <tr>
+                  <td><strong>28</strong></td>
+                  <td>0.0126</td>
+                  <td>0.321</td>
+                  <td>160</td>
+                  <td>64.90</td>
+                  <td>0.2129</td>
+                  <td>0.23</td>
+                </tr>
+                <tr>
+                  <td><strong>30</strong></td>
+                  <td>0.0100</td>
+                  <td>0.255</td>
+                  <td>101</td>
+                  <td>103.2</td>
+                  <td>0.3386</td>
+                  <td>0.14</td>
+                </tr>
+                <tr>
+                  <td><strong>32</strong></td>
+                  <td>0.0080</td>
+                  <td>0.202</td>
+                  <td>63.2</td>
+                  <td>164.1</td>
+                  <td>0.5384</td>
+                  <td>0.09</td>
+                </tr>
+                <tr>
+                  <td><strong>34</strong></td>
+                  <td>0.0063</td>
+                  <td>0.160</td>
+                  <td>39.8</td>
+                  <td>261.0</td>
+                  <td>0.8560</td>
+                  <td>0.06</td>
+                </tr>
+                <tr>
+                  <td><strong>36</strong></td>
+                  <td>0.0050</td>
+                  <td>0.127</td>
+                  <td>25.0</td>
+                  <td>414.8</td>
+                  <td>1.361</td>
+                  <td>0.04</td>
+                </tr>
+                <tr>
+                  <td><strong>38</strong></td>
+                  <td>0.0040</td>
+                  <td>0.102</td>
+                  <td>15.7</td>
+                  <td>659.6</td>
+                  <td>2.163</td>
+                  <td>0.02</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">* Maximum current values are approximate, based on 750 circular mils per ampere for enclosed coil windings. Actual capacity depends on cooling, duty cycle, and allowable temperature rise.</p>
+
+            <h2>Memorizing the Key Relationships</h2>
+            <p>You do not need to memorize the entire table. A few rules of thumb make the AWG system practical to work with:</p>
+
+            <div class="callout callout--copper">
+              <h4 class="callout__title">AWG Rules of Thumb</h4>
+              <ul>
+                <li><strong>Every 3 gauge steps:</strong> resistance roughly doubles, cross-sectional area roughly halves</li>
+                <li><strong>Every 6 gauge steps:</strong> diameter halves</li>
+                <li><strong>Every 10 gauge steps:</strong> resistance increases by approximately 10x</li>
+                <li><strong>20 AWG</strong> is approximately 1 mm diameter (a useful anchor point)</li>
+              </ul>
+            </div>
+
+            <p>So if you know that 26 AWG has a resistance of about 40 ohms per 1000 feet, you can estimate that 29 AWG (3 gauges finer) will be about 80 ohms per 1000 feet. This is close enough for initial design estimates before running exact calculations.</p>
+
+            <h2>How Wire Gauge Affects DCR</h2>
+            <p>DC Resistance (DCR) is the total resistance of the winding measured with direct current. It depends on three factors: the resistivity of the conductor material, the length of the wire, and the cross-sectional area of the wire.</p>
+            <p><strong>DCR = (resistivity x length) / area</strong></p>
+            <p>For a given toroidal inductor design, the wire length is determined by the number of turns multiplied by the mean length per turn (which depends on core dimensions and winding buildup). Once the turns count and core are fixed, the only way to reduce DCR is to increase the wire's cross-sectional area, which means choosing a lower AWG number (thicker wire).</p>
+
+            <h3>A Practical Example</h3>
+            <p>Consider a toroidal inductor with 750 turns on a core with a mean turn length of 3.5 inches. The total wire length is 750 x 3.5 = 2,625 inches, or approximately 219 feet.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Wire Gauge</th>
+                  <th>Resistance per 1000 ft</th>
+                  <th>Total DCR (219 ft)</th>
+                  <th>Power Loss at 50 mA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>26 AWG</td>
+                  <td>40.81 ohm</td>
+                  <td>8.94 ohm</td>
+                  <td>22.3 mW</td>
+                </tr>
+                <tr>
+                  <td>30 AWG</td>
+                  <td>103.2 ohm</td>
+                  <td>22.60 ohm</td>
+                  <td>56.5 mW</td>
+                </tr>
+                <tr>
+                  <td>34 AWG</td>
+                  <td>261.0 ohm</td>
+                  <td>57.16 ohm</td>
+                  <td>142.9 mW</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Moving from 34 AWG to 26 AWG cuts the DCR by more than 6x. But the 26 AWG wire has a bare diameter of 0.0159" compared to 0.0063" for 34 AWG. That is 2.5 times the diameter, and since area scales with the square of diameter, each turn of 26 AWG occupies roughly 6.4 times more window area than 34 AWG. Whether 750 turns of 26 AWG will fit on the core depends entirely on the available window area.</p>
+
+            <h2>How Wire Gauge Affects Heat</h2>
+            <p>The power dissipated in the winding equals I-squared times R. This power is converted entirely to heat. In an enclosed inductor where the winding is wrapped tightly around the core, this heat must conduct through the winding layers and core to reach the component's surface, where it can be dissipated to the environment through convection and radiation.</p>
+            <p>The temperature rise of the winding depends on the power dissipated, the thermal resistance of the winding structure, and the ambient temperature. As the winding heats up, the copper resistance increases (approximately +0.4% per degree Celsius), which increases the power dissipation, which increases the temperature further. This positive feedback loop is normally self-limiting, but in extreme cases (grossly undersized wire, poor thermal design, or high ambient temperatures), it can lead to thermal runaway.</p>
+
+            <div class="callout callout--steel">
+              <h4 class="callout__title">Temperature and DCR</h4>
+              <p>Copper resistance increases by approximately 0.393% for every 1&deg;C rise above 20&deg;C. An inductor with 10.0 ohms DCR at room temperature (20&deg;C) will measure approximately 12.0 ohms at 70&deg;C (a 50&deg;C rise). Always verify that the specified DCR tolerance accounts for the expected operating temperature range, or specify whether DCR is measured at 20&deg;C or at the maximum operating temperature.</p>
+            </div>
+
+            <h2>Core Window Area: The Physical Constraint</h2>
+            <p>The center hole of a toroidal core (defined by the inner diameter) limits the total cross-sectional area of wire that can pass through it. This is the window area, and it is the single most common physical constraint in toroidal inductor design.</p>
+
+            <h3>Calculating Available Window Area</h3>
+            <p>The window area of a toroidal core is:</p>
+            <p><strong>Wa = pi x (ID / 2)^2</strong></p>
+            <p>For a core with an ID of 1.100 inches: Wa = 3.14159 x (0.55)^2 = 0.950 square inches.</p>
+            <p>The usable window area is less than the geometric area because of insulation tape on the core surface (which reduces the effective ID), the fill factor of round wire (round conductors cannot completely fill a space), and the wire insulation itself (each turn includes both the conductor and its enamel coating).</p>
+
+            <h3>Fill Factor</h3>
+            <p>Typical fill factors for toroidal windings range from 30% to 55% depending on the winding method and wire size. Machine winding with careful technique achieves higher fill factors than hand winding. Finer wires tend to pack more efficiently than heavy wires.</p>
+            <p>A conservative design uses a fill factor of 40%. The usable copper area is:</p>
+            <p><strong>Usable copper area = Wa x fill factor</strong></p>
+            <p>For the example above: 0.950 x 0.40 = 0.380 square inches of copper cross-section.</p>
+
+            <h3>Does It Fit? A Quick Check</h3>
+            <p>To determine whether a given wire gauge and turn count will fit:</p>
+            <ol>
+              <li>Look up the overall diameter of the insulated wire (bare diameter + insulation build)</li>
+              <li>Calculate the cross-sectional area of one turn: pi x (d/2)^2</li>
+              <li>Multiply by the number of turns: total wire area = N x (area per turn)</li>
+              <li>Divide by the window area: fill factor required = total wire area / Wa</li>
+              <li>If the required fill factor exceeds 50-55%, the winding probably will not fit</li>
+            </ol>
+
+            <h2>Wire Gauge Selection by Application</h2>
+            <p>Different inductor applications typically use different gauge ranges based on their current and impedance requirements.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Application</th>
+                  <th>Typical Gauge Range</th>
+                  <th>Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Power inductors (high current)</td>
+                  <td>14 - 20 AWG</td>
+                  <td>High current demands low resistance and large conductor area</td>
+                </tr>
+                <tr>
+                  <td>General-purpose transformers</td>
+                  <td>20 - 26 AWG</td>
+                  <td>Moderate current, balanced size and performance</td>
+                </tr>
+                <tr>
+                  <td>Current sensing secondaries</td>
+                  <td>26 - 34 AWG</td>
+                  <td>Low secondary current, high turns count, window area constraint</td>
+                </tr>
+                <tr>
+                  <td>High-impedance sensors</td>
+                  <td>30 - 38 AWG</td>
+                  <td>Very low current, maximum turns in minimum space</td>
+                </tr>
+                <tr>
+                  <td>Bobbin-wound power coils</td>
+                  <td>16 - 22 AWG</td>
+                  <td>Higher current, fewer turns, bobbin provides support</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>The Design Tension: Turns vs. Wire Size</h2>
+            <p>Every toroidal inductor design involves a fundamental tradeoff between the number of turns and the wire gauge. More turns increase inductance (proportional to N-squared) but require more window area and add wire length (increasing DCR). Thicker wire reduces DCR and increases current capacity but takes up more window area, limiting the turn count.</p>
+            <p>The designer's job is to find the combination that satisfies all the electrical requirements (inductance, DCR, current rating) within the physical constraints (core dimensions, maximum component size). When no feasible combination exists on a given core, the solution is to move to a larger core with more window area and cross-sectional area.</p>
+
+            <h3>Optimization Strategies</h3>
+            <ul>
+              <li><strong>Reduce insulation build:</strong> Moving from heavy to single build insulation frees up window area for more conductor or more turns</li>
+              <li><strong>Use a higher permeability core:</strong> Higher permeability means fewer turns are needed for the same inductance, freeing window area for thicker wire</li>
+              <li><strong>Increase core size:</strong> A larger core provides more window area and more cross-sectional area, relaxing both constraints simultaneously</li>
+              <li><strong>Accept higher DCR:</strong> If the application can tolerate higher resistance, use finer wire to fit more turns</li>
+              <li><strong>Multi-layer winding:</strong> Layer winding with inter-layer insulation uses the window area more efficiently than single-layer winding for high turn counts</li>
+            </ul>
+
+            <h2>Gauge Selection Checklist</h2>
+            <p>When specifying wire gauge for a custom inductor, work through these considerations in order:</p>
+            <ul class="check-list">
+              <li>Determine the maximum continuous current the winding must carry</li>
+              <li>Select a gauge that provides adequate current capacity with acceptable temperature rise</li>
+              <li>Calculate the expected DCR for the required turns count and verify it meets the specification</li>
+              <li>Verify the winding will physically fit in the core window area with a realistic fill factor</li>
+              <li>Confirm the insulation class and build are appropriate for the operating temperature</li>
+              <li>Consider the manufacturing implications of very fine wire (higher breakage rate, slower winding speed)</li>
+            </ul>
+
+            <p>For additional context on insulation types and temperature ratings, see our article on <a href="/blog/guide-to-magnet-wire.html">magnet wire types, coatings, and temperature ratings</a>.</p>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin: var(--s4) auto var(--s6); max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/guide-to-magnet-wire.html" class="sidebar__link">The Complete Guide to Magnet Wire</a>
+            <a href="/blog/understanding-toroidal-inductors.html" class="sidebar__link">Understanding Toroidal Inductors</a>
+            <a href="/blog/what-is-a-custom-inductor.html" class="sidebar__link">What Is a Custom Inductor?</a>
+            <a href="/blog/current-sensing-transformers.html" class="sidebar__link">Current Sensing Transformers</a>
+          </div>
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item"><span class="spec-list__label">Common Range</span><span class="spec-list__value">18 - 34 AWG</span></div>
+              <div class="spec-list__item"><span class="spec-list__label">+3 AWG Rule</span><span class="spec-list__value">2x resistance</span></div>
+              <div class="spec-list__item"><span class="spec-list__label">Typical Fill Factor</span><span class="spec-list__value">30% - 55%</span></div>
+            </div>
+          </div>
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

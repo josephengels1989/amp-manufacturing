@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bobbin-Wound vs. Toroidal Inductors: When to Use Which | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="Compare bobbin-wound and toroidal inductor construction methods. Learn the advantages, EMI characteristics, cost factors, and assembly considerations for each form factor.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Bobbin-Wound vs. Toroidal Inductors</span>
+      </div>
+      <p class="hero-page__eyebrow">Inductor Design</p>
+      <h1 class="hero-page__title">Bobbin-Wound vs. Toroidal Inductors: When to Use Which</h1>
+      <p class="hero-page__desc">Two construction methods, each with distinct advantages. Choosing the right form factor starts with understanding the tradeoffs in EMI, cost, assembly, and performance.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/circuit_abstract.jpg" alt="Toroidal inductor wound with copper wire on a ferrite core" class="article__hero-img">
+
+          <div class="article__content">
+
+            <h2>Two Ways to Wind an Inductor</h2>
+            <p>Every inductor is built by wrapping conductive wire around a magnetic core. The geometry of that core and how the wire is applied define the component's electrical behavior, physical size, manufacturing cost, and suitability for a given application. The two most common construction methods in power and signal electronics are bobbin-wound and toroidal.</p>
+            <p>Bobbin-wound inductors use a spool-shaped form (the bobbin) with a flanged core, typically an E-core, EI-core, or pot core. Wire is wound around the center post of the bobbin, and the core halves clamp around it. Toroidal inductors use a donut-shaped core. Wire is threaded through the center hole and wrapped around the full circumference of the ring.</p>
+            <p>Each approach brings a different set of engineering tradeoffs. This guide walks through them so you can match the form factor to your application requirements.</p>
+
+            <h2>Construction and Geometry</h2>
+
+            <h3>Bobbin-Wound Construction</h3>
+            <p>In a bobbin-wound assembly, the bobbin provides a structured form for the winding. Wire feeds onto the center post between two flanges, which contain the winding and establish repeatable layer patterns. After winding, E-core halves or similar structures are placed around the bobbin, creating a closed or gapped magnetic path.</p>
+            <p>This construction lends itself to automation. Bobbin winding machines operate at high speed, feeding wire onto the spool in controlled layers. Multiple windings (primary, secondary, auxiliary) can be placed in isolated sections of the bobbin, which simplifies transformer construction and helps meet safety creepage and clearance requirements.</p>
+
+            <h3>Toroidal Construction</h3>
+            <p>Toroidal winding requires threading the wire through the center hole of the core on each turn. The wire is distributed evenly around the full 360 degrees of the ring. This process is inherently slower than bobbin winding, especially at high turn counts, because each turn requires the wire (or a shuttle carrying the wire) to pass through the diminishing inner diameter.</p>
+            <p>The payoff for this added complexity is a geometry that naturally contains the magnetic flux within the core. In a toroid, the flux path forms a closed loop inside the ring, with minimal leakage into the surrounding space.</p>
+
+            <h2>Head-to-Head Comparison</h2>
+
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Bobbin-Wound</th>
+                  <th>Toroidal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EMI / Flux Leakage</td>
+                  <td>Higher. Flux leaks at core gaps and joints.</td>
+                  <td class="highlight">Very low. Flux stays inside the closed core.</td>
+                </tr>
+                <tr>
+                  <td>Winding Efficiency</td>
+                  <td class="highlight">High. Automated, fast, low labor cost.</td>
+                  <td>Moderate. Slower winding, more labor.</td>
+                </tr>
+                <tr>
+                  <td>Size / Weight</td>
+                  <td>Larger for equivalent inductance.</td>
+                  <td class="highlight">Smaller and lighter at same rating.</td>
+                </tr>
+                <tr>
+                  <td>Multiple Windings</td>
+                  <td class="highlight">Easy. Separate bobbin sections.</td>
+                  <td>Possible but more complex.</td>
+                </tr>
+                <tr>
+                  <td>Mounting</td>
+                  <td class="highlight">Built-in pins. Through-hole ready.</td>
+                  <td>Requires bracket, leads, or adhesive.</td>
+                </tr>
+                <tr>
+                  <td>Core Gapping</td>
+                  <td class="highlight">Simple. Spacer in core halves.</td>
+                  <td>Difficult. Requires cutting the toroid.</td>
+                </tr>
+                <tr>
+                  <td>Inductance per Turn</td>
+                  <td>Lower. Air gaps reduce effective permeability.</td>
+                  <td class="highlight">Higher. Full permeability of core material.</td>
+                </tr>
+                <tr>
+                  <td>Audible Noise</td>
+                  <td>Can buzz at core joints under AC excitation.</td>
+                  <td class="highlight">Quiet. Single-piece core, no joints.</td>
+                </tr>
+                <tr>
+                  <td>Thermal Performance</td>
+                  <td>Good. Easy to add heatsinks.</td>
+                  <td class="highlight">Excellent. Large surface-to-volume ratio.</td>
+                </tr>
+                <tr>
+                  <td>Unit Cost (High Volume)</td>
+                  <td class="highlight">Lower. Automation reduces labor.</td>
+                  <td>Higher. More hand labor per unit.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>EMI and Flux Leakage</h2>
+            <p>This is often the deciding factor. In a toroidal inductor, the magnetic flux travels in a continuous loop through the core material. There is no air gap, no joint between core halves, and no exposed pole faces where flux can escape into the surrounding environment. The result is radiated EMI that can be 10 to 20 dB lower than an equivalent bobbin-wound design.</p>
+            <p>Bobbin-wound inductors using E-cores or EI-cores have inherent gaps where core halves meet. Even when mated tightly, these joints allow some flux leakage. If the design includes an intentional air gap for energy storage (common in power inductors), the leakage increases further.</p>
+
+            <div class="callout callout--copper">
+              <p class="callout__title">Design Consideration</p>
+              <p>If your design must pass FCC Class B or CISPR 22 emissions limits, toroidal inductors give you a significant head start. The contained flux means less work for your EMI filter stages and fewer board layout constraints.</p>
+            </div>
+
+            <h2>Cost and Volume Considerations</h2>
+            <p>At low to medium volumes (under 5,000 units), the cost difference between bobbin-wound and toroidal inductors is often smaller than expected. Tooling for custom bobbins can be expensive, while toroidal cores are available in a wide range of standard sizes. For short runs, a toroidal design may actually cost less because it avoids custom bobbin tooling altogether.</p>
+            <p>At high volumes (50,000+ units), bobbin-wound assemblies gain a clear cost advantage. Automated winding machines can produce hundreds of units per hour with minimal operator involvement. Toroidal winding, even with shuttle-fed machines, remains more labor-intensive per unit.</p>
+
+            <h3>Cost Factors at a Glance</h3>
+            <ul>
+              <li><strong>Tooling:</strong> Bobbin molds cost $2,000 to $10,000 or more. Toroidal cores use standard sizes with no tooling.</li>
+              <li><strong>Labor:</strong> Bobbin winding is 3 to 5 times faster per unit than toroidal winding at equivalent turn counts.</li>
+              <li><strong>Material:</strong> Toroids use less copper wire for equivalent inductance due to shorter mean turn length.</li>
+              <li><strong>Assembly:</strong> Bobbins include integrated pins. Toroids need separate lead preparation and mounting hardware.</li>
+            </ul>
+
+            <h2>Assembly and PCB Integration</h2>
+            <p>Bobbin-wound inductors are designed for direct PCB mounting. The bobbin includes molded pins at standard pitches that drop into through-hole pads on the board. This makes automated pick-and-place or wave soldering straightforward. For high-volume PCBA lines, this is a meaningful advantage.</p>
+            <p>Toroidal inductors require additional consideration for board mounting. Common approaches include adhesive mounting pads, vertical mounting brackets, and formed wire leads soldered to pads. Each adds a step to the assembly process. For chassis-mount or flying-lead applications, however, toroids are simpler because they need only lead wires and a mounting surface.</p>
+
+            <h2>When to Choose Bobbin-Wound</h2>
+            <ul class="check-list">
+              <li>High-volume production where automated winding reduces per-unit cost</li>
+              <li>Transformer applications requiring isolated primary and secondary windings</li>
+              <li>Designs that need an intentional air gap for energy storage (buck converters, flyback transformers)</li>
+              <li>Through-hole PCB mounting with standard pin configurations</li>
+              <li>Applications where EMI shielding can be addressed by other means (shielded enclosures, can shields)</li>
+            </ul>
+
+            <h2>When to Choose Toroidal</h2>
+            <ul class="check-list">
+              <li>EMI-sensitive designs where low flux leakage is critical</li>
+              <li>Space-constrained boards that need maximum inductance in minimum volume</li>
+              <li>Audio equipment and sensitive analog circuits where audible noise from core vibration is unacceptable</li>
+              <li>Current sensing applications that depend on precise, contained flux paths</li>
+              <li>Medical and military applications with strict emissions requirements</li>
+              <li>Low to medium volumes where avoiding custom tooling saves cost</li>
+            </ul>
+
+            <h2>Core Material Applies to Both</h2>
+            <p>Both form factors are available in a range of core materials. Ferrite, powdered iron, silicon-iron, and high-permeability alloys like 1J85 (Permalloy) can all be used in either bobbin or toroidal geometries. The choice of core material is driven by the operating frequency, saturation requirements, and loss characteristics of your application, independent of the winding method.</p>
+            <p>That said, certain core geometries pair naturally with certain materials. E-cores are commonly available in ferrite and powdered iron. Toroidal cores are produced in virtually every magnetic material, including tape-wound alloys that are only practical in ring form.</p>
+
+            <h2>Making the Decision</h2>
+            <p>Start with your application requirements. If radiated EMI is a primary concern, toroidal construction provides inherent advantages that are difficult to replicate with bobbin-wound designs. If you need multiple isolated windings, core gapping, or high-speed automated assembly, bobbin-wound construction is the more practical path.</p>
+            <p>Many product lines use both. A switching power supply might use a bobbin-wound transformer for the main power stage and toroidal inductors for the output filter, taking advantage of each form factor where it performs best.</p>
+
+            <div class="callout callout--steel">
+              <p class="callout__title">Ampersand Builds Both</p>
+              <p>We produce both toroidal and bobbin-wound inductors. If you are evaluating form factors for a new design, send us your electrical specifications and mechanical constraints. We can quote both options so you can compare performance, size, and cost side by side.</p>
+            </div>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin:var(--s4) auto var(--s6);max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/understanding-dcr" class="sidebar__link">Understanding DCR: Why DC Resistance Matters</a>
+            <a href="/blog/emi-filtering-custom-inductors" class="sidebar__link">EMI Filtering with Custom Inductors</a>
+            <a href="/blog/inductors-in-power-supply-design" class="sidebar__link">Inductors in Power Supply Design</a>
+            <a href="/blog/permalloy-1j85-cores" class="sidebar__link">Permalloy (1J85) Cores: Properties and Applications</a>
+          </div>
+
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item">
+                <div class="spec-list__label">Wire Gauge Range</div>
+                <div class="spec-list__value">5 to 45 AWG</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Turn Count Range</div>
+                <div class="spec-list__value">20 to 2,500 turns</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Construction Types</div>
+                <div class="spec-list__value">Toroidal, Bobbin-Wound</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

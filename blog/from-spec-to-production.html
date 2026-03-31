@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Spec to Production: How Custom Magnetic Components Are Made | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="A step-by-step walkthrough of how custom inductors and transformers are manufactured, from receiving the engineering specification through final inspection and shipping.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">From Spec to Production</span>
+      </div>
+      <p class="hero-page__eyebrow">Manufacturing</p>
+      <h1 class="hero-page__title">From Spec to Production: How Custom Magnetic Components Are Made</h1>
+      <p class="hero-page__desc">Every custom inductor starts as a drawing and a set of requirements. Here is what happens between the moment we receive your specification and the day your parts ship.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/soldering_person.jpg" alt="Close-up view of precision wire winding on a toroidal core" class="article__hero-img">
+
+          <div class="article__content">
+
+            <h2>Step 1: Receiving the Specification</h2>
+            <p>Everything begins with a document. The customer's engineering team sends a specification package that typically includes a mechanical drawing showing dimensions and tolerances, an electrical specification listing inductance, DC resistance (DCR), turns count, and wire gauge, a materials callout identifying the core material and wire type, and any compliance requirements such as RoHS or specific military standards.</p>
+            <p>Some specs arrive as polished PDF drawings with full GD&T (geometric dimensioning and tolerancing). Others come as a sketch on a napkin with a phone call to fill in the details. Both are valid starting points. The goal at this stage is to capture every requirement so that the finished part matches exactly what the design engineer needs.</p>
+
+            <h2>Step 2: Engineering Review</h2>
+            <p>Before any material is ordered or any machine is set up, the spec goes through a detailed engineering review. This is where potential issues get caught early.</p>
+            <p>The review checks for several things. Can the specified number of turns physically fit within the core's winding window? Is the wire gauge appropriate for the required DCR value? Are the lead length and tinning specifications achievable with the termination equipment available? Does the core material match the electrical performance requirements?</p>
+            <p>If the review identifies any concerns, the engineering team communicates them back to the customer with specific recommendations. For example, if 1500 turns of 34 AWG wire would fill the inner diameter beyond the minimum ID specification, the team might suggest a slightly larger core or propose a tighter winding technique that uses the available space more efficiently.</p>
+
+            <div class="callout callout--steel">
+              <div class="callout__title">Why This Step Matters</div>
+              <p>Catching a tolerance conflict or material incompatibility during engineering review costs nothing. Catching it after 500 cores have been wound costs time, material, and trust. The review is where quality begins.</p>
+            </div>
+
+            <h2>Step 3: Material Procurement</h2>
+            <p>With the spec confirmed, the bill of materials is generated and procurement begins. For a typical toroidal inductor, the material list includes the magnetic core (sourced from the specified manufacturer or an approved equivalent), magnet wire in the correct gauge and insulation class, insulation tape (commonly yellow Mylar, 3M Type 74 or equivalent), solder for lead tinning (typically SN100 for RoHS-compliant, lead-free applications), and packaging materials.</p>
+            <p>Lead times vary by material. Standard ferrite cores from major distributors may ship in days. Specialty cores made from grain-oriented silicon-iron or nickel-iron alloys (such as permalloy) often require four to eight weeks, especially for first-time orders that need custom tooling. Wire is generally available in one to two weeks for common gauges.</p>
+            <p>Experienced manufacturers maintain safety stock of the most commonly used materials to avoid delays on repeat orders. Once a part has been produced before, subsequent orders benefit from established supplier relationships and known lead times.</p>
+
+            <h2>Step 4: Core Preparation</h2>
+            <p>When the cores arrive from the supplier, they go through incoming inspection (more on that in the quality control stage). Cores that pass inspection move to preparation.</p>
+            <p>For coated cores, preparation is minimal. The coating already provides the insulation barrier and mechanical protection needed for winding. The operator verifies the coating is free of defects, checks the dimensions against the spec, and loads the cores into the winding station.</p>
+            <p>For uncoated cores or cores that require additional insulation, tape wrapping may be applied at this stage. A layer of Mylar or polyester tape around the core adds insulation and creates a smooth surface for the winding wire to lay against.</p>
+
+            <h2>Step 5: Winding</h2>
+            <p>This is the heart of the manufacturing process, and the techniques differ significantly depending on the component type.</p>
+
+            <h3>Toroidal Winding</h3>
+            <p>Toroidal winding is a specialized skill. The wire must pass through the center hole of the donut-shaped core for every single turn. On a 750-turn toroid, that means 750 passes through the center hole, with each turn laid evenly beside the last to achieve uniform distribution.</p>
+            <p>For production quantities, toroidal winding machines automate this process. The machine loads a measured length of wire onto a shuttle that fits through the core's inner diameter. The shuttle rotates, passing wire through the hole and around the outside of the core in a continuous motion. The operator sets the turn count, wire tension, and distribution pattern. The machine counts each turn precisely and stops when the target count is reached.</p>
+            <p>Wire tension is carefully controlled. Too little tension and the turns become loose, creating a bulky winding that may exceed the maximum outer diameter specification. Too much tension and the wire stretches, changing its resistance per unit length and potentially damaging the insulation enamel. Experienced operators calibrate tension based on the wire gauge: heavier wire like 18 AWG requires more tension, while fine wire like 34 AWG needs a much lighter touch.</p>
+
+            <h3>Bobbin Winding</h3>
+            <p>Bobbin-wound components use a different approach. The core sits inside a plastic or phenolic bobbin (also called a coil form), and the wire wraps around the bobbin rather than threading through a hole. This is faster than toroidal winding and well-suited for components where the magnetic circuit is completed by assembling core pieces around the bobbin after winding.</p>
+            <p>Bobbin winding machines rotate the bobbin while a wire guide traverses back and forth, laying the wire in neat layers. Layer winding produces a more predictable result than random-wound bobbins, with better control over distributed capacitance and voltage stress between layers.</p>
+
+            <div class="callout callout--copper">
+              <div class="callout__title">Turn Count Accuracy</div>
+              <p>Modern winding machines count turns electronically and stop automatically at the programmed count. For specifications calling for 750 turns evenly distributed, the machine delivers exactly 750 turns. Specifications that allow a range (such as 1500 turns, minus 0 plus 20) give the operator a window to optimize the winding for best fill factor.</p>
+            </div>
+
+            <h2>Step 6: Lead Termination</h2>
+            <p>After winding, the wire ends (leads) must be prepared for connection to the circuit board or terminal. The specification defines the lead length, typically measured from the point where the wire exits the winding to the end of the lead. Common lead lengths range from 1.25 inches to 3.25 inches, depending on the application.</p>
+            <p>The operator cuts the leads to length, strips the enamel insulation from the ends (either mechanically or by chemical stripping for very fine wire), and routes the leads according to the drawing. Lead routing matters because it affects how the finished component sits on the board and how it connects to the circuit.</p>
+
+            <h2>Step 7: Solder Tinning</h2>
+            <p>The stripped lead ends are dipped into a pot of molten solder to "tin" them. Tinning serves two purposes: it protects the bare copper from oxidation during storage, and it makes the leads easier to solder onto a PCB or terminal during final assembly.</p>
+            <p>The solder type is specified on the drawing. For RoHS-compliant parts, SN100 (a lead-free tin-copper alloy) is standard. The tinning length is also specified, often 1/8 inch to 1/4 inch from the end of the lead. Temperature and dwell time in the solder pot must be controlled to achieve good wetting without damaging the wire insulation further up the lead.</p>
+
+            <h2>Step 8: Taping and Insulation</h2>
+            <p>Many toroidal components receive a final wrap of insulation tape over the completed winding. Yellow Mylar tape (3M Type 74, 1/2-inch width, is common) provides additional insulation, holds the winding in place, and gives the finished component a clean, professional appearance.</p>
+            <p>The tape is applied with controlled overlap (typically 50% overlap per wrap) and secured at the end. Some specifications call for multiple layers of tape, or for tape to be applied only in certain areas. The spec drawing governs exactly how the taping is done.</p>
+
+            <h2>Step 9: Electrical Testing</h2>
+            <p>Every finished component undergoes electrical testing before it leaves the production floor.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Test</th>
+                  <th>What It Measures</th>
+                  <th>Typical Tolerance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DC Resistance (DCR)</td>
+                  <td>Resistance of the winding in ohms</td>
+                  <td>Plus or minus 5% to 15%</td>
+                </tr>
+                <tr>
+                  <td>Inductance</td>
+                  <td>Inductance value at specified frequency</td>
+                  <td>Plus or minus 10% to 20%</td>
+                </tr>
+                <tr>
+                  <td>Hi-Pot (Dielectric)</td>
+                  <td>Insulation integrity between winding and core</td>
+                  <td>Pass/Fail at specified voltage</td>
+                </tr>
+                <tr>
+                  <td>Turns Count Verification</td>
+                  <td>Confirms correct number of turns</td>
+                  <td>Exact count or specified range</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>DCR measurement is the most common test and is performed on 100% of production parts. The measured value is compared against the specification (for example, 22.24 ohms plus or minus 15%). Parts that fall outside the tolerance band are segregated for disposition.</p>
+
+            <h2>Step 10: Visual and Dimensional Inspection</h2>
+            <p>After electrical testing, each part is visually inspected under magnification. Inspectors look for damaged insulation, loose turns, improper lead routing, solder bridges, incomplete tinning, and any other workmanship defects. The inspection criteria often reference IPC-A-620, the industry standard for cable and wire harness assemblies, which includes acceptance criteria for wound magnetic components.</p>
+            <p>Dimensional checks verify that the finished component meets the mechanical specifications: overall outer diameter, minimum inner diameter after winding, height, and lead lengths. These measurements are taken with calibrated instruments (digital calipers, micrometers, or optical comparators for critical dimensions).</p>
+
+            <h2>Step 11: Packaging and Shipping</h2>
+            <p>Finished components are packaged to prevent damage during transit. Small toroidal inductors are typically placed in partitioned trays or egg-crate style packaging that keeps each part separated. Larger components may be individually bagged. Anti-static packaging is used when the components will be handled in ESD-sensitive environments.</p>
+            <p>Each shipment includes a certificate of compliance (C of C) documenting that the parts were manufactured and tested in accordance with the customer's specification. Test data, including DCR measurements and hi-pot results, is retained on file for traceability. Many customers require lot traceability, meaning each shipment can be traced back to the specific raw material lots, production dates, and operator records.</p>
+
+            <div class="callout callout--copper">
+              <div class="callout__title">Timeline Summary</div>
+              <p>For a repeat order with materials in stock, production typically takes two to three weeks. First-time orders that require tooling or specialty core procurement may take six to eight weeks. Clear specifications and early communication on material requirements help keep timelines on track.</p>
+            </div>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin:var(--s4) auto var(--s6);max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/quality-control-magnetics" class="sidebar__link">Quality Control in Magnetic Component Manufacturing</a>
+            <a href="/blog/epoxy-coated-cores" class="sidebar__link">Epoxy-Coated Cores: Protection, Performance, and Reliability</a>
+            <a href="/blog/custom-vs-off-the-shelf" class="sidebar__link">The Economics of Custom vs. Off-the-Shelf Inductors</a>
+            <a href="/blog/understanding-inductance" class="sidebar__link">Understanding Inductance: A Practical Guide</a>
+          </div>
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item">
+                <div class="spec-list__label">Wire Gauges</div>
+                <div class="spec-list__value">18 - 34 AWG</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Turn Counts</div>
+                <div class="spec-list__value">200 - 1,500</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Repeat Order Lead Time</div>
+                <div class="spec-list__value">2 - 3 weeks</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

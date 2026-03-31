@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wire Types Guide | Ampersand Manufacturing</title>
+  <meta name="description" content="Technical guide to magnet wire for custom inductors and transformers. Copper and nickel wire, AWG gauge selection, enamel insulation ratings, temperature classes, and SN100 lead-free solder termination.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <!-- ============================================
+       Hero
+       ============================================ -->
+  <section class="hero-page">
+    <div class="container">
+      <p class="hero-page__eyebrow">Technical Reference</p>
+      <h1 class="hero-page__title">Wire Types Guide</h1>
+      <p class="hero-page__desc">Wire is the conductor that carries current through an inductor or transformer. Its gauge, material, and insulation determine the component's current capacity, resistance, thermal rating, and winding density. This guide covers the wire types and gauges we use in production.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Role of Wire in Magnetic Components
+       ============================================ -->
+  <section class="bg-dark">
+    <div class="container">
+      <div class="content-image-block fade-in">
+        <div class="content-image-block__text">
+          <p class="eyebrow">Fundamentals</p>
+          <h2>The Role of Wire in Magnetic Components</h2>
+          <p>Every inductor and transformer is fundamentally a coil of wire wound around a magnetic core. The wire creates the magnetic field when current flows through it. The number of turns, the wire diameter, and the winding geometry all affect the component's electrical characteristics.</p>
+          <p>Wire gauge selection involves balancing four competing requirements: current carrying capacity (larger wire handles more current), turn count (smaller wire fits more turns in the core window), DC resistance (thicker wire has lower resistance and less I&sup2;R loss), and cost (finer wire is more expensive per unit length).</p>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Copper Magnet Wire
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="copper">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="badge badge--copper">Wire Material</span>
+        <h2 class="mt-4">Copper Magnet Wire</h2>
+        <p>Copper is the standard conductor material for magnetic components. Its combination of high electrical conductivity, good thermal conductivity, mechanical ductility, and established manufacturing infrastructure makes it the default choice for the vast majority of inductor and transformer applications.</p>
+      </div>
+
+      <div class="grid grid-2 fade-in">
+        <div>
+          <h3 class="mb-4">Properties</h3>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Conductivity</div>
+              <div class="spec-list__value">100% IACS (reference standard)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Resistivity</div>
+              <div class="spec-list__value">1.68 &times; 10&#8315;&sup8; &Omega;&middot;m</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Density</div>
+              <div class="spec-list__value">8.96 g/cm&sup3;</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Melting Point</div>
+              <div class="spec-list__value">1,085&deg;C (1,985&deg;F)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Thermal Conductivity</div>
+              <div class="spec-list__value">401 W/m&middot;K</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Solderability</div>
+              <div class="spec-list__value">Excellent</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4">Why Copper Is the Standard</h3>
+          <p>Copper has the second-highest electrical conductivity of any element (after silver). It is easy to draw into fine wire, easy to solder, and maintains its properties over a wide temperature range. In practice, copper magnet wire delivers the lowest DC resistance per unit length for a given wire diameter, which directly reduces I&sup2;R heating in the winding.</p>
+          <p class="mt-4">Copper's high thermal conductivity also helps distribute heat within the winding, preventing hot spots that could degrade insulation or shift electrical parameters.</p>
+          <ul class="check-list mt-8">
+            <li>Lowest cost per unit of conductivity</li>
+            <li>Available in every AWG size from ultra-fine to heavy gauge</li>
+            <li>Compatible with all standard solder alloys</li>
+            <li>Proven reliability across billions of installed components</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Nickel Wire
+       ============================================ -->
+  <section class="bg-dark section-border-t" id="nickel">
+    <div class="container">
+      <div class="content-image-block content-image-block--reverse fade-in">
+        <div class="content-image-block__text">
+          <span class="badge badge--steel">Wire Material</span>
+          <h2 class="mt-4">Nickel Wire</h2>
+          <p>Nickel magnet wire is a specialty conductor used when the application demands properties that copper cannot provide. Nickel offers superior corrosion resistance, higher operating temperature, and better performance in chemically aggressive or high-radiation environments.</p>
+          <p><strong>Conductivity:</strong> Approximately 25% of copper (higher resistance per unit length).</p>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+
+      <div class="grid grid-2 mt-12 fade-in">
+        <div>
+          <h3 class="mb-4">Properties</h3>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Conductivity</div>
+              <div class="spec-list__value">~25% IACS</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Corrosion Resistance</div>
+              <div class="spec-list__value">Excellent</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Max Operating Temp</div>
+              <div class="spec-list__value">Higher than copper</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Magnetic Properties</div>
+              <div class="spec-list__value">Ferromagnetic</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4">When to Use Nickel Wire</h3>
+          <ul class="check-list">
+            <li>Applications exposed to corrosive chemicals or salt spray</li>
+            <li>High-temperature environments exceeding copper wire ratings</li>
+            <li>Radiation-hardened designs for space or nuclear applications</li>
+            <li>Situations where the wire's ferromagnetic properties are needed (e.g., specific sensor designs)</li>
+          </ul>
+          <div class="callout callout--steel mt-8">
+            <p class="callout__title">Production Note</p>
+            <p>We currently wind nickel wire in 34 AWG for precision toroidal assemblies. Higher DCR is expected and accounted for in the design. Our NK20 toroid assembly uses 750 turns of 34 AWG nickel wire with a DCR of 19.85 ohm &plusmn;5%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       AWG Explained
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="awg">
+    <div class="container">
+      <div class="section-header--center fade-in">
+        <p class="eyebrow">Wire Gauge</p>
+        <h2>American Wire Gauge (AWG) Explained</h2>
+        <p>AWG is the standard North American system for specifying wire diameter. The scale is logarithmic and runs backwards: larger AWG numbers indicate thinner wire. Every 6 AWG steps doubles or halves the wire diameter. Every 3 AWG steps doubles or halves the cross-sectional area.</p>
+      </div>
+
+      <div class="callout callout--copper mb-8 fade-in">
+        <p class="callout__title">The Key Rule</p>
+        <p>Bigger AWG number = thinner wire = higher resistance per foot = less current capacity = more turns fit in the same space. An 18 AWG wire is about 1mm in diameter and carries several amps. A 34 AWG wire is about the thickness of a human hair and carries milliamps.</p>
+      </div>
+
+      <div class="fade-in" style="overflow-x: auto;">
+        <table class="spec-table spec-table--striped">
+          <thead>
+            <tr>
+              <th>AWG</th>
+              <th>Diameter (mm)</th>
+              <th>Diameter (inches)</th>
+              <th>Resistance (&Omega;/1000 ft)</th>
+              <th>Current Capacity</th>
+              <th>Typical Turn Count</th>
+              <th>Our Applications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>18 AWG</strong></td>
+              <td>1.024</td>
+              <td>0.0403</td>
+              <td>6.385</td>
+              <td>High (multi-amp)</td>
+              <td>100 to 300 turns</td>
+              <td>Bobbin-wound coils, high-current inductors. Used in our 202-turn coil assemblies with DCR of 0.320 &Omega;.</td>
+            </tr>
+            <tr>
+              <td><strong>26 AWG</strong></td>
+              <td>0.405</td>
+              <td>0.0159</td>
+              <td>40.81</td>
+              <td>Medium</td>
+              <td>500 to 1,000 turns</td>
+              <td>Medium-current toroidal inductors. Used in our 750-turn assemblies on ferrite cores with DCR of 6.47 &Omega;.</td>
+            </tr>
+            <tr>
+              <td><strong>34 AWG</strong></td>
+              <td>0.160</td>
+              <td>0.0063</td>
+              <td>260.9</td>
+              <td>Low (milliamp range)</td>
+              <td>750 to 1,500+ turns</td>
+              <td>Fine-wire precision toroidal coils. Used in our 1,000 and 1,500-turn current sensing assemblies with DCR from 19 to 39 &Omega;.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Our Three Primary Gauges
+       ============================================ -->
+  <section class="bg-dark section-border-t">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">Our Production Gauges</p>
+        <h2>18, 26, and 34 AWG in Detail</h2>
+      </div>
+
+      <div class="grid grid-3 fade-in">
+        <div class="feature-card">
+          <div class="feature-card__icon" style="font-size: 0.9rem; font-weight: 700;">18</div>
+          <h3 class="feature-card__title">18 AWG: High-Current</h3>
+          <p class="feature-card__desc">Diameter: ~1.02 mm. The thickest wire in our standard production range. Used for applications that need to carry significant current with minimal resistive loss. A 202-turn bobbin-wound coil on 18 AWG achieves a DCR of just 0.320 ohm, keeping I&sup2;R losses extremely low.</p>
+          <div class="mt-4">
+            <span class="badge badge--copper">0.320 &Omega; DCR at 202 turns</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="font-size: 0.9rem; font-weight: 700;">26</div>
+          <h3 class="feature-card__title">26 AWG: Medium-Duty</h3>
+          <p class="feature-card__desc">Diameter: ~0.405 mm. The middle ground between current capacity and turn count. A 750-turn coil on 26 AWG delivers a DCR of 6.47 ohm, suitable for medium-power toroidal inductors on ferrite cores where both inductance and current handling matter.</p>
+          <div class="mt-4">
+            <span class="badge badge--copper">6.47 &Omega; DCR at 750 turns</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="font-size: 0.9rem; font-weight: 700;">34</div>
+          <h3 class="feature-card__title">34 AWG: Precision Fine Wire</h3>
+          <p class="feature-card__desc">Diameter: ~0.160 mm. Fine wire for high-turn-count precision coils. Fits 1,000 to 1,500 turns in the same core window that would hold 200 turns of 18 AWG. DCR ranges from 19 to 39 ohm depending on turn count. Standard for current sensing transformer secondaries.</p>
+          <div class="mt-4">
+            <span class="badge badge--copper">22 to 39 &Omega; DCR at 1,000 to 1,500 turns</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 fade-in">
+        <h3 class="mb-8">Wire Gauge vs. Key Parameters</h3>
+        <div class="bar-chart">
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>18 AWG: Current Capacity</span>
+              <span>Highest</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>26 AWG: Current Capacity</span>
+              <span>Medium</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>34 AWG: Current Capacity</span>
+              <span>Low</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill" style="width: 12%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar-chart mt-8">
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>18 AWG: Max Turns (given core window)</span>
+              <span>~300</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill bar-chart__fill--steel" style="width: 20%;"></div>
+            </div>
+          </div>
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>26 AWG: Max Turns (given core window)</span>
+              <span>~1,000</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill bar-chart__fill--steel" style="width: 55%;"></div>
+            </div>
+          </div>
+          <div class="bar-chart__item">
+            <div class="bar-chart__label">
+              <span>34 AWG: Max Turns (given core window)</span>
+              <span>~1,500+</span>
+            </div>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill bar-chart__fill--steel" style="width: 95%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Wire Insulation
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="insulation">
+    <div class="container">
+      <div class="content-image-block fade-in">
+        <div class="content-image-block__text">
+          <p class="eyebrow">Insulation</p>
+          <h2>Wire Insulation and Temperature Ratings</h2>
+          <p>Magnet wire is coated with a thin layer of enamel insulation that prevents short circuits between adjacent turns. The insulation must withstand the operating temperature of the component without degrading, cracking, or softening over the expected service life.</p>
+          <p>Insulation is classified by thermal endurance. The temperature class indicates the maximum continuous operating temperature at which the insulation will provide a service life of at least 20,000 hours.</p>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+
+      <div class="grid grid-2 mt-12 fade-in">
+        <div>
+          <h3 class="mb-4">Our Standard: Class 155&deg;C (NEMA MW80-C)</h3>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Temperature Class</div>
+              <div class="spec-list__value">155&deg;C (Class F)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">NEMA Standard</div>
+              <div class="spec-list__value">MW80-C</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Coating Type</div>
+              <div class="spec-list__value">Single-coat enamel</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Service Life</div>
+              <div class="spec-list__value">20,000+ hours at rated temp</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4">Single-Coat vs. Multi-Coat</h3>
+          <p><strong>Single-coat enamel</strong> provides a thin, uniform insulation layer. It results in a slightly smaller build-up on the wire, which means more turns fit in a given core window. Single coat is our standard for production assemblies where the operating voltage between turns is moderate.</p>
+          <p class="mt-4"><strong>Multi-coat (heavy build)</strong> adds additional enamel layers for higher dielectric strength. Used when turn-to-turn voltage is high or when the component must pass rigorous hi-pot testing. Multi-coat increases the overall wire diameter and reduces the number of turns that fit in the core window.</p>
+        </div>
+      </div>
+
+      <div class="fade-in mt-12" style="overflow-x: auto;">
+        <h3 class="mb-4">Common Temperature Classes</h3>
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Max Temp</th>
+              <th>Typical Enamel</th>
+              <th>Applications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Class A</td>
+              <td>105&deg;C</td>
+              <td>Polyvinyl acetal (Formvar)</td>
+              <td>General purpose, low-temperature</td>
+            </tr>
+            <tr>
+              <td>Class B</td>
+              <td>130&deg;C</td>
+              <td>Polyurethane</td>
+              <td>Direct solderable coils</td>
+            </tr>
+            <tr>
+              <td><strong>Class F</strong></td>
+              <td><strong>155&deg;C</strong></td>
+              <td><strong>Modified polyester (our standard)</strong></td>
+              <td><strong>Inductors, transformers, motors</strong></td>
+            </tr>
+            <tr>
+              <td>Class H</td>
+              <td>180&deg;C</td>
+              <td>Polyester-imide</td>
+              <td>High-temperature industrial</td>
+            </tr>
+            <tr>
+              <td>Class C</td>
+              <td>220&deg;C+</td>
+              <td>Polyimide (Kapton)</td>
+              <td>Aerospace, extreme environments</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Wire Selection Guide
+       ============================================ -->
+  <section class="bg-dark section-border-t">
+    <div class="container">
+      <div class="section-header--center fade-in">
+        <p class="eyebrow">Selection Guide</p>
+        <h2>How to Choose the Right Wire Gauge</h2>
+        <p>Three factors drive the wire gauge decision: the current the wire must carry, the number of turns the design requires, and the available window area in the core.</p>
+      </div>
+
+      <div class="grid grid-3 fade-in">
+        <div class="feature-card">
+          <div class="feature-card__icon">A</div>
+          <h3 class="feature-card__title">Start with Current</h3>
+          <p class="feature-card__desc">The wire must carry the operating current without overheating. Current capacity is proportional to cross-sectional area. Higher current requires thicker wire. For a given application, calculate the RMS current and select a gauge with adequate ampacity at the expected operating temperature.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">N</div>
+          <h3 class="feature-card__title">Check Turn Count</h3>
+          <p class="feature-card__desc">The inductance formula (L = N&sup2; &times; AL) shows that inductance scales with the square of the turns. Doubling the turns quadruples the inductance. If the design requires 1,500 turns, 18 AWG wire is physically impossible: it will not fit in the core window. Fine wire (34 AWG) is the only option.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">W</div>
+          <h3 class="feature-card__title">Verify Window Fill</h3>
+          <p class="feature-card__desc">The core window (the hole in a toroid, or the bobbin area) has finite space. Calculate the total cross-sectional area of all turns plus insulation and verify it fits within 60 to 70% of the window area. The remaining space accounts for winding imperfections and air gaps between turns.</p>
+        </div>
+      </div>
+
+      <div class="accordion mt-12 fade-in">
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            High current, low turn count: choose 18 AWG
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              <p>Applications carrying multiple amps with turn counts under 300. Typical: filter chokes in power supplies, high-current bobbin-wound assemblies. The large wire diameter keeps DCR below 1 ohm, minimizing heat generation. Our 18 AWG bobbin-wound coil uses 202 turns and achieves a DCR of 0.320 ohm with &plusmn;15% tolerance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            Moderate current, medium turn count: choose 26 AWG
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              <p>Applications with 500 to 1,000 turns at current levels in the hundreds of milliamps. Typical: general-purpose toroidal inductors on ferrite cores. Our 26 AWG assemblies use 750 turns on ferrite toroids, producing a DCR of 6.47 ohm with &plusmn;5% tolerance. This gauge balances inductance, resistance, and fill factor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            Low current, high turn count: choose 34 AWG
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              <p>Applications requiring 750 to 1,500+ turns where current is in the milliamp range. Typical: current transformer secondaries, precision sensing coils. The fine wire fits dense windings into small core windows. Our 34 AWG assemblies achieve 1,000 to 1,500 turns with DCR from 19 to 39 ohm. Available in both copper and nickel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Solder and Termination
+       ============================================ -->
+  <section class="bg-alt section-border-t" id="solder">
+    <div class="container">
+      <div class="content-image-block content-image-block--reverse fade-in">
+        <div class="content-image-block__text">
+          <p class="eyebrow">Termination</p>
+          <h2>Solder and Lead Termination</h2>
+          <p>Every coil assembly requires termination: the wire leads must be cut to length, stripped of insulation at the ends, and tinned with solder to facilitate connection to the circuit board or harness.</p>
+          <p>We use <strong>SN100 lead-free solder</strong> for all tinning operations. SN100 is a tin-copper-nickel alloy that complies with RoHS and REACH requirements. It produces reliable, consistent solder joints with good wetting characteristics.</p>
+        </div>
+        <div class="content-image-block__image">
+        </div>
+      </div>
+
+      <div class="grid grid-2 mt-12 fade-in">
+        <div>
+          <h3 class="mb-4">Lead Specifications</h3>
+          <div class="spec-list">
+            <div class="spec-list__item">
+              <div class="spec-list__label">Solder Alloy</div>
+              <div class="spec-list__value">SN100 (Lead-Free)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Compliance</div>
+              <div class="spec-list__value">RoHS, REACH</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Lead Length Range</div>
+              <div class="spec-list__value">1.25" to 3.25" (31 to 83 mm)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Tinning Length</div>
+              <div class="spec-list__value">1/10" to 1/4" (2.5 to 6.4 mm)</div>
+            </div>
+            <div class="spec-list__item">
+              <div class="spec-list__label">Lead Length Tolerance</div>
+              <div class="spec-list__value">&plusmn;0.01" to &plusmn;0.05"</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4">Why Lead-Free Matters</h3>
+          <p>RoHS (Restriction of Hazardous Substances) restricts the use of lead in electronic equipment sold in the EU and many other markets. Lead-free solder is now the standard for virtually all commercial and industrial electronics.</p>
+          <p class="mt-4">SN100 provides comparable mechanical strength and thermal cycling reliability to traditional tin-lead solders. Every assembly we produce ships with full RoHS compliance documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Comparison Table
+       ============================================ -->
+  <section class="bg-dark section-border-t">
+    <div class="container">
+      <div class="section-header--center fade-in">
+        <p class="eyebrow">Summary</p>
+        <h2>Wire Gauge Comparison</h2>
+      </div>
+
+      <div class="fade-in" style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>18 AWG</th>
+              <th>26 AWG</th>
+              <th>34 AWG</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bare Diameter</td>
+              <td>1.024 mm</td>
+              <td>0.405 mm</td>
+              <td>0.160 mm</td>
+            </tr>
+            <tr>
+              <td>Current Capacity</td>
+              <td class="highlight">High (multi-amp)</td>
+              <td>Medium</td>
+              <td>Low (milliamps)</td>
+            </tr>
+            <tr>
+              <td>Typical Turn Count</td>
+              <td>100 to 300</td>
+              <td>500 to 1,000</td>
+              <td class="highlight">750 to 1,500+</td>
+            </tr>
+            <tr>
+              <td>DCR (Typical Assembly)</td>
+              <td class="highlight">0.320 &Omega;</td>
+              <td>6.47 &Omega;</td>
+              <td>19 to 39 &Omega;</td>
+            </tr>
+            <tr>
+              <td>Winding Type</td>
+              <td>Bobbin-wound</td>
+              <td>Toroidal</td>
+              <td>Toroidal</td>
+            </tr>
+            <tr>
+              <td>Wire Material</td>
+              <td>Copper</td>
+              <td>Copper</td>
+              <td>Copper or Nickel</td>
+            </tr>
+            <tr>
+              <td>Insulation Class</td>
+              <td>155&deg;C (MW80-C)</td>
+              <td>155&deg;C (MW80-C)</td>
+              <td>155&deg;C (MW80-C)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Gallery
+       ============================================ -->
+  <section class="bg-alt section-border-t">
+    <div class="container">
+      <div class="section-header--center fade-in">
+        <p class="eyebrow">Gallery</p>
+        <h2>Wire in Production</h2>
+      </div>
+      <div class="gallery gallery--3 fade-in">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA
+       ============================================ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Have a spec that calls for a specific wire type?</h2>
+      <p>Send us your drawing. We will confirm wire gauge, insulation class, and termination method to match your requirements exactly.</p>
+      <a href="/contact" class="btn btn--copper btn--lg">Get in Touch</a>
+      <div class="cta-contact">
+        <a href="mailto:joe@ampmanufacturing.com" class="cta-contact__item">joe@ampmanufacturing.com</a>
+        <a href="tel:5104737714" class="cta-contact__item">510-473-7714</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

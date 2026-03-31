@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is a Custom Inductor? A Buyer's Guide | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="A practical guide for procurement managers on when to specify custom inductors, what to include in an RFQ, typical lead times, prototyping, and cost factors.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">What Is a Custom Inductor?</span>
+      </div>
+      <p class="hero-page__eyebrow">Buyer's Guide</p>
+      <h1 class="hero-page__title">What Is a Custom Inductor? A Buyer's Guide</h1>
+      <p class="hero-page__desc">A practical walkthrough for procurement professionals and engineers who need to specify, source, and qualify custom wound magnetic components.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/components_bw.jpg" alt="Custom inductors in various sizes for electronic assemblies" class="article__hero-img">
+          <div class="article__content">
+
+            <h2>Custom vs. Off-the-Shelf Inductors</h2>
+            <p>Off-the-shelf inductors are pre-designed components available from catalog distributors. They come in standard inductance values, fixed physical sizes, and are suitable for applications where the electrical and mechanical requirements align with what is commercially available. For prototyping, low-volume development, and designs built around standard component families, off-the-shelf parts are the logical starting point.</p>
+            <p>Custom inductors are designed and manufactured to meet a specific application's requirements. The core material, core dimensions, wire gauge, number of turns, winding technique, lead configuration, and coating are all specified to optimize performance for the target application. Custom components make sense when:</p>
+            <ul>
+              <li><strong>Space constraints</strong> require a form factor that catalog parts cannot match</li>
+              <li><strong>Electrical specifications</strong> (inductance, DCR, current rating, frequency) fall between standard values</li>
+              <li><strong>Volume requirements</strong> justify the engineering and setup costs</li>
+              <li><strong>Quality documentation</strong> requires full material traceability and controlled processes</li>
+              <li><strong>Multiple parameters</strong> must be optimized simultaneously (e.g., minimum DCR at maximum inductance in a constrained footprint)</li>
+              <li><strong>Application-specific testing</strong> or certification is required</li>
+            </ul>
+
+            <div class="callout callout--copper">
+              <h4 class="callout__title">When Custom Makes Sense</h4>
+              <p>As a general guideline, custom inductors become cost-effective at production volumes of 500 units or more per order. Below that, the engineering and setup costs are spread across too few parts. Above that threshold, the per-unit cost of a custom inductor can actually be lower than a catalog part because the design is optimized for the specific application, eliminating the cost of over-specification.</p>
+            </div>
+
+            <h2>What to Include in an RFQ</h2>
+            <p>A complete Request for Quotation (RFQ) accelerates the quoting process and ensures the manufacturer can provide an accurate price. Here is what to include:</p>
+
+            <h3>Electrical Specifications</h3>
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>What to Specify</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inductance</td>
+                  <td>Target value and tolerance</td>
+                  <td>100 &mu;H &plusmn; 10%</td>
+                </tr>
+                <tr>
+                  <td>DC Resistance (DCR)</td>
+                  <td>Maximum allowable value and tolerance</td>
+                  <td>22.24 ohm &plusmn; 15%</td>
+                </tr>
+                <tr>
+                  <td>Rated Current</td>
+                  <td>Maximum DC bias current</td>
+                  <td>2.5 A continuous</td>
+                </tr>
+                <tr>
+                  <td>Operating Frequency</td>
+                  <td>Primary frequency or range</td>
+                  <td>60 Hz, or 50 kHz - 200 kHz</td>
+                </tr>
+                <tr>
+                  <td>Turns</td>
+                  <td>If known (some specs call out turns instead of inductance)</td>
+                  <td>750 turns, evenly distributed</td>
+                </tr>
+                <tr>
+                  <td>Saturation Current</td>
+                  <td>Current at which inductance drops by a specified percentage</td>
+                  <td>Isat at 30% L drop: 5 A</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Physical Specifications</h3>
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>What to Specify</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Core Dimensions</td>
+                  <td>OD, ID, and height with tolerances</td>
+                  <td>OD: 0.800" &plusmn; 0.010</td>
+                </tr>
+                <tr>
+                  <td>Maximum Finished Size</td>
+                  <td>Dimensions after winding and coating</td>
+                  <td>Max OD: 1.65", Min ID: 0.86"</td>
+                </tr>
+                <tr>
+                  <td>Lead Length</td>
+                  <td>Length and tolerance of terminated leads</td>
+                  <td>3.0" &plusmn; 0.1</td>
+                </tr>
+                <tr>
+                  <td>Lead Termination</td>
+                  <td>Tinned length, solder type, straight vs. formed</td>
+                  <td>Tin 1/4" with SN100</td>
+                </tr>
+                <tr>
+                  <td>Mounting Style</td>
+                  <td>Through-hole, surface mount, chassis mount</td>
+                  <td>Through-hole, radial leads</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Materials and Compliance</h3>
+            <ul class="check-list">
+              <li><strong>Core material:</strong> Specify the material (ferrite, silicon-iron, permalloy) or allow the manufacturer to recommend</li>
+              <li><strong>Wire type:</strong> Conductor material, gauge, insulation class (e.g., 26 AWG copper, Class 155)</li>
+              <li><strong>Insulation tape:</strong> If required (e.g., Yellow Mylar, 3M Type 74)</li>
+              <li><strong>Core coating:</strong> Epoxy, powder coat, or uncoated</li>
+              <li><strong>RoHS compliance:</strong> Required or requested</li>
+              <li><strong>UL/CSA/CE:</strong> Any safety agency certifications needed</li>
+              <li><strong>Restricted substances:</strong> Any material restrictions beyond standard RoHS</li>
+            </ul>
+
+            <h3>Volume and Delivery</h3>
+            <ul>
+              <li><strong>Annual volume estimate:</strong> Be as accurate as possible. Pricing tiers typically apply.</li>
+              <li><strong>First order quantity:</strong> If different from ongoing production volumes</li>
+              <li><strong>Delivery schedule:</strong> Monthly releases, blanket orders, or one-time shipments</li>
+              <li><strong>Lead time requirements:</strong> When do you need first articles? Production quantities?</li>
+            </ul>
+
+            <h2>The Custom Inductor Process</h2>
+            <p>Understanding the typical workflow helps set realistic timelines and expectations.</p>
+
+            <h3>Step 1: RFQ and Engineering Review</h3>
+            <p>The manufacturer reviews your specifications for feasibility. Can the required turns fit on the specified core? Is the DCR target achievable with the specified wire gauge? Are there any material availability concerns? This review typically takes 1 to 3 business days for straightforward designs.</p>
+
+            <h3>Step 2: Quotation</h3>
+            <p>You receive pricing for the requested quantities, along with any engineering notes or recommendations. If the manufacturer identifies potential improvements to the design (a smaller core that would work, a wire gauge change that would reduce DCR), they may offer alternatives for your consideration.</p>
+
+            <h3>Step 3: Prototyping / First Articles</h3>
+            <p>Before committing to production tooling or large material purchases, most manufacturers produce a small batch of prototypes (typically 5 to 25 units). These first articles are built using production-equivalent materials and processes so they accurately represent what the production run will deliver.</p>
+
+            <div class="callout callout--steel">
+              <h4 class="callout__title">First Article Testing</h4>
+              <p>Plan to test first articles thoroughly in your actual application. Bench testing for inductance and DCR is a minimum. If possible, run accelerated life testing to validate thermal performance. It is far less expensive to catch a design issue at the prototype stage than after 5,000 units have been produced.</p>
+            </div>
+
+            <h3>Step 4: Approval and Production</h3>
+            <p>After first articles are approved, the manufacturer proceeds with production. For custom toroidal inductors, setup includes core procurement (or verification of core inventory), wire procurement if not in stock, winding machine setup, and quality checkpoint preparation.</p>
+
+            <h3>Step 5: Quality Verification and Shipment</h3>
+            <p>Each production lot undergoes electrical testing (typically DCR measurement on 100% of units, with inductance sampling). Dimensional checks verify lead length, finished OD/ID, and termination quality. A certificate of conformance accompanies each shipment, documenting test results and material traceability.</p>
+
+            <h2>Typical Lead Times</h2>
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Phase</th>
+                  <th>First Order</th>
+                  <th>Repeat Orders</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Quotation</td>
+                  <td>1-3 business days</td>
+                  <td>1 business day</td>
+                </tr>
+                <tr>
+                  <td>Prototype / First Articles</td>
+                  <td>2-4 weeks</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Core Tooling (if custom core)</td>
+                  <td>4-8 weeks</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Production (standard core)</td>
+                  <td>3-6 weeks</td>
+                  <td>2-3 weeks</td>
+                </tr>
+                <tr>
+                  <td>Production (custom tooled core)</td>
+                  <td>6-10 weeks</td>
+                  <td>2-3 weeks</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Repeat orders are significantly faster because the core design, winding program, and quality parameters are already established. The learning curve cost has been absorbed by the first order.</p>
+
+            <h2>Cost Factors</h2>
+            <p>Understanding what drives cost helps buyers make informed decisions during the design phase.</p>
+
+            <h3>Core Material and Size</h3>
+            <p>The magnetic core is often the single largest material cost in a wound component. Specialty materials (permalloy, amorphous metals) cost significantly more than standard ferrite or silicon-iron. Larger cores require more material. Custom core geometries add tooling costs that are amortized across the production volume.</p>
+
+            <h3>Wire Gauge and Material</h3>
+            <p>Thicker wire (lower AWG) means more copper per unit, increasing material cost. Nickel wire costs more than copper. The number of turns also affects wire consumption: more turns means more wire and longer winding time.</p>
+
+            <h3>Winding Complexity</h3>
+            <p>The winding process is the primary labor cost. Factors that increase winding time include:</p>
+            <ul>
+              <li>High turn counts (more passes through the core)</li>
+              <li>Fine wire (slower winding speed, higher breakage rate)</li>
+              <li>Small core ID (limited space for the winding shuttle)</li>
+              <li>Multiple winding sections or layers</li>
+              <li>Tight dimensional tolerances on the finished product</li>
+              <li>Special winding patterns (progressive, bank, or sectored winding)</li>
+            </ul>
+
+            <h3>Testing and Quality Requirements</h3>
+            <p>100% electrical testing adds time but is standard practice. Additional requirements like hi-pot testing, temperature cycling, or extended burn-in add cost proportional to the time and equipment required.</p>
+
+            <h3>Volume</h3>
+            <p>Per-unit costs decrease with volume due to setup amortization, material quantity discounts, and improved production efficiency. Most manufacturers offer price breaks at common volume tiers: 100, 500, 1,000, 5,000, and 10,000 units.</p>
+
+            <h2>Questions to Ask Your Manufacturer</h2>
+            <p>When evaluating potential custom inductor suppliers, these questions help assess capability and fit:</p>
+            <ol>
+              <li>What core materials do you stock or have access to?</li>
+              <li>What wire gauge range can you wind?</li>
+              <li>What is your maximum and minimum core OD capability?</li>
+              <li>Do you provide 100% electrical testing?</li>
+              <li>What documentation do you provide with shipments (CoC, test data, material certs)?</li>
+              <li>What is your typical prototype lead time?</li>
+              <li>Can you hold safety stock or provide blanket order programs?</li>
+              <li>Are you RoHS compliant across all materials and processes?</li>
+              <li>What is your minimum order quantity for production runs?</li>
+              <li>Can you accommodate engineering changes between production runs?</li>
+            </ol>
+
+            <h2>Common Mistakes in Custom Inductor Procurement</h2>
+            <ul>
+              <li><strong>Underspecifying the RFQ:</strong> Missing parameters force the manufacturer to make assumptions, which can lead to parts that meet the letter of the spec but miss the intent. Provide as much detail as possible.</li>
+              <li><strong>Skipping prototyping:</strong> Going straight to production volume to save time often costs more in the long run when parts need rework or redesign.</li>
+              <li><strong>Over-specifying tolerances:</strong> Tight tolerances on non-critical parameters increase cost without adding value. Reserve tight tolerances for parameters that genuinely affect circuit performance.</li>
+              <li><strong>Ignoring lead times for core procurement:</strong> The core is often the longest-lead item. Discuss core availability early in the process.</li>
+              <li><strong>Single-sourcing without a plan:</strong> If your production depends on a custom inductor, discuss backup plans with your manufacturer, including alternative core materials or second-source options.</li>
+            </ul>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin: var(--s4) auto var(--s6); max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/understanding-toroidal-inductors.html" class="sidebar__link">Understanding Toroidal Inductors</a>
+            <a href="/blog/wire-gauge-selection-awg.html" class="sidebar__link">Wire Gauge Selection (AWG)</a>
+            <a href="/blog/rohs-compliance-magnetics.html" class="sidebar__link">RoHS Compliance in Magnetics</a>
+            <a href="/blog/ferrite-vs-silicon-iron.html" class="sidebar__link">Ferrite vs. Silicon-Iron Cores</a>
+          </div>
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item"><span class="spec-list__label">Prototype Lead Time</span><span class="spec-list__value">2-4 weeks</span></div>
+              <div class="spec-list__item"><span class="spec-list__label">Repeat Order Lead Time</span><span class="spec-list__value">2-3 weeks</span></div>
+              <div class="spec-list__item"><span class="spec-list__label">Custom Core Tooling</span><span class="spec-list__value">4-8 weeks</span></div>
+            </div>
+          </div>
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

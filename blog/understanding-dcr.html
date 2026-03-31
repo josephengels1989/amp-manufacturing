@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding DCR: Why DC Resistance Matters in Inductor Design | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="Learn what DCR (DC resistance) is, how it affects inductor performance, power loss, and heat generation, and how to specify DCR tolerance for your application.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Understanding DCR</span>
+      </div>
+      <p class="hero-page__eyebrow">Engineering</p>
+      <h1 class="hero-page__title">Understanding DCR: Why DC Resistance Matters in Inductor Design</h1>
+      <p class="hero-page__desc">DC resistance is the most frequently specified electrical parameter on inductor drawings. It directly affects power loss, heat generation, and circuit performance.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/pcb_macro_green.jpg" alt="Close-up of fine green magnet wire wound on a toroidal core" class="article__hero-img">
+
+          <div class="article__content">
+
+            <h2>What Is DCR?</h2>
+            <p>DCR stands for DC Resistance. It is the resistance of the inductor's winding measured with a direct current (DC) signal, expressed in ohms. Every wire has resistance. When you wind that wire into a coil with dozens, hundreds, or thousands of turns, the total resistance of the wire path becomes a critical design parameter.</p>
+            <p>DCR is measured with a precision ohmmeter or LCR meter at DC (zero frequency). At this measurement condition, the inductance of the coil has no effect. You are measuring only the resistive component of the wire, which depends on three physical properties: the wire material, the wire cross-sectional area, and the total length of wire in the winding.</p>
+
+            <div class="callout callout--copper">
+              <p class="callout__title">The Basic Formula</p>
+              <p>DCR = (&rho; &times; L) / A, where &rho; is the resistivity of the wire material (ohm-meters), L is the total length of wire in the winding (meters), and A is the cross-sectional area of the wire (square meters). For copper at 20&deg;C, &rho; = 1.68 &times; 10<sup>-8</sup> ohm-meters.</p>
+            </div>
+
+            <h2>Why DCR Matters</h2>
+            <p>DCR is the primary source of power loss in an inductor carrying DC or low-frequency current. This power dissipation follows a straightforward relationship.</p>
+
+            <h3>Power Loss: P = I&sup2;R</h3>
+            <p>The power dissipated as heat in the winding equals the square of the current multiplied by the DC resistance. This is the fundamental I-squared-R loss. A 1-ohm DCR carrying 2 amps dissipates 4 watts. That same winding carrying 3 amps dissipates 9 watts. The squared relationship means that small increases in current produce disproportionately large increases in heat.</p>
+            <p>In a power supply running at 5 amps continuous, reducing DCR from 0.1 ohms to 0.05 ohms cuts the winding loss from 2.5 watts to 1.25 watts. Over thousands of operating hours, that difference affects component temperature, system reliability, and total energy consumption.</p>
+
+            <h3>Voltage Drop: V = IR</h3>
+            <p>The current flowing through the winding also creates a DC voltage drop across the inductor. In precision circuits, this voltage drop can affect regulation accuracy. A 0.5-ohm DCR inductor carrying 1 amp drops 0.5 volts across the winding. In a 3.3V output power supply, that represents a 15% loss before the output even reaches the load.</p>
+
+            <h2>What Determines DCR?</h2>
+
+            <h3>Wire Gauge</h3>
+            <p>Wire gauge is the most direct lever for controlling DCR. Thicker wire has lower resistance per unit length. The relationship between AWG (American Wire Gauge) size and resistance follows a logarithmic scale. Each step of 3 AWG sizes doubles the cross-sectional area and halves the resistance per foot.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Wire Gauge (AWG)</th>
+                  <th>Diameter (mm)</th>
+                  <th>Resistance (ohms/ft)</th>
+                  <th>Typical Application</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>18</td>
+                  <td>1.024</td>
+                  <td>0.00639</td>
+                  <td>High-current inductors, power transformers</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>0.644</td>
+                  <td>0.01614</td>
+                  <td>Medium-current, general purpose</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>0.405</td>
+                  <td>0.04076</td>
+                  <td>Signal inductors, moderate current</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>0.255</td>
+                  <td>0.1028</td>
+                  <td>Low-current, high-turn-count coils</td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td>0.160</td>
+                  <td>0.2593</td>
+                  <td>Current sensors, precision windings</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Using 18 AWG wire instead of 34 AWG reduces resistance per foot by a factor of roughly 40. However, thicker wire takes up more space in the winding window. A core that can accommodate 1,500 turns of 34 AWG wire might only fit 200 turns of 18 AWG wire. This is the fundamental tradeoff: lower DCR requires thicker wire, which limits the maximum number of turns and therefore the maximum inductance.</p>
+
+            <h3>Number of Turns</h3>
+            <p>More turns means more total wire length, which directly increases DCR. If the mean length per turn (MLT) on a given core is 50 mm and you wind 1,000 turns, the total wire length is 50 meters. At 34 AWG, that yields a DCR around 42 ohms. At 26 AWG, the same 1,000 turns would yield approximately 6.7 ohms, but the winding might not physically fit on the core.</p>
+
+            <h3>Core Size</h3>
+            <p>Larger cores have a longer mean turn length, which increases DCR for the same number of turns. However, larger cores also have larger winding windows, which allows the use of thicker wire. In practice, the net effect of stepping up to a larger core is usually a reduction in DCR because the ability to use heavier gauge wire more than compensates for the longer path.</p>
+
+            <h3>Wire Material</h3>
+            <p>Copper is the standard conductor for magnet wire, with a resistivity of 1.68 &times; 10<sup>-8</sup> ohm-meters at 20&deg;C. Some specialized applications use nickel wire, which has a resistivity roughly 4 times higher than copper. Nickel wire is used where magnetic properties of the conductor itself are needed, as in certain current sensing configurations. Aluminum wire, with roughly 1.6 times the resistivity of copper, is occasionally used where weight savings justify the higher resistance.</p>
+
+            <h2>Temperature Effects on DCR</h2>
+            <p>Copper resistance increases with temperature. The temperature coefficient of copper is approximately 0.393% per degree Celsius. A winding measured at 0.32 ohms at 20&deg;C will read approximately 0.37 ohms at 55&deg;C and 0.43 ohms at 90&deg;C.</p>
+
+            <div class="callout callout--steel">
+              <p class="callout__title">Temperature Correction Formula</p>
+              <p>R<sub>T</sub> = R<sub>20</sub> &times; [1 + 0.00393 &times; (T - 20)], where R<sub>T</sub> is resistance at temperature T (&deg;C) and R<sub>20</sub> is resistance measured at 20&deg;C. This correction is essential when comparing measurements taken at different ambient temperatures.</p>
+            </div>
+
+            <p>This temperature dependence is why inductor specifications always reference a measurement temperature, typically 20&deg;C or 25&deg;C. When measuring DCR for quality verification, the ambient temperature in the test area must be documented.</p>
+
+            <h2>Specifying DCR Tolerance</h2>
+            <p>Every inductor drawing includes a DCR value with a tolerance band. Common tolerance specifications are &plusmn;5%, &plusmn;10%, and &plusmn;15%. The appropriate tolerance depends on how sensitive your circuit is to DCR variation.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Tolerance</th>
+                  <th>Typical Application</th>
+                  <th>Manufacturing Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&plusmn;5%</td>
+                  <td>Precision current sensors, matched pairs, critical power paths</td>
+                  <td>Requires tighter process control, sorted wire lots, temperature-controlled measurement</td>
+                </tr>
+                <tr>
+                  <td>&plusmn;10%</td>
+                  <td>General-purpose power inductors, filter chokes</td>
+                  <td>Standard manufacturing processes with good quality control</td>
+                </tr>
+                <tr>
+                  <td>&plusmn;15%</td>
+                  <td>EMI filters, non-critical signal paths, energy storage inductors</td>
+                  <td>Broadest acceptance window, highest yield, lowest cost</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Tighter tolerances cost more because they increase measurement time, reduce yield, and may require sorting or rework. Before specifying &plusmn;5%, verify that your circuit actually needs that level of precision. Many designs function perfectly with &plusmn;15% DCR tolerance. The key question to ask: what happens to my circuit if the DCR is 15% higher or lower than nominal? If the answer is "nothing significant," specify &plusmn;15% and reduce your component cost.</p>
+
+            <h2>DCR in Real-World Specifications</h2>
+            <p>Here are representative DCR values from production inductor specifications across different wire gauges and turn counts.</p>
+
+            <table class="spec-table spec-table--striped">
+              <thead>
+                <tr>
+                  <th>Part Description</th>
+                  <th>Wire Gauge</th>
+                  <th>Turns</th>
+                  <th>DCR (ohms)</th>
+                  <th>Tolerance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bobbin-wound power coil</td>
+                  <td>18 AWG</td>
+                  <td>202</td>
+                  <td>0.320</td>
+                  <td>&plusmn;15%</td>
+                </tr>
+                <tr>
+                  <td>Toroidal coil, ferrite core</td>
+                  <td>26 AWG</td>
+                  <td>750</td>
+                  <td>6.47</td>
+                  <td>&plusmn;5%</td>
+                </tr>
+                <tr>
+                  <td>Current sensor, small toroid</td>
+                  <td>34 AWG</td>
+                  <td>1,000</td>
+                  <td>22.24</td>
+                  <td>&plusmn;15%</td>
+                </tr>
+                <tr>
+                  <td>High-count toroidal coil</td>
+                  <td>34 AWG</td>
+                  <td>1,500</td>
+                  <td>39.15</td>
+                  <td>&plusmn;15%</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Notice the pattern: DCR scales with turn count and inversely with wire gauge. The 18 AWG bobbin-wound coil at 202 turns has a DCR of just 0.320 ohms, while the 34 AWG toroidal with 1,500 turns reaches 39.15 ohms. The wire gauge has a much larger effect than the turn count because resistance per unit length increases exponentially as wire diameter decreases.</p>
+
+            <h2>Minimizing DCR in Your Design</h2>
+            <ul class="check-list">
+              <li>Use the heaviest gauge wire that fits your winding window and frequency requirements</li>
+              <li>Choose a core with a short mean turn length to minimize total wire consumption</li>
+              <li>Consider parallel windings (two thinner wires wound simultaneously) to reduce effective DCR</li>
+              <li>Account for temperature rise when calculating worst-case DCR at operating conditions</li>
+              <li>Specify only the tolerance you actually need to avoid unnecessary cost</li>
+            </ul>
+
+            <h2>Measurement and Quality Verification</h2>
+            <p>DCR is measured with a four-wire (Kelvin) resistance measurement using a micro-ohmmeter or LCR meter set to DC. The four-wire technique eliminates lead resistance from the measurement, which is critical when measuring low-DCR windings where lead resistance could be a significant fraction of the total.</p>
+            <p>Measurements should be taken at a known ambient temperature and corrected to the reference temperature on the drawing. In production, every unit is typically measured and compared against the specification limits. Units falling outside the tolerance band are rejected or reworked.</p>
+
+            <div class="callout callout--copper">
+              <p class="callout__title">Ampersand's Approach</p>
+              <p>We measure DCR on every unit with a calibrated micro-ohmmeter at room temperature. Full test data ships with every batch, including individual DCR readings, ambient temperature at time of test, and pass/fail status against your specification.</p>
+            </div>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin:var(--s4) auto var(--s6);max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/bobbin-wound-vs-toroidal" class="sidebar__link">Bobbin-Wound vs. Toroidal Inductors</a>
+            <a href="/blog/inductors-in-power-supply-design" class="sidebar__link">Inductors in Power Supply Design</a>
+            <a href="/blog/custom-transformers-power-efficiency" class="sidebar__link">How Custom Transformers Improve Efficiency</a>
+          </div>
+
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item">
+                <div class="spec-list__label">DCR Range</div>
+                <div class="spec-list__value">0.32 to 39+ ohms</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Tolerance Options</div>
+                <div class="spec-list__value">&plusmn;5%, &plusmn;10%, &plusmn;15%</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Measurement</div>
+                <div class="spec-list__value">4-wire Kelvin, 20&deg;C ref</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

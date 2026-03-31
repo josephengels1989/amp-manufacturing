@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Control in Magnetic Component Manufacturing | Ampersand Manufacturing Blog</title>
+  <meta name="description" content="A thorough guide to quality control in magnetic component manufacturing, covering incoming inspection, in-process controls, electrical testing, visual standards, and traceability.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span class="breadcrumb__sep">/</span>
+        <a href="/blog/">Blog</a> <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Quality Control in Magnetics</span>
+      </div>
+      <p class="hero-page__eyebrow">Manufacturing</p>
+      <h1 class="hero-page__title">Quality Control in Magnetic Component Manufacturing</h1>
+      <p class="hero-page__desc">Quality in magnetic component manufacturing is built into every stage of the process, from incoming materials through final shipment. Here is how it works.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article">
+          <img src="/assets/images/soldering_hand.jpg" alt="Quality inspection of wound magnetic components under magnification" class="article__hero-img">
+
+          <div class="article__content">
+
+            <h2>The Quality Mindset</h2>
+            <p>In magnetic component manufacturing, quality cannot be inspected into a finished product. It must be built in at every stage. A defect that occurs during winding, for example, is often invisible from the outside. The only reliable way to catch it is to prevent it from happening in the first place through controlled processes, trained operators, and systematic verification at each step.</p>
+            <p>This guide walks through the complete quality control framework for manufacturing custom inductors and transformers, from the moment raw materials arrive through final packaging and shipment.</p>
+
+            <h2>Incoming Material Inspection</h2>
+            <p>Every component in a magnetic assembly affects the finished product's performance. Incoming inspection verifies that raw materials meet their specifications before they enter the production process.</p>
+
+            <h3>Core Inspection</h3>
+            <p>Magnetic cores are the foundation of the component, and incoming inspection is thorough.</p>
+            <ul>
+              <li><strong>Visual inspection:</strong> Check for chips, cracks, bare spots in the coating, uneven coating, and any visible contamination. For coated cores, verify that the coating is uniform and free of pinholes or bubbles.</li>
+              <li><strong>Dimensional verification:</strong> Measure outer diameter, inner diameter, and height with calibrated calipers or micrometers. Compare against the core specification. For toroidal cores, ID is particularly critical because it determines the available winding window.</li>
+              <li><strong>Coating thickness:</strong> Measure using non-destructive thickness gauges at multiple points around the core. Verify that thickness falls within the specified tolerance (e.g., 0.015" plus or minus 0.003").</li>
+              <li><strong>Magnetic properties:</strong> For critical applications, sample cores are tested on an impedance analyzer or BH curve tracer to verify permeability and loss characteristics match the manufacturer's data sheet.</li>
+            </ul>
+
+            <h3>Wire Inspection</h3>
+            <p>Magnet wire is verified for correct gauge, insulation type, and insulation integrity.</p>
+            <ul>
+              <li><strong>Gauge verification:</strong> Wire diameter is measured with a micrometer and compared to the AWG standard table. For example, 34 AWG wire should measure 0.0063 inches (0.160 mm) bare diameter.</li>
+              <li><strong>Insulation class:</strong> The wire spool label is checked against the specification to confirm the correct insulation type and temperature class (e.g., Class 155 degrees Celsius, single-coat enamel, NEMA MW80-C).</li>
+              <li><strong>Continuity and insulation test:</strong> A sample length of wire is tested for electrical continuity and insulation integrity. Any breaks in the enamel coating will show up as a low-resistance path to ground.</li>
+            </ul>
+
+            <h3>Other Materials</h3>
+            <p>Solder (verified for alloy composition, especially important for RoHS compliance with SN100 lead-free solder), insulation tape (verified for width, type, and adhesive quality), and packaging materials are all checked against their respective specifications.</p>
+
+            <div class="callout callout--copper">
+              <div class="callout__title">Sampling Plans</div>
+              <p>Incoming inspection uses statistical sampling plans based on ANSI/ASQ Z1.4 (formerly MIL-STD-105). The sample size depends on the lot size and the acceptable quality level (AQL). For critical dimensions, tighter sampling levels are used. For visual attributes, normal inspection levels are standard. Suppliers with established quality track records may qualify for reduced inspection levels over time.</p>
+            </div>
+
+            <h2>In-Process Controls</h2>
+            <p>Once materials enter production, controls at each manufacturing step prevent defects from propagating downstream.</p>
+
+            <h3>Winding Setup Verification</h3>
+            <p>Before a production run begins, the winding machine setup is verified against the production traveler (the document that follows the lot through production). The operator confirms the correct core part number is loaded, the wire gauge matches the specification, the programmed turn count is correct, the wire tension is set appropriately for the gauge, and the winding direction and distribution pattern match the drawing.</p>
+            <p>A first piece inspection is performed on the first wound unit. This unit is fully tested (electrically and dimensionally) before the rest of the lot proceeds. If the first piece passes all inspections, the setup is confirmed and production continues. If it fails, the setup is adjusted and a new first piece is produced and tested.</p>
+
+            <h3>Turn Count Verification</h3>
+            <p>Modern winding machines count turns electronically and stop automatically at the programmed count. This is verified by the operator at the start of each setup and spot-checked during the run. For specifications with exact turn count requirements (e.g., 750 turns, no tolerance), the machine counter must match precisely. Many manufacturers also perform an electrical turns ratio test on sample units as an independent verification of the turn count.</p>
+
+            <h3>Wire Tension Monitoring</h3>
+            <p>Consistent wire tension throughout the winding process is essential for a uniform, compact winding. If tension is too low, the winding becomes loose and may exceed the maximum outer diameter specification. If tension is too high, the wire stretches (changing its DCR per unit length) and the enamel insulation may be damaged. Tension is set during setup and monitored during the run, with adjustments made as the wire supply spool diameter changes.</p>
+
+            <h3>In-Process DCR Checks</h3>
+            <p>During a production run, sample units are pulled periodically and tested for DC resistance. This serves as a real-time indicator that the winding process is consistent. A sudden shift in DCR could indicate a wire gauge problem, a tension change, or a turn count error. Catching these issues during the run, rather than at final test, prevents the production of an entire lot of out-of-spec parts.</p>
+
+            <h2>Electrical Testing</h2>
+            <p>Electrical testing is the most critical quality gate. Every finished component is tested against its electrical specification before being released for shipment.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Test</th>
+                  <th>Purpose</th>
+                  <th>Method</th>
+                  <th>Typical Acceptance Criteria</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DC Resistance (DCR)</td>
+                  <td>Verifies correct wire gauge and turn count</td>
+                  <td>4-wire Kelvin measurement with precision ohmmeter</td>
+                  <td>Nominal value plus or minus 5% to 15%</td>
+                </tr>
+                <tr>
+                  <td>Inductance</td>
+                  <td>Verifies magnetic performance</td>
+                  <td>LCR meter at specified frequency and amplitude</td>
+                  <td>Nominal value plus or minus 10% to 20%</td>
+                </tr>
+                <tr>
+                  <td>Hi-Pot (Dielectric Withstand)</td>
+                  <td>Verifies insulation between winding and core</td>
+                  <td>Apply specified voltage for 1 to 60 seconds, monitor leakage current</td>
+                  <td>No breakdown, leakage below threshold</td>
+                </tr>
+                <tr>
+                  <td>Insulation Resistance</td>
+                  <td>Measures insulation quality at lower voltage</td>
+                  <td>Megohmmeter at 100V or 500V DC</td>
+                  <td>Greater than 100 megaohms typical</td>
+                </tr>
+                <tr>
+                  <td>Turns Ratio</td>
+                  <td>Verifies correct turns count (transformers)</td>
+                  <td>Turns ratio tester</td>
+                  <td>Exact ratio per specification</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>DCR Measurement in Detail</h3>
+            <p>DC resistance measurement is performed on 100% of production units. The measurement uses a 4-wire (Kelvin) technique that eliminates the resistance of the test leads from the reading, ensuring accuracy for low-resistance windings.</p>
+            <p>Temperature affects resistance: copper wire resistance increases approximately 0.393% per degree Celsius. Test results are either corrected to a standard reference temperature (typically 20 or 25 degrees Celsius) or the specification defines the acceptable measurement temperature range. Measuring a warm component immediately after soldering will produce a higher reading than measuring the same component at room temperature.</p>
+
+            <h3>Hi-Pot Testing</h3>
+            <p>The high-potential (hi-pot) test applies a voltage between the winding and the core (or between windings in a transformer) to verify that the insulation system can withstand the design voltage with margin. A typical test applies 500 to 1500 VAC for 60 seconds. Any breakdown (indicated by a sudden increase in leakage current) means the insulation has failed, and the unit is rejected.</p>
+            <p>Hi-pot testing is destructive if the insulation fails, so it is performed after all other testing is complete. It is the final electrical gate before the component is approved for shipment.</p>
+
+            <div class="callout callout--steel">
+              <div class="callout__title">Test Equipment Calibration</div>
+              <p>All test equipment used for acceptance testing must be calibrated to traceable national standards (NIST in the United States). Calibration intervals are typically 12 months. Calibration records, including the certificate, the as-found and as-left data, and the next calibration due date, are maintained in the quality system and available for customer audit.</p>
+            </div>
+
+            <h2>Visual Inspection Standards</h2>
+            <p>Visual inspection evaluates the physical workmanship of the component. The most widely referenced standard for wound component inspection is IPC-A-620, "Requirements and Acceptance for Cable and Wire Harness Assemblies," which includes criteria specifically applicable to magnetic components.</p>
+
+            <h3>What Inspectors Check</h3>
+            <ul>
+              <li><strong>Winding appearance:</strong> Turns should be evenly distributed with consistent spacing. No crossovers (where one turn crosses over another), no bunching, and no gaps in the winding that would indicate missing turns.</li>
+              <li><strong>Wire condition:</strong> The enamel insulation must be intact throughout the winding. Scratches, nicks, or exposed copper are rejectable defects.</li>
+              <li><strong>Lead routing:</strong> Leads should exit the winding at the locations specified on the drawing, with smooth bends (no kinks) and consistent routing from unit to unit.</li>
+              <li><strong>Solder tinning:</strong> Tinned lead ends should show smooth, bright, continuous solder coverage for the specified length. Cold solder joints (grainy, dull appearance), icicles, and bridging are rejectable.</li>
+              <li><strong>Tape application:</strong> Insulation tape should be applied with the specified overlap, with smooth adhesion and no wrinkles, bubbles, or exposed areas.</li>
+              <li><strong>Core condition:</strong> No chips, cracks, or coating damage that occurred during the winding process.</li>
+              <li><strong>Marking:</strong> Part number, lot number, date code, and any other required markings must be legible and correctly applied.</li>
+            </ul>
+
+            <h3>Inspection Levels</h3>
+            <p>IPC-A-620 defines three classes of acceptance criteria, each progressively stricter.</p>
+
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Description</th>
+                  <th>Typical Applications</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Class 1</td>
+                  <td>General Electronic Products</td>
+                  <td>Consumer electronics, non-critical applications</td>
+                </tr>
+                <tr>
+                  <td>Class 2</td>
+                  <td>Dedicated Service Electronic Products</td>
+                  <td>Industrial equipment, commercial communications, test instruments</td>
+                </tr>
+                <tr>
+                  <td>Class 3</td>
+                  <td>High-Performance Electronic Products</td>
+                  <td>Medical devices, military, aerospace, life-support systems</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Class 3 inspection is the most stringent. Defects that are acceptable under Class 1 or Class 2 criteria may be rejectable under Class 3. The applicable class is determined by the customer's specification and is documented on the production traveler.</p>
+
+            <h2>Dimensional Verification</h2>
+            <p>Finished components are measured to verify they meet the mechanical dimensions on the drawing. Critical dimensions for toroidal components include:</p>
+            <ul>
+              <li><strong>Maximum outer diameter (OD) after winding:</strong> The winding adds bulk to the core. The specification defines the maximum allowable OD of the finished assembly. Exceeding this dimension means the part will not fit in the allocated board space or mounting location.</li>
+              <li><strong>Minimum inner diameter (ID) after winding:</strong> The winding fills the center hole. The specification defines the minimum ID, ensuring adequate clearance for mounting hardware or current-sensing conductors that pass through the hole.</li>
+              <li><strong>Overall height:</strong> The combination of core height and winding buildup determines the total height. This must not exceed the clearance available in the assembly.</li>
+              <li><strong>Lead lengths:</strong> Measured from the exit point of the winding to the end of the lead, including the tinned portion. Tolerances are typically plus or minus 0.05 inches for standard leads.</li>
+            </ul>
+
+            <h2>Environmental Testing</h2>
+            <p>For components going into demanding applications (military, aerospace, automotive, outdoor), environmental testing verifies performance under stress conditions.</p>
+            <ul>
+              <li><strong>Temperature cycling:</strong> Components are cycled between temperature extremes (e.g., minus 40 to plus 125 degrees Celsius) for a specified number of cycles. Electrical parameters are measured before and after cycling to detect any degradation.</li>
+              <li><strong>Humidity exposure:</strong> Components are placed in a humidity chamber (typically 85 degrees Celsius, 85% relative humidity) for a specified duration (commonly 168 hours or 1,000 hours). Insulation resistance is measured afterward to verify the coating maintained its moisture barrier.</li>
+              <li><strong>Thermal shock:</strong> Rapid transition between temperature extremes (within seconds, using liquid baths or air-to-air chambers) stresses the materials and bonding interfaces more severely than gradual cycling.</li>
+              <li><strong>Vibration:</strong> Components are mounted on a vibration table and subjected to sinusoidal or random vibration profiles. Electrical continuity is monitored during vibration, and full electrical testing is performed afterward.</li>
+            </ul>
+
+            <div class="callout callout--copper">
+              <div class="callout__title">Environmental Testing is Typically Destructive</div>
+              <p>Environmental testing is performed on sample units from a production lot. The tested units are usually consumed by the testing process and cannot be shipped to the customer. The sample size and test conditions are defined in the specification or agreed upon between the manufacturer and the customer.</p>
+            </div>
+
+            <h2>Statistical Process Control (SPC)</h2>
+            <p>Statistical process control uses data collected during production to monitor and control the manufacturing process in real time. For magnetic components, the most common SPC parameters are DCR values and dimensional measurements.</p>
+            <p>DCR values from every tested unit are logged and plotted on control charts. These charts show the mean value and the natural variation of the process over time. If the process mean starts drifting toward a specification limit, or if the variation increases, the control chart provides early warning before any units actually fail. The operator can then investigate and correct the root cause (a wire tension change, a core lot variation, a temperature shift in the test area) before defective parts are produced.</p>
+            <p>Control chart rules (typically based on Western Electric rules or Nelson rules) define the specific patterns that trigger an investigation. A single point outside the control limits, a run of seven consecutive points on one side of the mean, or a trend of six consecutive increasing or decreasing points all signal that the process may be shifting out of control.</p>
+
+            <h2>Lot Traceability</h2>
+            <p>Traceability is the ability to trace any finished component back through every stage of its manufacturing history. A comprehensive traceability system records:</p>
+            <ul>
+              <li>Core supplier, lot number, and incoming inspection results</li>
+              <li>Wire supplier, spool number, gauge, and insulation class</li>
+              <li>Solder lot number and alloy composition</li>
+              <li>Production date, operator identification, and machine number</li>
+              <li>Winding parameters (tension settings, turn count verification)</li>
+              <li>Electrical test results for every unit, linked to the test equipment serial number</li>
+              <li>Visual inspection results and inspector identification</li>
+              <li>Environmental test results (if applicable)</li>
+              <li>Shipping date, customer PO number, and quantity shipped</li>
+            </ul>
+            <p>This information is recorded on a production traveler that accompanies the lot through every process step and is archived after shipment. If a field failure occurs, the lot number on the component allows the manufacturer to retrieve the complete production history and determine whether other components from the same lot may be affected.</p>
+
+            <h2>Customer-Specific Requirements</h2>
+            <p>Many customers have quality requirements beyond the standard practices described above. Common customer-specific requirements include:</p>
+            <ul>
+              <li><strong>First Article Inspection (FAI):</strong> A detailed inspection of the first production unit per AS9102, documenting every dimension, material, and process characteristic.</li>
+              <li><strong>Process Failure Mode and Effects Analysis (PFMEA):</strong> A systematic analysis of potential failure modes in the manufacturing process, their effects, and the controls in place to prevent or detect them.</li>
+              <li><strong>Control plans:</strong> Documents that define the quality checks performed at each process step, including the characteristic being checked, the measurement method, the sample size, and the reaction plan if a check fails.</li>
+              <li><strong>Annual quality reviews:</strong> Some customers require periodic audits of the manufacturer's quality system, either on-site or through documentation review.</li>
+              <li><strong>Non-conformance reporting:</strong> Specific procedures for documenting, investigating, and correcting any non-conformance that occurs during production.</li>
+            </ul>
+
+            <p>A quality-focused manufacturer welcomes these requirements. They align with best practices and demonstrate the customer's commitment to receiving reliable components. The manufacturer's quality team works with the customer to understand and implement any unique requirements before production begins.</p>
+
+          </div>
+
+          <div class="cta-section mt-12" style="background:var(--surface);border-radius:var(--radius);padding:var(--s8);text-align:center;border:1px solid var(--border);">
+            <h3>Need custom magnetic components?</h3>
+            <p style="margin:var(--s4) auto var(--s6);max-width:500px;">Send us your specifications and we will respond within 24 hours.</p>
+            <a href="/contact" class="btn btn--copper">Contact Us</a>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Related Articles</h4>
+            <a href="/blog/from-spec-to-production" class="sidebar__link">From Spec to Production: How Custom Magnetics Are Made</a>
+            <a href="/blog/military-defense-magnetics" class="sidebar__link">Military and Defense Applications of Custom Magnetics</a>
+            <a href="/blog/epoxy-coated-cores" class="sidebar__link">Epoxy-Coated Cores: Protection, Performance, and Reliability</a>
+            <a href="/blog/understanding-inductance" class="sidebar__link">Understanding Inductance: A Practical Guide</a>
+          </div>
+          <div class="sidebar__block">
+            <h4 class="sidebar__title">Quick Specs</h4>
+            <div class="spec-list" style="gap:var(--s3);">
+              <div class="spec-list__item">
+                <div class="spec-list__label">DCR Test Method</div>
+                <div class="spec-list__value">4-Wire Kelvin</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Visual Standard</div>
+                <div class="spec-list__value">IPC-A-620</div>
+              </div>
+              <div class="spec-list__item">
+                <div class="spec-list__label">Sampling Plan</div>
+                <div class="spec-list__value">ANSI/ASQ Z1.4</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__block" style="background:var(--copper-light);border-color:rgba(184,115,51,0.2);">
+            <h4 class="sidebar__title" style="color:var(--copper);">Contact</h4>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:var(--s3);">Questions about this topic?</p>
+            <a href="mailto:joe@ampmanufacturing.com" style="font-size:0.9rem;color:var(--copper);">joe@ampmanufacturing.com</a><br>
+            <a href="tel:5104737714" style="font-size:0.9rem;color:var(--copper);">510-473-7714</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/components.js?v=1774923106"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
