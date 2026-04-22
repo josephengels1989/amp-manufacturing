@@ -16,7 +16,10 @@
       <div class="container nav__inner">
         <a href="${prefix}" class="nav__logo">
           <span class="nav__logo-mark">&amp;</span>
-          <span class="nav__logo-text">Ampersand Manufacturing</span>
+          <span class="nav__logo-group">
+            <span class="nav__logo-text">Ampersand Manufacturing</span>
+            <span class="nav__logo-tagline">Custom Magnetic Components</span>
+          </span>
         </a>
 
         <div class="nav__menu" id="nav-menu">
