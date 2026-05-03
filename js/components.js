@@ -11,11 +11,16 @@
   // ============================================
   // Header / Navigation
   // ============================================
+  // Ensō — open Zen circle, painted as a tapered sumi-e brushstroke.
+  // Five stacked arcs of decreasing length and increasing width simulate the
+  // pressure curve of a bushy brush: thin tip, thick belly, thin tail.
+  const ensoSVG = `<svg class="enso" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="rotate(-115 50 50)" fill="none" stroke="currentColor" stroke-linecap="round"><circle cx="50" cy="50" r="30" stroke-width="6" stroke-dasharray="178 200" stroke-dashoffset="0"/><circle cx="50" cy="50" r="30" stroke-width="12" stroke-dasharray="158 200" stroke-dashoffset="-10"/><circle cx="50" cy="50" r="30" stroke-width="17" stroke-dasharray="130 200" stroke-dashoffset="-24"/><circle cx="50" cy="50" r="30" stroke-width="22" stroke-dasharray="100 200" stroke-dashoffset="-39"/><circle cx="50" cy="50" r="30" stroke-width="26" stroke-dasharray="70 200" stroke-dashoffset="-54"/></g></svg>`;
+
   const headerHTML = `
     <nav class="nav" id="main-nav">
       <div class="container nav__inner">
         <a href="${prefix}" class="nav__logo">
-          <span class="nav__logo-mark">&amp;</span>
+          <span class="nav__logo-mark">${ensoSVG}</span>
           <span class="nav__logo-group">
             <span class="nav__logo-text">Ampersand Manufacturing</span>
             <span class="nav__logo-tagline">Custom Magnetic Components</span>
@@ -74,7 +79,7 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <a href="${prefix}" class="footer__logo">
-              <span class="mark">&amp;</span> Ampersand Manufacturing
+              <span class="mark">${ensoSVG}</span> Ampersand Manufacturing
             </a>
             <p class="footer__tagline">Custom Inductors &amp; Transformers</p>
             <p class="footer__address">
