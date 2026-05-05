@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Design Decision: StoryBrand + Zen Redesign (2026-05-03)</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 720px; margin: 3rem auto; padding: 0 1.5rem; color: #2a2520; line-height: 1.7; background: #f5f0e6; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; color: #2a2520; }
+  h1 { border-bottom: 1px solid #d8cebc; padding-bottom: 0.5rem; }
+  h2 { margin-top: 2.5rem; color: #4f5d44; }
+  code { background: #ebe3d2; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+  blockquote { border-left: 3px solid #7c8d6d; margin: 1.5rem 0; padding: 0.25rem 0 0.25rem 1.25rem; color: #6b6359; font-style: italic; }
+  ul { padding-left: 1.5rem; }
+  .meta { color: #6b6359; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<h1>StoryBrand Wireframe + Zen Visual Theme</h1>
+<p class="meta">Decision date: 2026-05-03 &middot; Commit: <code>ca3fadf</code></p>
+
+<h2>The Decision</h2>
+<p>The homepage was rebuilt around Donald Miller's StoryBrand 7-part framework (the customer is the hero, Ampersand is the guide, single call-to-action). The old homepage had multiple competing CTAs and felt like a generic capabilities brochure. The new structure runs Problem &rarr; Stakes &rarr; Guide &rarr; Plan &rarr; Identity Transformation &rarr; one Final CTA.</p>
+
+<p>Visual language switched from dark industrial to a light "zen" palette: warm washi-paper background, sumi-ink text, muted sage accent, Cormorant Garamond serif headings, generous whitespace. The logo mark changed from the literal ampersand <code>&amp;</code> to an <strong>ensō</strong> — the open Zen circle painted in one breath with a sumi brush. Implemented as a 5-layer SVG arc that tapers from thin tip to thick belly to thin tail.</p>
+
+<h2>Why</h2>
+<p>The hero copy now opens with the customer's pain rather than our capabilities:</p>
+<blockquote>"Our competitors don't respect you. They disrespect you in both pricing and communication."</blockquote>
+<p>The Bob Nguyen quote and the NK Technologies growth story (5,000 cores &rarr; half their catalog in 12 months) carry the authority. Three contact methods (text, email, live call) collapse into a single ask: schedule a call with our intake coordinator.</p>
+
+<h2>Why Zen + Ensō</h2>
+<p>Most competitors in the inductor space use a hard, technical, dark, blue-and-grey aesthetic. A warm, contemplative palette and a hand-painted brushstroke logo signal craft, attention, and care &mdash; the same qualities that distinguish Ampersand's communication and quality from transactional suppliers. The ensō (open circle, brushstroke) maps directly to the "wholeness, but never closed" identity of a partner who keeps showing up.</p>
+
+<h2>Color Tokens</h2>
+<ul>
+  <li>Paper background: <code>#f5f0e6</code></li>
+  <li>Alt panel: <code>#ebe3d2</code></li>
+  <li>Card lift: <code>#fbf7ee</code></li>
+  <li>Sumi ink (text): <code>#2a2520</code></li>
+  <li>Stone (secondary): <code>#6b6359</code></li>
+  <li>Sage (accent): <code>#7c8d6d</code></li>
+  <li>Moss (accent dark): <code>#4f5d44</code></li>
+  <li>Hairline border: <code>#d8cebc</code></li>
+</ul>
+
+<h2>Type</h2>
+<ul>
+  <li>Headings: Cormorant Garamond, weight 400</li>
+  <li>Body: Inter, weight 300</li>
+</ul>
+
+<h2>Pending</h2>
+<ul>
+  <li>Apply the same framework + theme to all other pages</li>
+  <li>Replace placeholder intake numbers (510-555-0142, 510-555-0143) with real ones</li>
+  <li>Push commit to GitHub (auto-deploys to Vercel)</li>
+</ul>
+
+</body>
+</html>
