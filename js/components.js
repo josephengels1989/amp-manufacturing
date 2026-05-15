@@ -22,8 +22,8 @@
         <a href="${prefix}" class="nav__logo">
           <span class="nav__logo-mark">${ensoSVG}</span>
           <span class="nav__logo-group">
-            <span class="nav__logo-text">Ampersand Manufacturing</span>
-            <span class="nav__logo-tagline">Custom Magnetic Components</span>
+            <span class="nav__logo-text">Ampersand</span>
+            <span class="nav__logo-tagline">We take care of the transformers. So you can transform the world.</span>
           </span>
         </a>
 
@@ -113,7 +113,7 @@
           <div class="footer__nav">
             <h4>Contact</h4>
             <div class="footer__contact-info">
-              <a href="mailto:joe@ampmanufacturing.com">joe@ampmanufacturing.com</a>
+              <a href="mailto:intake@ampmanufacturing.com">intake@ampmanufacturing.com</a>
               <a href="tel:5104737714">510-473-7714</a>
               <p style="font-size:0.85rem;color:var(--text-muted);margin-top:var(--s2);">
                 2204 McKinley Avenue<br>Berkeley, California 94703

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ampersand | Industrial Mockup</title>
-  <meta name="description" content="Custom toroidal inductors. Berkeley, California.">
+  <title>Send us your drawing | Ampersand</title>
+  <meta name="description" content="Three ways to start the conversation. Email template, direct email, or phone.">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Inline nav */
+    /* Nav (same as industrial) */
     .i-nav {
       position: fixed;
       top: 0;
@@ -80,7 +80,7 @@
       color: var(--i-ink);
       line-height: 1;
     }
-.i-nav__tagline {
+    .i-nav__tagline {
       font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 0.82rem;
       letter-spacing: 0;
@@ -121,164 +121,213 @@
       max-width: 880px;
       margin: 0 auto;
       padding: 0 2rem;
-      text-align: center;
     }
 
-/* 1. HERO — centered, story-flow */
-    body.theme-classy .i-hero {
-      padding: 14rem 0 10rem;
+    /* Page hero */
+    body.theme-classy .i-page-hero {
+      padding: 14rem 0 3rem;
       background: var(--i-bg);
+      text-align: center;
       border-bottom: 1px solid var(--i-line);
     }
-
-    .i-headline {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-      color: var(--i-ink);
-      margin: 0;
-    }
-    .i-headline__line {
-      display: block;
-      margin-bottom: 0.85em;
-    }
-    .i-headline__line:last-child {
-      margin-bottom: 0;
-    }
-    .i-empathy {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-      color: var(--i-mist);
-      margin: 4.5rem 0 0;
-    }
-    .i-empathy__line {
-      display: block;
-      margin-bottom: 0.85em;
-    }
-    .i-empathy__line:last-child {
-      margin-bottom: 0;
-    }
-    .i-enter {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-      line-height: 1.05;
-      color: var(--i-navy);
-      margin: 7rem 0 2rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-    }
-    .i-samples {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-      line-height: 1.55;
-      color: var(--i-ink-soft);
-      margin: 0 auto 3.75rem;
-      max-width: 44ch;
-      font-weight: 500;
-    }
-
-    /* CTA — bold action red */
-    .i-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.95rem;
-      padding: 1.25rem 2.75rem;
-      background: var(--i-action);
-      color: #ffffff;
-      font-family: "Inter", sans-serif;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--i-action);
-      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.22);
-      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .i-cta:hover {
-      background: var(--i-action-d);
-      border-color: var(--i-action-d);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
-    }
-    .i-cta__arrow {
-      font-family: "JetBrains Mono", monospace;
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
-    /* 2. PLAN — centered vertical, story-flow */
-    body.theme-classy .i-plan {
-      padding: 7rem 0;
-      background: var(--i-panel);
-      border-bottom: 1px solid var(--i-line);
-    }
-    .i-plan__eyebrow {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.78rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--i-navy);
-      font-weight: 600;
-      margin: 0 auto 1rem;
-      text-align: center;
-    }
-    .i-plan__title {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      letter-spacing: -0.025em;
-      color: var(--i-ink);
-      margin: 0 auto 5rem;
-      font-weight: 800;
-      text-align: center;
-    }
-    .i-plan__list {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .i-step {
-      padding: 3.25rem 0;
-      border-top: 1px solid var(--i-line);
-      text-align: center;
-    }
-    .i-step:last-child {
-      border-bottom: 1px solid var(--i-line);
-    }
-    .i-step__num {
+    .i-page-hero__kicker {
       font-family: "JetBrains Mono", monospace;
       font-size: 0.72rem;
       letter-spacing: 0.32em;
       text-transform: uppercase;
       color: var(--i-navy);
-      margin: 0 0 0.75rem;
       font-weight: 600;
+      margin: 0 0 1.5rem;
     }
-    .i-step__body {
+    .i-page-hero h1 {
       font-family: "Inter", sans-serif;
-      font-size: clamp(1.2rem, 1.7vw, 1.5rem);
-      line-height: 1.4;
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 800;
       color: var(--i-ink);
+      margin: 0 0 1.5rem;
+    }
+    .i-page-hero p {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      line-height: 1.45;
+      color: var(--i-ink);
+      max-width: 48ch;
       margin: 0 auto;
-      max-width: 38ch;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: -0.01em;
     }
 
-    /* CTA section — between plan and footer */
-    body.theme-classy .i-cta-section {
-      padding: 6rem 0;
+    /* Method blocks */
+    body.theme-classy .i-methods {
+      padding: 2rem 0 5rem;
       background: var(--i-bg);
+    }
+    .i-method {
+      padding: 3rem 0;
+      border-top: 1px solid var(--i-line);
+    }
+    .i-method:last-child {
       border-bottom: 1px solid var(--i-line);
-      text-align: center;
+    }
+    .i-method__num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--i-navy);
+      font-weight: 600;
+      margin: 0 0 1.25rem;
+    }
+    .i-method__title {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      font-weight: 800;
+      color: var(--i-ink);
+      margin: 0 0 1.25rem;
+    }
+    .i-method__desc {
+      font-family: "Inter", sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: var(--i-ink-soft);
+      margin: 0 0 2rem;
+      max-width: 52ch;
+      font-weight: 500;
+    }
+    .i-method__guarantee {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+      line-height: 1.15;
+      letter-spacing: -0.022em;
+      color: var(--i-ink);
+      margin: 2rem 0 0;
+      font-weight: 800;
+    }
+    .i-method__commit {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--i-ink-soft);
+      margin: 2rem 0 0;
+      max-width: 56ch;
+      font-weight: 500;
+      font-style: italic;
+    }
+    .i-method__warm {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--i-ink-soft);
+      margin: -1rem 0 2rem;
+      max-width: 56ch;
+      font-weight: 500;
     }
 
-    /* 3. FOOTER — classy slate blue */
+    /* Template panel */
+    .i-template {
+      background: #ffffff;
+      border: 1px solid var(--i-line);
+      padding: 2rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--i-ink);
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0 0 1.25rem;
+    }
+
+    /* Inline copyable value */
+    .i-value {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: #ffffff;
+      border: 1px solid var(--i-line);
+      padding: 1rem 1.5rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.05rem;
+      color: var(--i-ink);
+      font-weight: 500;
+      margin: 0 0 1.25rem;
+    }
+    .i-value__label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--i-stone);
+      font-weight: 600;
+    }
+    .i-value__text {
+      font-weight: 500;
+    }
+
+    /* Copy button */
+    .i-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.2rem;
+      background: transparent;
+      color: var(--i-navy);
+      font-family: "Inter", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--i-navy);
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .i-copy:hover {
+      background: var(--i-navy);
+      color: #ffffff;
+    }
+    .i-copy.is-copied {
+      background: var(--i-navy);
+      color: #ffffff;
+    }
+
+    /* Hours block */
+    .i-hours {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0 0;
+    }
+    .i-hours__cell {
+      padding: 1.25rem 1.5rem;
+      background: #ffffff;
+      border: 1px solid var(--i-line);
+    }
+    .i-hours__label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--i-stone);
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+    }
+    .i-hours__value {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      line-height: 1.35;
+      color: var(--i-ink);
+      margin: 0;
+      font-weight: 600;
+    }
+    @media (max-width: 720px) {
+      .i-hours { grid-template-columns: 1fr; }
+    }
+
+    /* Footer (same as industrial) */
     body.theme-classy .i-footer {
       background: #d4dee2;
       color: var(--i-ink);
@@ -346,56 +395,46 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="i-hero">
+  <!-- Page hero -->
+  <section class="i-page-hero">
     <div class="i-container">
-      <h1 class="i-headline">
-        <span class="i-headline__line">You need an inductor.</span>
-        <span class="i-headline__line">You need it customized.</span>
-        <span class="i-headline__line">You need it now.</span>
-      </h1>
-      <p class="i-empathy">
-        <span class="i-empathy__line">You don't know who can do it.</span>
-        <span class="i-empathy__line">You don't know who to trust.</span>
-      </p>
-      <p class="i-enter">Enter Ampersand.</p>
-      <p class="i-samples">Samples on your doorstep in weeks, completely free. Including shipping.</p>
-      <a href="/send-drawing" class="i-cta">
-        Send us your drawing
-        <span class="i-cta__arrow">&rarr;</span>
-      </a>
+      <h1>Send us your drawing.</h1>
+      <p>Two ways to reach us.<br><br>Pick both, or whichever takes the least friction.</p>
     </div>
   </section>
 
-  <!-- Plan -->
-  <section class="i-plan">
-    <h2 class="i-plan__title">Here's the three-step plan</h2>
-    <div class="i-plan__list">
-      <div class="i-step">
-        <p class="i-step__num">Step 01</p>
-        <p class="i-step__body">You give us a drawing of the inductor you need.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 02</p>
-        <p class="i-step__body">You get samples back in weeks. No strings attached.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 03</p>
-        <p class="i-step__body">We beat the price you're currently paying.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 04</p>
-        <p class="i-step__body">Repeat step 1.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Methods -->
+  <section class="i-methods">
+    <div class="i-container">
 
-  <!-- CTA -->
-  <section class="i-cta-section">
-    <a href="/send-drawing" class="i-cta">
-      Send us your drawing
-      <span class="i-cta__arrow">&rarr;</span>
-    </a>
+      <!-- 01: Direct email -->
+      <article class="i-method">
+        <p class="i-method__num">Option 01</p>
+        <h2 class="i-method__title">Email us directly.</h2>
+        <p class="i-method__desc">Skip the template. Just send us whatever you've got. A drawing, a spec, a question. We'll take it from there.</p>
+        <div class="i-value">
+          <span class="i-value__label">Intake</span>
+          <span class="i-value__text" id="rfq-email">intake@ampmanufacturing.com</span>
+        </div>
+        <br>
+        <button class="i-copy" data-copy-target="rfq-email" type="button">Copy address</button>
+      </article>
+
+      <!-- 02: Call -->
+      <article class="i-method">
+        <p class="i-method__num">Option 02</p>
+        <h2 class="i-method__title">Or just call.</h2>
+        <p class="i-method__desc">Unlike many suppliers, we love live calls.</p>
+        <p class="i-method__warm">Call us anytime, about anything. Including personal hangups, dating advice, and other things we're not qualified to handle. We may not be able to help, but you know what? We'll listen.</p>
+        <div class="i-value">
+          <span class="i-value__label">Direct Line (staffed and monitored)</span>
+          <a href="tel:+15855008786" class="i-value__text" style="color: inherit; text-decoration: none;">+1 585-500-8786</a>
+        </div>
+        <p class="i-method__guarantee">All missed calls are returned within 12 hours.</p>
+        <p class="i-method__commit">We encourage you to leave a voicemail. Its contents will be reviewed, and it will be returned promptly.</p>
+      </article>
+
+    </div>
   </section>
 
   <!-- Footer -->
@@ -414,6 +453,23 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script>
+    document.querySelectorAll('.i-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.copyTarget);
+        if (!target) return;
+        const text = target.innerText.trim();
+        navigator.clipboard.writeText(text).then(() => {
+          const original = btn.innerText;
+          btn.classList.add('is-copied');
+          btn.innerText = 'Copied';
+          setTimeout(() => {
+            btn.classList.remove('is-copied');
+            btn.innerText = original;
+          }, 1600);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
