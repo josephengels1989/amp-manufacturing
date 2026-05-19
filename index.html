@@ -365,6 +365,21 @@
       max-width: 1240px;
       margin: 0 auto;
     }
+
+    /* Specificity overrides to defeat classy-v2.css dark-on-light defaults */
+    body.theme-classy .i-nav__name { color: var(--i-ink); }
+    body.theme-classy .i-headline,
+    body.theme-classy .i-headline__line { color: var(--i-ink); }
+    body.theme-classy .i-plan__title { color: var(--i-ink); }
+    body.theme-classy .i-step__body { color: var(--i-ink); }
+    body.theme-classy .i-step__num { color: var(--i-navy); }
+    body.theme-classy .i-plan__eyebrow { color: var(--i-navy); }
+    body.theme-classy .i-footer__brand { color: var(--i-navy); }
+    body.theme-classy .i-footer__tagline,
+    body.theme-classy .i-footer__data { color: #c8cfd5; }
+    body.theme-classy .i-footer__data a { color: #c8cfd5; }
+    body.theme-classy .i-footer__data a:hover { color: var(--i-navy); }
+    body.theme-classy .i-footer__copy { color: #8993a0; }
   </style>
 </head>
 <body class="theme-classy">
