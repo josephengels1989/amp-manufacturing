@@ -164,7 +164,15 @@
       padding: 10rem 0 10rem;
       background: var(--i-bg);
       border-bottom: 1px solid var(--i-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
+    .i-hero .i-container {
+      width: 100%;
+    }
+    body { overflow-x: hidden; }
 
     .i-headline {
       font-family: "Inter", sans-serif;
@@ -390,6 +398,14 @@
     body.theme-classy .i-footer__data a:hover { color: var(--i-navy); }
     body.theme-classy .i-footer__copy { color: #8993a0; }
     body.theme-classy .i-step__body { color: #d0d9e2; }
+
+    /* Force-center hero headline against external CSS interference */
+    body.theme-classy .i-headline,
+    body.theme-classy .i-headline__line {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
   </style>
 </head>
 <body class="theme-classy">
