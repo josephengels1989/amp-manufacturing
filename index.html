@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=1774923106">
   <link rel="stylesheet" href="/css/classy-v2.css?v=1776819524">
   <style>
@@ -292,14 +292,14 @@
       font-weight: 600;
     }
     .i-step__body {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(1.2rem, 1.7vw, 1.5rem);
-      line-height: 1.4;
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+      line-height: 1.22;
       color: var(--i-ink);
       margin: 0 auto;
-      max-width: 38ch;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      max-width: 24ch;
+      font-weight: 800;
+      letter-spacing: -0.012em;
     }
 
     /* CTA section — between plan and footer */
@@ -380,6 +380,12 @@
     body.theme-classy .i-footer__data a { color: #c8cfd5; }
     body.theme-classy .i-footer__data a:hover { color: var(--i-navy); }
     body.theme-classy .i-footer__copy { color: #8993a0; }
+
+    /* Rotating accent palette for step bodies (blues, golds, reds) */
+    body.theme-classy .i-step:nth-child(1) .i-step__body { color: #7eb1e0; }
+    body.theme-classy .i-step:nth-child(2) .i-step__body { color: #d4b46e; }
+    body.theme-classy .i-step:nth-child(3) .i-step__body { color: #d24550; }
+    body.theme-classy .i-step:nth-child(4) .i-step__body { color: #d4b46e; }
   </style>
 </head>
 <body class="theme-classy">
