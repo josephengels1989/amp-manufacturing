@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=1774923106">
   <link rel="stylesheet" href="/css/classy-v2.css?v=1776819524">
   <style>
@@ -289,13 +289,15 @@
       border-bottom: 1px solid var(--i-line);
     }
     .i-step__num {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--i-navy);
-      margin: 0 0 0.75rem;
-      font-weight: 600;
+      font-family: "Playfair Display", "Georgia", serif;
+      font-style: italic;
+      font-size: clamp(1.45rem, 2.1vw, 1.95rem);
+      letter-spacing: 0;
+      text-transform: none;
+      color: #f0f4f8;
+      margin: 0 0 1.15rem;
+      font-weight: 700;
+      line-height: 1.2;
     }
     .i-step__body {
       font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -379,7 +381,7 @@
     body.theme-classy .i-headline__line { color: var(--i-ink); }
     body.theme-classy .i-plan__title { color: var(--i-ink); }
     body.theme-classy .i-step__body { color: var(--i-ink); }
-    body.theme-classy .i-step__num { color: var(--i-navy); }
+    body.theme-classy .i-step__num { color: #f0f4f8; }
     body.theme-classy .i-plan__eyebrow { color: var(--i-navy); }
     body.theme-classy .i-footer__brand { color: var(--i-navy); }
     body.theme-classy .i-footer__tagline,
