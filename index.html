@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=1774923106">
   <link rel="stylesheet" href="/css/classy-v2.css?v=1776819524">
   <style>
@@ -292,14 +292,15 @@
       font-weight: 600;
     }
     .i-step__body {
-      font-family: "Playfair Display", "Georgia", serif;
-      font-size: clamp(1.7rem, 2.6vw, 2.4rem);
-      line-height: 1.22;
-      color: var(--i-ink);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: clamp(1.3rem, 1.85vw, 1.65rem);
+      line-height: 1.4;
+      color: #d0d9e2;
       margin: 0 auto;
-      max-width: 24ch;
+      max-width: 30ch;
       font-weight: 800;
-      letter-spacing: -0.012em;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
     }
 
     /* CTA section — between plan and footer */
@@ -380,12 +381,7 @@
     body.theme-classy .i-footer__data a { color: #c8cfd5; }
     body.theme-classy .i-footer__data a:hover { color: var(--i-navy); }
     body.theme-classy .i-footer__copy { color: #8993a0; }
-
-    /* Rotating accent palette for step bodies (blues, golds, reds) */
-    body.theme-classy .i-step:nth-child(1) .i-step__body { color: #7eb1e0; }
-    body.theme-classy .i-step:nth-child(2) .i-step__body { color: #d4b46e; }
-    body.theme-classy .i-step:nth-child(3) .i-step__body { color: #d24550; }
-    body.theme-classy .i-step:nth-child(4) .i-step__body { color: #d4b46e; }
+    body.theme-classy .i-step__body { color: #d0d9e2; }
   </style>
 </head>
 <body class="theme-classy">
