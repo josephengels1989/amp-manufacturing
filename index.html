@@ -161,17 +161,16 @@
 
 /* 1. HERO — centered, story-flow */
     body.theme-classy .i-hero {
-      padding: 10rem 0 10rem;
+      padding: 10rem 1rem;
       background: var(--i-bg);
       border-bottom: 1px solid var(--i-line);
-      display: grid;
-      place-items: center;
-      width: 100%;
+      text-align: center;
     }
     body { overflow-x: hidden; margin: 0; padding: 0; }
     html { margin: 0; padding: 0; scrollbar-gutter: stable; }
 
     .i-headline {
+      display: inline-block;
       font-family: "Inter", sans-serif;
       font-size: clamp(3rem, 9vw, 7rem);
       line-height: 1.0;
@@ -179,7 +178,7 @@
       font-weight: 900;
       color: var(--i-ink);
       margin: 0;
-      text-align: center;
+      max-width: 90vw;
     }
     .i-empathy {
       font-family: "Inter", sans-serif;
@@ -388,17 +387,14 @@
     body.theme-classy .i-step__body { color: #d0d9e2; }
 
     /* Force-center hero headline against external CSS interference */
-    body.theme-classy .i-hero,
-    body.theme-classy .i-hero .i-container,
-    body.theme-classy .i-headline,
-    body.theme-classy .i-headline__line {
+    body.theme-classy .i-hero {
       text-align: center !important;
     }
     body.theme-classy .i-headline {
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      display: inline-block !important;
+      margin: 0 !important;
+      float: none !important;
+      position: static !important;
     }
   </style>
 </head>
@@ -415,9 +411,7 @@
 
   <!-- Hero -->
   <section class="i-hero">
-    <div class="i-container">
-      <h1 class="i-headline">Become top tier.</h1>
-    </div>
+    <h1 class="i-headline">Become top tier.</h1>
   </section>
 
   <!-- Four Q+As -->
