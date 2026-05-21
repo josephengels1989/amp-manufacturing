@@ -164,10 +164,12 @@
       padding: 10rem 0 10rem;
       background: var(--i-bg);
       border-bottom: 1px solid var(--i-line);
-      text-align: center;
+      display: grid;
+      place-items: center;
+      width: 100%;
     }
     body { overflow-x: hidden; margin: 0; padding: 0; }
-    html { margin: 0; padding: 0; }
+    html { margin: 0; padding: 0; scrollbar-gutter: stable; }
 
     .i-headline {
       font-family: "Inter", sans-serif;
@@ -176,18 +178,8 @@
       letter-spacing: -0.04em;
       font-weight: 900;
       color: var(--i-ink);
-      margin: 0 auto;
+      margin: 0;
       text-align: center;
-      max-width: 100%;
-      display: block;
-    }
-    .i-headline__line {
-      display: inline-block;
-      text-align: center;
-      margin: 0 auto 0.85em;
-    }
-    .i-headline__line:last-child {
-      margin-bottom: 0;
     }
     .i-empathy {
       font-family: "Inter", sans-serif;
@@ -424,9 +416,7 @@
   <!-- Hero -->
   <section class="i-hero">
     <div class="i-container">
-      <h1 class="i-headline">
-        <span class="i-headline__line">Become top tier.</span>
-      </h1>
+      <h1 class="i-headline">Become top tier.</h1>
     </div>
   </section>
 
