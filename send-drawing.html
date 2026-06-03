@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Send us your drawing | Ampersand</title>
+  <title>Send us your drawing | Ampersand Magnetics</title>
   <meta name="description" content="Three ways to start the conversation. Email template, direct email, or phone.">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Niconne&family=Tangerine:wght@400;700&family=Italianno&family=Parisienne&family=Dancing+Script:wght@400;700&family=Lobster&family=Petit+Formal+Script&family=Alex+Brush&family=Rouge+Script&family=Beau+Rivage&family=Birthstone&family=Style+Script&family=Caveat:wght@700&family=Sacramento&family=Great+Vibes&family=Princess+Sofia&family=Mea+Culpa&family=Whisper&family=Bilbo+Swash+Caps&family=Marck+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=1774923106">
   <link rel="stylesheet" href="/css/classy-v2.css?v=1776819524">
   <style>
     :root {
-      --i-bg:        #eef1f3;
-      --i-panel:     #e2e7eb;
-      --i-ink:       #0b0d10;
-      --i-ink-soft:  #2a2e34;
-      --i-stone:     #4b525c;
-      --i-mist:      #8a929c;
-      --i-line:      #d8dce2;
-      --i-navy:      #003a70;
-      --i-navy-d:    #002a52;
-      --i-action:    #d11829;
-      --i-action-d:  #a3101f;
+      --i-bg:        #333d52;
+      --i-panel:     #3d4860;
+      --i-ink:       #f4f7fa;
+      --i-ink-soft:  #dde2e7;
+      --i-stone:     #a8b2bc;
+      --i-mist:      #8993a0;
+      --i-line:      rgba(255, 255, 255, 0.10);
+      --i-navy:      #5FB4F2;
+      --i-navy-d:    #4AA0E0;
+      --i-action:    #c8202f;
+      --i-action-d:  #a51823;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -50,7 +50,7 @@
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(238, 241, 243, 0.96);
+      background: rgba(51, 61, 82, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--i-line);
       z-index: 50;
@@ -74,26 +74,26 @@
     }
     .i-nav__name {
       font-family: "Cormorant Garamond", sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       font-weight: 900;
       letter-spacing: -0.02em;
-      color: var(--i-ink);
+      color: #5FB4F2;
       line-height: 1;
     }
     .i-nav__tagline {
       font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 0.82rem;
+      font-size: 1.25rem;
       letter-spacing: 0;
-      color: #3a4a55;
-      font-weight: 400;
+      color: #e6ebf0;
+      font-weight: 700;
       text-transform: none;
-      line-height: 1.45;
+      line-height: 1;
       max-width: 44ch;
     }
     .i-nav__cta {
-      font-family: "Cormorant Garamond", sans-serif;
+      font-family: "Inter", sans-serif;
       font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #ffffff;
@@ -159,14 +159,44 @@
       font-weight: 600;
       margin: 0 0 1.5rem;
     }
-    .i-page-hero h1 {
+    body.theme-classy .i-page-hero h1 {
       font-family: "Cormorant Garamond", sans-serif;
       font-size: clamp(2.4rem, 5.5vw, 4.4rem);
       line-height: 1.02;
       letter-spacing: -0.03em;
       font-weight: 800;
-      color: var(--i-ink);
+      color: #f4f7fa;
       margin: 0 0 1.5rem;
+    }
+    body.theme-classy .i-step-marker {
+      font-family: "Niconne", cursive;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 4vw, 3.6rem);
+      color: #f4f7fa;
+      margin: 0 0 0.75rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    body.theme-classy .i-page-hero p {
+      color: #dde2e7;
+    }
+    body.theme-classy .i-method__title {
+      color: #f4f7fa;
+    }
+    body.theme-classy .i-method__desc,
+    body.theme-classy .i-method__warm,
+    body.theme-classy .i-method__commit {
+      color: #c8cfd5;
+    }
+    body.theme-classy .i-method__guarantee {
+      color: #f4f7fa;
+    }
+    body.theme-classy .i-value__text,
+    body.theme-classy .i-value__label {
+      color: #f4f7fa;
+    }
+    body.theme-classy .i-hours__value {
+      color: #f4f7fa;
     }
     .i-page-hero p {
       font-family: "Cormorant Garamond", sans-serif;
@@ -249,8 +279,8 @@
 
     /* Template panel */
     .i-template {
-      background: #ffffff;
-      border: 1px solid var(--i-line);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       padding: 2rem;
       font-family: "JetBrains Mono", monospace;
       font-size: 0.92rem;
@@ -266,8 +296,8 @@
       display: inline-flex;
       align-items: center;
       gap: 1.25rem;
-      background: #ffffff;
-      border: 1px solid var(--i-line);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       padding: 1.15rem 1.65rem;
       font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--i-ink);
@@ -324,8 +354,8 @@
     }
     .i-hours__cell {
       padding: 1.25rem 1.5rem;
-      background: #ffffff;
-      border: 1px solid var(--i-line);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
     .i-hours__label {
       font-family: "JetBrains Mono", monospace;
@@ -348,28 +378,29 @@
       .i-hours { grid-template-columns: 1fr; }
     }
 
-    /* Footer (same as industrial) */
+    /* Footer */
     body.theme-classy .i-footer {
-      background: #d4dee2;
+      background: #2a3346;
       color: var(--i-ink);
       padding: 6rem 0 2.5rem;
       text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .i-footer__brand {
       font-family: "Cormorant Garamond", sans-serif;
       font-size: clamp(1.75rem, 2.8vw, 2.4rem);
       letter-spacing: -0.025em;
-      color: var(--i-navy);
+      color: #5FB4F2;
       margin: 0 0 1.25rem;
       line-height: 1;
       font-weight: 900;
     }
     .i-footer__tagline {
       font-family: "Cormorant Garamond", sans-serif;
-      font-size: 0.95rem;
-      color: #3a4a55;
+      font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+      color: #c8cfd5;
       margin: 0 auto 3.5rem;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.55;
       max-width: 42ch;
     }
@@ -377,12 +408,12 @@
       font-family: "Cormorant Garamond", sans-serif;
       font-size: 0.9rem;
       line-height: 1.85;
-      color: #2a3640;
+      color: #c8cfd5;
       margin: 0 auto 2.5rem;
       font-weight: 500;
     }
     .i-footer__data a {
-      color: #2a3640;
+      color: #c8cfd5;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: color 0.15s ease, border-color 0.15s ease;
@@ -396,7 +427,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: #5d6c79;
+      color: #8993a0;
       font-weight: 500;
       padding-top: 2rem;
       border-top: 1px solid rgba(11, 13, 16, 0.14);
@@ -409,8 +440,8 @@
   <header class="i-nav">
     <div class="i-nav__inner">
       <a href="/" class="i-nav__brand">
-        <span class="i-nav__name">AMPERSAND.</span>
-        <span class="i-nav__tagline">We take care of the transformers. So you can transform the world.</span>
+        <span class="i-nav__name">AMPERSAND MAGNETICS</span>
+        <span class="i-nav__tagline">Build on schedule.</span>
       </a>
       <a href="/send-drawing" class="i-nav__cta">Send us your drawing</a>
     </div>
@@ -419,8 +450,113 @@
   <!-- Page hero -->
   <section class="i-page-hero">
     <div class="i-container">
+      <!-- FONT PICKER (temporary) -->
+      <div style="text-align: left; max-width: 700px; margin: 0 auto 4rem;">
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #c8cfd5; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 2rem; text-align: center;">Pick a font for "Step 1"</p>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Niconne', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">01 — Niconne (current)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Tangerine', cursive; font-weight: 700; font-size: 3.6rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">02 — Tangerine Bold</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Italianno', cursive; font-size: 4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">03 — Italianno (thin elegant)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Parisienne', cursive; font-size: 3.2rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">04 — Parisienne</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 3rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">05 — Dancing Script Bold</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Lobster', cursive; font-size: 3.2rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">06 — Lobster (retro bold)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Petit Formal Script', cursive; font-size: 3rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">07 — Petit Formal Script</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Alex Brush', cursive; font-size: 3.8rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">08 — Alex Brush (signature)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Rouge Script', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">09 — Rouge Script</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Beau Rivage', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">10 — Beau Rivage (swooping)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Birthstone', cursive; font-size: 3.6rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">11 — Birthstone (decorative)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Style Script', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">12 — Style Script</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 3.2rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">13 — Caveat Bold (modern signature)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Sacramento', cursive; font-size: 3.2rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">14 — Sacramento</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Great Vibes', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">15 — Great Vibes (classic elegant)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Princess Sofia', cursive; font-size: 3.2rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">16 — Princess Sofia (bold script)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Mea Culpa', cursive; font-size: 3.6rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">17 — Mea Culpa (swooping dramatic)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Whisper', cursive; font-size: 3.6rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">18 — Whisper (thin elegant)</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Bilbo Swash Caps', cursive; font-size: 3.4rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">19 — Bilbo Swash Caps</p>
+        </div>
+
+        <div style="padding: 1.25rem 0;">
+          <p style="font-family: 'Marck Script', cursive; font-size: 3rem; color: #f4f7fa; margin: 0; line-height: 1;">Step 1</p>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #8993a0; letter-spacing: 0.18em; text-transform: uppercase; margin: 0.4rem 0 0;">20 — Marck Script (signature)</p>
+        </div>
+      </div>
+
       <h1>Send us your drawing.</h1>
-      <p>Two ways to reach us.<br><br>Pick both, or whichever takes the least friction.</p>
+      <p>Two ways to reach us.</p>
     </div>
   </section>
 
@@ -428,7 +564,19 @@
   <section class="i-methods">
     <div class="i-container">
 
-      <!-- 01: Direct email -->
+      <!-- 01: Call -->
+      <article class="i-method">
+        <h2 class="i-method__title">Give us a call.</h2>
+        <p class="i-method__desc">Unlike many suppliers, we love live calls. Why? Two reasons: they unknot problems quickly and help us get to know you personally.</p>
+        <div class="i-value">
+          <span class="i-value__label">Direct Line (staffed and monitored)</span>
+          <a href="tel:+15855008786" class="i-value__text" style="color: inherit; text-decoration: none;">+1 585-500-8786</a>
+        </div>
+        <p class="i-method__guarantee">All missed calls are returned within 12 hours.</p>
+        <p class="i-method__commit">We encourage you to leave a voicemail. Its contents will be reviewed, and it will be returned promptly.</p>
+      </article>
+
+      <!-- 02: Direct email -->
       <article class="i-method">
         <h2 class="i-method__title">Email us directly.</h2>
         <p class="i-method__desc">Send us a drawing. Or describe the inductor or transformer in words. We'll take it from there.</p>
@@ -440,27 +588,14 @@
         <button class="i-copy" data-copy-target="rfq-email" type="button">Copy address</button>
       </article>
 
-      <!-- 02: Call -->
-      <article class="i-method">
-        <h2 class="i-method__title">Or just call.</h2>
-        <p class="i-method__desc">Unlike many suppliers, we love live calls.</p>
-        <p class="i-method__warm">Call us anytime, about anything. Including personal stuff, dating advice, and or other things we're not qualified to handle. We may not be able to help, but you know what? We'll listen.</p>
-        <div class="i-value">
-          <span class="i-value__label">Direct Line (staffed and monitored)</span>
-          <a href="tel:+15855008786" class="i-value__text" style="color: inherit; text-decoration: none;">+1 585-500-8786</a>
-        </div>
-        <p class="i-method__guarantee">All missed calls are returned within 12 hours.</p>
-        <p class="i-method__commit">We encourage you to leave a voicemail. Its contents will be reviewed, and it will be returned promptly.</p>
-      </article>
-
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="i-footer">
     <div class="i-container">
-      <p class="i-footer__brand">AMPERSAND.</p>
-      <p class="i-footer__tagline">We take care of the transformers. So you can transform the world.</p>
+      <p class="i-footer__brand">AMPERSAND MAGNETICS</p>
+      <p class="i-footer__tagline">Build on schedule.</p>
       <p class="i-footer__data">
         2204 McKinley Avenue<br>
         Berkeley, California 94703<br>
