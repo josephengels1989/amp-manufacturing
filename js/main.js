@@ -1,4 +1,4 @@
-// Ampersand Manufacturing - Main JS
+// Ampersand Magnetics - Main JS
 (function() {
   'use strict';
 

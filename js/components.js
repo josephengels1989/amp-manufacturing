@@ -1,4 +1,4 @@
-// Ampersand Manufacturing - Shared Components
+// Ampersand Magnetics - Shared Components
 // Header + Footer injection for all pages
 
 (function() {
@@ -79,7 +79,7 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <a href="${prefix}" class="footer__logo">
-              <span class="mark">${ensoSVG}</span> Ampersand Manufacturing
+              <span class="mark">${ensoSVG}</span> Ampersand Magnetics
             </a>
             <p class="footer__tagline">Custom Inductors &amp; Transformers</p>
             <p class="footer__address">
@@ -123,7 +123,7 @@
         </div>
 
         <div class="footer__bottom">
-          <p>&copy; ${new Date().getFullYear()} Ampersand Manufacturing. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} Ampersand Magnetics. All rights reserved.</p>
           <div class="footer__badges">
             <span class="footer__badge">RoHS Compliant</span>
             <span class="footer__badge">Lead-Free</span>

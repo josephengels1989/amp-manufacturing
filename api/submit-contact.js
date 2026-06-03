@@ -53,7 +53,7 @@ export default async function handler(req, res) {
           ` : ''}
         </div>
         <div style="background: #0a0a0a; padding: 20px; text-align: center;">
-          <a href="mailto:${safeEmail}?subject=Re: Your inquiry to Ampersand Manufacturing" style="display: inline-block; background: #B87333; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500;">Reply</a>
+          <a href="mailto:${safeEmail}?subject=Re: Your inquiry to Ampersand Magnetics" style="display: inline-block; background: #B87333; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500;">Reply</a>
         </div>
       </div>
     `;
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
       : [];
 
     const emailOptions = {
-      from: 'Ampersand Manufacturing <onboarding@resend.dev>',
+      from: 'Ampersand Magnetics <onboarding@resend.dev>',
       to: process.env.CONTACT_EMAIL || 'joe@ampmanufacturing.com',
       replyTo: email,
       subject,
