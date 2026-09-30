@@ -1,645 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Toroidal Inductors & Transformers | Ampersand Magnetics</title>
-  <meta name="description" content="Ampersand builds custom toroidal inductors and transformers for current sensors, EV chargers, solar inverters, and EMI filtering. Send a drawing, get free samples in weeks. Berkeley, California.">
-  <meta name="keywords" content="custom toroidal inductor, custom transformer, current sensor toroid, common mode choke, EMI filter inductor, permalloy core, ferrite core, EV charger inductor, solar inverter inductor">
-  <link rel="canonical" href="https://ampmanufacturing.com/">
-  <meta property="og:title" content="Custom Toroidal Inductors & Transformers | Ampersand Magnetics">
-  <meta property="og:description" content="Send a drawing. Get free samples in weeks. We beat the price you're currently paying.">
-  <meta property="og:url" content="https://ampmanufacturing.com/">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,700;1,800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Kaushan+Script&family=Satisfy&family=Yellowtail&family=Damion&family=Caveat:wght@700&family=Marck+Script&family=Calligraffitti&family=Permanent+Marker&family=Sacramento&family=Great+Vibes&family=Allura&family=Berkshire+Swash&family=Niconne&family=Cookie&family=Engagement&family=Bilbo+Swash+Caps&family=Homemade+Apple&family=Mr+Dafoe&family=Pinyon+Script&family=Big+Shoulders+Display:wght@800;900&family=Anton&family=Bebas+Neue&family=Archivo+Black&family=Oswald:wght@700&family=Staatliches&family=Bodoni+Moda:wght@900&family=Playfair+Display:wght@900&family=Fraunces:wght@900&family=DM+Serif+Display&family=Yeseva+One&family=Abril+Fatface&family=Roboto+Slab:wght@900&family=Bitter:wght@900&family=Vollkorn:wght@900&family=Alegreya:wght@900&family=Cinzel:wght@900&family=Russo+One&family=Black+Ops+One&family=Saira+Stencil+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=1774923106">
-  <link rel="stylesheet" href="/css/classy-v2.css?v=1776819524">
-  <style>
-    :root {
-      --i-bg:        #0d1014;
-      --i-panel:     #161a20;
-      --i-ink:       #f4f7fa;
-      --i-ink-soft:  #dde2e7;
-      --i-stone:     #a8b2bc;
-      --i-mist:      #8993a0;
-      --i-line:      #2a323b;
-      --i-navy:      #d0d9e2;
-      --i-navy-d:    #e6ecf1;
-      --i-action:    #c8202f;
-      --i-action-d:  #a51823;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23262320'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Georgia,serif' font-size='46' fill='%23D86C2E'%3E%26amp;%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#262320">
+<title>Custom Wound Magnetics &amp; Cores for OEMs – Ampersand Magnetics</title>
+<meta name="description" content="Custom wound magnetics and cores for OEM production. Toroids, bobbins, CTs and ferrite beads built to your spec and delivered on your schedule.">
+<link rel="canonical" href="https://ampersand-magnetics.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ampersand Magnetics">
+<meta property="og:title" content="Custom Wound Magnetics &amp; Cores for OEMs – Ampersand Magnetics">
+<meta property="og:description" content="Custom wound magnetics and cores for OEM production. Toroids, bobbins, CTs and ferrite beads built to your spec and delivered on your schedule.">
+<meta property="og:url" content="https://ampersand-magnetics.com/">
+<meta property="og:image" content="https://ampersand-magnetics.com/assets/og_card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Wound Magnetics &amp; Cores for OEMs – Ampersand Magnetics">
+<meta name="twitter:description" content="Custom wound magnetics and cores for OEM production. Toroids, bobbins, CTs and ferrite beads built to your spec and delivered on your schedule.">
+<meta name="twitter:image" content="https://ampersand-magnetics.com/assets/og_card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4EFE9; --cream2:#FAF7F3; --ink:#262320; --ink-deep:#1A1815;
+  --text:#000000; --dim:#000000;
+  --copper:#A5461E; --copper-bright:#D86C2E; --copper-deep:#7A2F16;
+  --line:#D7C9BC; --ondark:#FFFFFF; --ondark-dim:#FFFFFF;
+  --display:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif;
+  --body:Arial,'Helvetica Neue',Helvetica,sans-serif;
+  --wrap:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--copper);color:#fff}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 
-    *, *::before, *::after { box-sizing: border-box; }
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:.06em;text-transform:uppercase;
+  padding:17px 32px;line-height:1;text-decoration:none;border:1.5px solid var(--copper);border-radius:14px;
+  background:var(--copper);color:var(--ondark);transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--copper-deep);border-color:var(--copper-deep)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--ondark);border-color:rgba(248,245,241,.6)}
+.btn.ghost:hover{background:rgba(248,245,241,.1);border-color:var(--ondark)}
+.btn.ghost-copper{background:transparent;color:var(--copper);border-color:var(--copper)}
+.btn.ghost-copper:hover{background:var(--copper);color:var(--ondark)}
+.btnrow{display:flex;gap:14px;flex-wrap:wrap}
 
-    body.theme-classy {
-      --bg:             var(--i-bg);
-      --surface:        var(--i-panel);
-      --text:           var(--i-ink);
-      --text-secondary: var(--i-stone);
-      --text-muted:     var(--i-mist);
-      --copper:         var(--i-navy);
-      --copper-hover:   var(--i-navy-d);
-      --border:         var(--i-line);
-      background: var(--i-bg);
-      color: var(--i-ink);
-      font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 500;
-      -webkit-font-smoothing: antialiased;
-    }
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:40;background:var(--cream);border-bottom:1px solid var(--line)}
+.navin{max-width:var(--wrap);margin:0 auto;padding:14px clamp(20px,4vw,40px);
+  display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;line-height:1.2}
+.brand b{display:flex;justify-content:space-between;width:100%;font-family:var(--display);font-weight:700;
+  font-size:23px;color:var(--copper);text-transform:uppercase;line-height:1.1}
+.brand b i{font-style:normal}
+.brand b .sp{min-width:.42em}
+.brand span{display:block;font-family:var(--display);font-size:16.5px;font-weight:600;letter-spacing:.005em;
+  color:var(--text);white-space:nowrap;margin-top:3px}
+.navlinks{display:flex;align-items:center;gap:30px}
+.navlinks a{font-family:var(--display);font-weight:500;font-size:19px;text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent}
+.navlinks a:hover{border-bottom-color:var(--copper);color:var(--copper)}
+.navlinks .btn{padding:14px 24px;font-size:15px;border-bottom:1.5px solid var(--copper)}
+.navlinks .btn:hover{color:var(--ondark)}
 
-    /* Inline nav */
-    .i-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(13, 16, 20, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--i-line);
-      z-index: 50;
-    }
-    .i-nav__inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 1.1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-    }
-    .i-nav__brand {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      text-decoration: none;
-      color: inherit;
-      line-height: 1;
-    }
-    .i-nav__name {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: 1.5rem;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--i-ink);
-      line-height: 1;
-    }
-.i-nav__tagline {
-      font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 1.25rem;
-      letter-spacing: 0;
-      color: #e6ebf0;
-      font-weight: 700;
-      text-transform: none;
-      line-height: 1;
-      max-width: 44ch;
-    }
-    .i-nav__cta {
-      font-family: "Inter", sans-serif;
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: var(--i-action);
-      text-decoration: none;
-      padding: 0.78rem 1.5rem;
-      border: 1px solid var(--i-action);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-      white-space: nowrap;
-    }
-    .i-nav__cta:hover {
-      background: var(--i-action-d);
-      border-color: var(--i-action-d);
-      transform: translateY(-1px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
-    }
-    @media (max-width: 720px) {
-      .i-nav__tagline { display: none; }
-      .i-nav__inner { padding: 0.3rem 1.1rem; gap: 0.85rem; }
-      .i-nav__cta { font-size: 0.62rem; padding: 0.42rem 0.8rem; letter-spacing: 0.08em; }
-      .i-nav__name { font-size: 0.95rem; }
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:var(--ondark);overflow:hidden}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  background-size:cover;background-position:center;transform:scale(1.02)}
+.hero-scrim{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(26,24,21,.82) 0%,rgba(26,24,21,.86) 60%,rgba(38,35,32,.94) 100%)}
+.hero-in{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;
+  padding:clamp(70px,11vh,120px) clamp(20px,4vw,40px) clamp(80px,12vh,120px);text-align:center}
+.hero h1{font-family:var(--display);font-weight:600;letter-spacing:-.01em;line-height:1.12}
+.hero .l1{display:block;font-size:clamp(21px,3vw,34px);font-weight:500;color:var(--ondark)}
+.hero .l2{display:inline-block;font-size:clamp(30px,5.2vw,60px);font-weight:600;margin-top:16px}
+.hero .mark{position:relative;display:inline-block}
+.hero .mark .ul{position:absolute;left:0;top:96%;width:100%;max-width:none;opacity:.95;pointer-events:none}
+.hero p{max-width:66ch;margin:76px auto 0;color:var(--ondark-dim);font-size:19px;line-height:1.7}
+.hero p em{font-style:italic;color:var(--ondark)}
+.hero .btnrow{justify-content:center;margin-top:34px}
+.missionband{height:0;position:relative;z-index:6;padding:0 clamp(20px,4vw,40px)}
+.missionbox{position:relative;transform:translateY(-50%);max-width:880px;margin:0 auto;
+  border-radius:16px;text-align:center;padding:20px clamp(26px,4vw,44px);
+  background:var(--copper);box-shadow:0 26px 60px rgba(26,24,21,.34)}
+.missionbox .mline{display:block;font-family:var(--display);font-size:19px;font-weight:400;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ondark);line-height:1.4}
+.missionbox .mline b{font-weight:700}
 
-      .i-nav { position: relative; }
-      body.theme-classy .i-hero { padding: 1.25rem 0 3.5rem; }
-      .i-container { padding: 0 1.5rem; }
-      .i-headline { font-size: clamp(2.6rem, 13vw, 4.8rem); max-width: 100%; }
-      .i-headline__line { margin-bottom: 0.65em; }
-      .i-empathy { font-size: clamp(1.85rem, 9vw, 3rem); margin-top: 3rem; max-width: 100%; }
-      .i-empathy__line { margin-bottom: 0.65em; }
-      .i-enter { font-size: clamp(1.55rem, 7vw, 2.2rem); margin: 4rem 0 1rem; }
-      .i-samples { font-size: 1.05rem; margin-bottom: 2.5rem; }
-      .i-cta { padding: 1.05rem 1.65rem; font-size: 0.82rem; letter-spacing: 0.12em; }
+/* ---------- generic section ---------- */
+.sec{padding:clamp(56px,9vh,96px) 0;border-bottom:1px solid var(--line)}
+.sec.dark{background:var(--ink);color:var(--ondark);border-bottom-color:#3A3630}
+.sec.dark .lead,.sec.dark .body{color:var(--ondark-dim)}
+.sec.dark h2,.sec.dark h3{color:var(--ondark)}
+.eyebrow{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+.sec.dark .eyebrow{color:var(--copper-bright)}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(25px,3.4vw,40px);line-height:1.2;letter-spacing:-.01em}
+h2 .hi{color:var(--copper);font-weight:700}
+.sec.dark h2 .hi{color:var(--copper-bright)}
+h3{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.3}
+.center{text-align:center}
+.center h2{max-width:22ch;margin:0 auto}
+.center h2.oneline{max-width:none;white-space:nowrap}
+@media(max-width:620px){.center h2.oneline{white-space:normal}}
+.center h2.wide{max-width:30ch}
 
-      body.theme-classy .i-plan { padding: 4.5rem 0; }
-      .i-plan__title { margin-bottom: 3.25rem; }
-      .i-plan__list { padding: 0 1.5rem; }
-      .i-step { padding: 2.25rem 0; }
-      .i-step__num { font-size: 2rem; }
-      .i-step__body { font-size: 1.5rem; max-width: 100%; }
+/* ---------- problem ---------- */
+#problem{position:relative;background:var(--cream);padding-top:clamp(96px,13vh,150px)}
+#problem .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.09;
+  filter:grayscale(.2)}
+#problem .wrap{position:relative;z-index:2;max-width:900px}
+#problem h2{margin-bottom:28px;color:#000}
+#problem p{margin-bottom:18px;color:#000}
+#problem .stack p{margin-bottom:4px}
+.pivot{margin:30px 0;display:grid;gap:12px;border-left:4px solid var(--copper);padding:4px 0}
+.pivot div{font-family:var(--display);font-weight:600;font-size:clamp(19px,2vw,23px);
+  color:#000;padding:6px 0 6px 18px}
+.pivot div:last-child{color:var(--copper)}
 
-      body.theme-classy .i-cta-section { padding: 3.5rem 0; }
+/* ---------- card grids ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,36px);margin-top:clamp(34px,5vh,52px)}
+.card{text-align:center}
+.card .ph{position:relative;aspect-ratio:1;overflow:hidden;border-radius:14px;margin-bottom:18px;background:var(--cream2)}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.sec.dark .card .ph{box-shadow:0 0 0 1px rgba(216,108,46,.55), 0 18px 40px rgba(0,0,0,.35)}
+.card h3{margin-bottom:8px}
+#who .card h3{color:var(--copper-bright)}
+.card p{font-size:19px;color:var(--dim);line-height:1.6}
+.sec.dark .card p{color:var(--ondark-dim)}
+.step{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  border-radius:50%;background:var(--copper);color:#fff;font-family:var(--display);font-weight:700;
+  font-size:19px;margin-bottom:10px}
 
-      body.theme-classy .i-footer { padding: 4rem 0 2rem; }
-      .i-footer__tagline { margin-bottom: 2.5rem; }
-      .i-footer__data { margin-bottom: 2rem; }
-      .i-footer__copy { padding: 0 1.5rem; padding-top: 1.5rem; font-size: 0.62rem; letter-spacing: 0.22em; }
-    }
+/* ---------- frees ---------- */
+#frees .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+#frees h2{margin-bottom:20px;max-width:16ch}
+#frees .lead{margin-bottom:22px}
+#frees ul{list-style:none;display:grid;gap:11px;margin-bottom:32px}
+#frees li{position:relative;padding-left:28px;font-size:19px}
+#frees li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;
+  background:var(--copper-bright);transform:rotate(45deg)}
+#frees .shot{aspect-ratio:4/5;overflow:hidden;border-radius:16px}
+#frees .shot img{width:100%;height:100%;object-fit:cover}
 
-    .i-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      text-align: center;
-    }
-    .i-hero .i-container {
-      max-width: 1400px;
-    }
+/* ---------- the ampersand promise ---------- */
+#promise{position:relative;background:var(--cream);overflow:hidden;padding:clamp(48px,7.5vh,82px) 0}
+#promise .bg{position:absolute;inset:0;background-size:cover;opacity:.15;background-position:center bottom;transform:scale(1.6);transform-origin:bottom center}
+#promise .wrap{position:relative;z-index:2}
+#promise .tag{font-family:var(--display);font-weight:400;font-style:italic;
+  font-size:clamp(21px,2.8vw,31px);text-align:center;color:var(--copper);margin-top:6px}
+#promise .body{max-width:76ch;margin:32px auto 0;text-align:center}
+#promise .body p{color:#000;margin-bottom:16px}
+#promise .body p:last-child{margin-bottom:0}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);
+  margin-top:clamp(34px,5vh,50px);padding-top:34px;border-top:1px solid var(--copper);
+  text-align:center}
+.pillars h3{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--copper);margin-bottom:10px}
+.pillars p{color:#000;line-height:1.6}
+@media(max-width:900px){.pillars{grid-template-columns:1fr}}
 
-/* 1. HERO — centered, story-flow */
-    body.theme-classy .i-hero {
-      padding: 12rem 1rem 7rem;
-      background: var(--i-bg);
-      border-bottom: 1px solid var(--i-line);
-      text-align: center;
-    }
-    body { overflow-x: hidden; margin: 0; padding: 0; }
-    html { margin: 0; padding: 0; scrollbar-gutter: stable; }
+/* ---------- final cta ---------- */
+#close{display:grid;grid-template-columns:0.85fr 1.15fr;align-items:stretch;
+  background:var(--ink);color:var(--ondark);border:none}
+#close .art{background-size:cover;background-position:center;min-height:420px}
+#close .txt{padding:clamp(44px,7vh,80px) clamp(24px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+#close h2{color:var(--copper-bright);max-width:none;margin-bottom:22px;font-weight:700;text-wrap:balance}
+#close p{color:var(--ondark-dim);margin-bottom:16px;max-width:52ch}
+#close .btnrow{margin-top:18px}
 
-    .i-headline {
-      display: inline-block;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(3rem, 9vw, 7rem);
-      line-height: 1.0;
-      letter-spacing: 0.04em;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #B89E68;
-      margin: 0;
-      max-width: 90vw;
-    }
-    .i-headline__line1,
-    .i-headline__line2,
-    .i-headline__line3,
-    .i-headline__line4 {
-      display: block;
-      opacity: 0;
-    }
-    .i-headline__line1 {
-      animation: slideInFromRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
-    }
-    .i-headline__line2 {
-      animation: slideInFromLeft 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
-    }
-    .i-headline__line3 {
-      animation: slideInFromRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
-    }
-    .i-headline__line4 {
-      animation: slideInFromLeft 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
-    }
-    @keyframes slideInFromLeft {
-      from { opacity: 0; transform: translateX(-80vw); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slideInFromRight {
-      from { opacity: 0; transform: translateX(80vw); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .i-headline__line1,
-      .i-headline__line2,
-      .i-headline__line3,
-      .i-headline__line4 {
-        opacity: 1;
-        animation: none;
-      }
-    }
-    .i-empathy {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-      color: var(--i-mist);
-      margin: 4.5rem 0 0;
-    }
-    .i-empathy__line {
-      display: block;
-      margin-bottom: 0.85em;
-    }
-    .i-empathy__line:last-child {
-      margin-bottom: 0;
-    }
-    .i-enter {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-      line-height: 1.05;
-      color: var(--i-navy);
-      margin: 7rem 0 2rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-    }
-    .i-samples {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-      line-height: 1.55;
-      color: var(--i-ink-soft);
-      margin: 0 auto 3.75rem;
-      max-width: 44ch;
-      font-weight: 500;
-    }
 
-    /* CTA — bold action red */
-    .i-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.95rem;
-      padding: 1.25rem 2.75rem;
-      background: var(--i-action);
-      color: #ffffff;
-      font-family: "Inter", sans-serif;
-      font-size: 0.95rem;
-      font-weight: 900;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--i-action);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
-      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .i-cta:hover {
-      background: var(--i-action-d);
-      border-color: var(--i-action-d);
-      transform: translateY(-2px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
-    }
-    .i-cta__arrow {
-      font-family: "JetBrains Mono", monospace;
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
+@media(max-width:900px){
+  .navlinks a:not(.btn){display:none}
+  .grid3,
+  #frees .cols{grid-template-columns:1fr}
+  #close{grid-template-columns:1fr}
+  #close .art{min-height:240px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-    /* 2. PLAN — centered vertical, story-flow */
-    body.theme-classy .i-plan {
-      padding: 2rem 0 5rem;
-      background: var(--i-panel);
-      border-bottom: 1px solid var(--i-line);
-    }
-    body.theme-classy .i-plan:not(.i-plan--steps) {
-      padding-bottom: 0.5rem;
-      border-bottom: none;
-    }
-    .i-plan__eyebrow {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.78rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--i-navy);
-      font-weight: 600;
-      margin: 0 auto 1rem;
-      text-align: center;
-    }
-    .i-plan__title {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      letter-spacing: -0.025em;
-      color: var(--i-ink);
-      margin: 0 auto 2rem;
-      font-weight: 800;
-      text-align: center;
-    }
-    .i-plan__list {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .i-step {
-      padding: 2rem 0;
-      border-top: 1px solid var(--i-line);
-      text-align: center;
-    }
-    .i-plan--steps .i-step:last-child {
-      border-bottom: 1px solid var(--i-line);
-    }
-    .i-plan-invite {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2.5rem 0;
-      background: var(--i-panel);
-    }
-    .i-plan-invite__arrow {
-      width: 0;
-      height: 0;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 18px solid var(--i-action);
-    }
-    .i-step__num {
-      font-family: "Permanent Marker", cursive;
-      font-style: normal;
-      font-size: clamp(2.2rem, 3.4vw, 3.2rem);
-      letter-spacing: 0;
-      text-transform: none;
-      color: #B89E68;
-      margin: 0 0 0.75rem;
-      font-weight: 400;
-      line-height: 1.15;
-    }
-    .i-step__body {
-      font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: clamp(1.8rem, 2.7vw, 2.5rem);
-      line-height: 1.35;
-      color: #d0d9e2;
-      margin: 0 auto;
-      max-width: 30ch;
-      font-weight: 800;
-      letter-spacing: 0.025em;
-      text-transform: uppercase;
-    }
+/* ---------- copper footer band ---------- */
+footer{background:var(--copper);border-top:none;color:#fff;text-align:center;
+  padding:clamp(20px,3vh,30px) clamp(20px,4vw,40px)}
+footer .fnav{background:transparent;border:0;padding:0;margin:0;display:block;
+  font-family:var(--display);font-size:19px;font-weight:500;line-height:1.9;letter-spacing:.055em}
+footer .fcontact{font-family:var(--display);font-size:19px;font-weight:500;line-height:1.9;margin-top:6px}
+footer a{color:#F3D6C6;text-decoration:none;font-weight:500;transition:color .2s}
+footer a:hover{color:#fff}
+footer .dot{color:#F3D6C6;margin:0 14px}
+@media(max-width:600px){footer .dot{margin:0 7px}footer .fnav,footer .fcontact{font-size:17px;letter-spacing:0}}
 
-    /* CTA section — between plan and footer */
-    body.theme-classy .i-cta-section {
-      padding: 6rem 0;
-      background: var(--i-bg);
-      border-bottom: 1px solid var(--i-line);
-      text-align: center;
-    }
+/* ---------- mobile navigation ---------- */
+.navtoggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer;
+  flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px}
+.navtoggle span{display:block;width:24px;height:2px;background:var(--text);
+  transition:transform .25s ease,opacity .2s ease}
+.mobilemenu{display:none;flex-direction:column;padding:18px clamp(20px,4vw,40px);
+  background:var(--copper);gap:0;position:fixed;left:0;right:0;z-index:39;
+  overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobilemenu a{font-family:var(--display);font-size:clamp(19px,2.25vw,26px);font-weight:500;color:#fff;
+  text-decoration:none;padding:7px 0}
+.mobilemenu a:hover{color:#F3D6C6}
+@media(max-width:900px){
+  .navtoggle{display:flex}
+  nav.open .navtoggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  nav.open .navtoggle span:nth-child(2){opacity:0}
+  nav.open .navtoggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobilemenu[data-open="1"]{display:flex}
+}
 
-    /* 3. FOOTER — classy slate blue */
-    body.theme-classy .i-footer {
-      background: #10141a;
-      color: var(--i-ink);
-      padding: 6rem 0 2.5rem;
-      text-align: center;
-    }
-    .i-footer__brand {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(1.75rem, 2.8vw, 2.4rem);
-      letter-spacing: -0.025em;
-      color: var(--i-navy);
-      margin: 0 0 1.25rem;
-      line-height: 1;
-      font-weight: 900;
-    }
-    .i-footer__tagline {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: clamp(1.45rem, 2.3vw, 1.85rem);
-      color: #c8cfd5;
-      margin: 0 auto 3.5rem;
-      font-weight: 700;
-      line-height: 1.55;
-      max-width: 42ch;
-    }
-    .i-footer__data {
-      font-family: "Cormorant Garamond", sans-serif;
-      font-size: 0.9rem;
-      line-height: 1.85;
-      color: #c8cfd5;
-      margin: 0 auto 2.5rem;
-      font-weight: 500;
-    }
-    .i-footer__data a {
-      color: #c8cfd5;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: color 0.15s ease, border-color 0.15s ease;
-    }
-    .i-footer__data a:hover {
-      color: var(--i-navy);
-      border-color: var(--i-navy);
-    }
-    .i-footer__copy {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: #8993a0;
-      font-weight: 500;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    /* Specificity overrides to defeat classy-v2.css dark-on-light defaults */
-    body.theme-classy .i-nav__name { color: #A6D9B8; }
-    body.theme-classy .i-headline,
-    body.theme-classy .i-headline__line,
-    body.theme-classy .i-headline__line1,
-    body.theme-classy .i-headline__line2,
-    body.theme-classy .i-headline__line3,
-    body.theme-classy .i-headline__line4 {
-      font-family: "Bebas Neue", sans-serif;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      background: linear-gradient(180deg, #EDC97A 0%, #D2A642 45%, #A87325 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-    body.theme-classy .i-plan__title { color: var(--i-ink); }
-    body.theme-classy .i-plan--steps {
-      background:
-        radial-gradient(ellipse at top, rgba(196, 138, 60, 0.12) 0%, transparent 65%),
-        linear-gradient(180deg, #1d2434 0%, #2a3346 50%, #1d2434 100%);
-      border-top: 1px solid rgba(196, 138, 60, 0.25);
-      border-bottom: 1px solid rgba(196, 138, 60, 0.25);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    }
-    body.theme-classy .i-plan--steps .i-step__num {
-      font-family: "Bilbo Swash Caps", cursive;
-      font-weight: 400;
-      font-size: clamp(2.6rem, 4vw, 3.6rem);
-      letter-spacing: 0;
-      text-transform: none;
-      color: #A6D9B8;
-    }
-    body.theme-classy .i-plan--steps .i-plan__title {
-      font-family: "Big Shoulders Display", sans-serif;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      font-size: clamp(2rem, 3.6vw, 3rem);
-    }
-    .i-plan__title-line {
-      position: relative;
-      display: inline-block;
-    }
-    .i-plan__title-line::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -0.18em;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg,
-        rgba(255,255,255,0.55) 0%,
-        rgba(255,255,255,0.95) 15%,
-        rgba(255,255,255,0.85) 45%,
-        rgba(255,255,255,0.95) 75%,
-        rgba(255,255,255,0.60) 100%);
-      box-shadow: 0 0 4px rgba(255,255,255,0.35);
-      border-radius: 1px;
-      transform: scaleX(0);
-      transform-origin: left center;
-      filter: blur(0.3px);
-    }
-    .i-plan__title-line.is-drawn::after {
-      animation: chalkUnderline 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-    }
-    @keyframes chalkUnderline {
-      to { transform: scaleX(1); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .i-plan__title-line::after { transform: scaleX(1); }
-    }
-    body.theme-classy .i-plan--steps .i-step__body {
-      font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.025em;
-    }
-    body.theme-classy .i-step__body { color: var(--i-ink); }
-    body.theme-classy .i-step__num { color: #B89E68; }
-    body.theme-classy .i-plan__eyebrow { color: var(--i-navy); }
-    body.theme-classy .i-footer__brand { color: #A6D9B8; }
-    body.theme-classy .i-footer__tagline,
-    body.theme-classy .i-footer__data { color: #c8cfd5; }
-    body.theme-classy .i-footer__data a { color: #c8cfd5; }
-    body.theme-classy .i-footer__data a:hover { color: var(--i-navy); }
-    body.theme-classy .i-footer__copy { color: #8993a0; }
-    body.theme-classy .i-step__body { color: #d0d9e2; }
-
-    /* Force-center hero headline against external CSS interference */
-    body.theme-classy .i-hero {
-      text-align: center !important;
-    }
-    body.theme-classy .i-headline {
-      display: inline-block !important;
-      margin: 0 !important;
-      float: none !important;
-      position: static !important;
-    }
-  </style>
+@media(max-width:900px){
+  .navlinks{display:none}
+  .brand b{font-size:18px}
+  .brand span{font-size:12.5px}
+}
+@media(max-width:387px){
+  .brand span{white-space:normal}
+}
+@media(max-width:600px){
+  footer .fnav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;line-height:1.6}
+  footer .fnav .dot{display:none}
+  footer .fcontact{line-height:1.7}
+  footer .fcontact .dot{display:none}
+  footer .fcontact a{display:block}
+}
+</style>
 </head>
-<body class="theme-classy">
-  <header class="i-nav">
-    <div class="i-nav__inner">
-      <a href="/" class="i-nav__brand">
-        <span class="i-nav__name">AMPERSAND MAGNETICS</span>
-        <span class="i-nav__tagline">Build on schedule.</span>
-      </a>
-      <a href="/send-drawing" class="i-nav__cta">Send us your drawing</a>
-    </div>
-  </header>
+<body>
 
-  <!-- Hero -->
-  <section class="i-hero">
-    <h1 class="i-headline"><span class="i-headline__line1">Trim</span><span class="i-headline__line2">your</span><span class="i-headline__line3">lead</span><span class="i-headline__line4">time.</span></h1>
-
-  </section>
-
-  <!-- Four Q+As -->
-  <section class="i-plan">
-    <div class="i-plan__list">
-      <div class="i-step">
-        <p class="i-step__num">What We Do</p>
-        <p class="i-step__body">We wind custom inductors and magnetic components.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Who We Serve</p>
-        <p class="i-step__body">Builders and engineers under real deadlines.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">What Makes Us Special</p>
-        <p class="i-step__body">Our impossibly short lead and response times.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Why the greatest builders switch to us</p>
-        <p class="i-step__body">Fast and right. Rare combination.</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Invitation arrow into four-step plan -->
-  <div class="i-plan-invite" aria-hidden="true">
-    <span class="i-plan-invite__arrow"></span>
-  </div>
-
-  <!-- Four-step plan (distinct background) -->
-  <section class="i-plan i-plan--steps">
-    <h2 class="i-plan__title"><span class="i-plan__title-line">Here's the four-step plan</span></h2>
-    <div class="i-plan__list">
-      <div class="i-step">
-        <p class="i-step__num">Step 01</p>
-        <p class="i-step__body">Send us your drawing.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 02</p>
-        <p class="i-step__body">Samples arrive at your door in weeks. Free.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 03</p>
-        <p class="i-step__body">You qualify or go straight to production. Your call.</p>
-      </div>
-      <div class="i-step">
-        <p class="i-step__num">Step 04</p>
-        <p class="i-step__body">We ship on your schedule. Every order, every time.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="i-cta-section">
-    <a href="/send-drawing" class="i-cta">
-      Send us your drawing
-      <span class="i-cta__arrow">&rarr;</span>
+<nav>
+  <div class="navin">
+    <a class="brand" href="index.html">
+      <b aria-label="Ampersand Magnetics"><i>A</i><i>M</i><i>P</i><i>E</i><i>R</i><i>S</i><i>A</i><i>N</i><i>D</i><i class="sp"></i><i>M</i><i>A</i><i>G</i><i>N</i><i>E</i><i>T</i><i>I</i><i>C</i><i>S</i></b>
+      <span>Custom Wound Magnetics &amp; Cores for OEMs</span>
     </a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="i-footer">
-    <div class="i-container">
-      <p class="i-footer__brand">AMPERSAND MAGNETICS</p>
-      <p class="i-footer__tagline">Build on schedule.</p>
-      <p class="i-footer__data">
-        2204 McKinley Avenue<br>
-        Berkeley, California 94703<br>
-        <br>
-        <a href="mailto:intake@ampmanufacturing.com">intake@ampmanufacturing.com</a><br>
-        <a href="tel:+15855008786">+1 585-500-8786</a>
-      </p>
-      <div class="i-footer__copy">&copy; 2026 Ampersand Magnetics &middot; All Rights Reserved</div>
+    <div class="navlinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="about.html">About Us</a>
+      <a class="btn" href="partner.html">Partner With Us</a>
     </div>
-  </footer>
+      <button class="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilemenu">
+        <span></span><span></span><span></span>
+      </button>
+  </div>
+</nav>
+<div class="mobilemenu" id="mobilemenu" hidden>
+  <a href="index.html">Home</a>
+  <a href="capabilities.html">Capabilities</a>
+  <a href="about.html">About Us</a>
+  <a href="partner.html">Partner With Us</a>
+</div>
 
-  <script src="/js/main.js"></script>
-  <script>
-    (function () {
-      var line = document.querySelector('.i-plan__title-line');
-      if (!line) return;
-      if (!('IntersectionObserver' in window)) {
-        line.classList.add('is-drawn');
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            line.classList.add('is-drawn');
-            io.disconnect();
-          }
-        });
-      }, { threshold: 0.6 });
-      io.observe(line);
-    })();
-  </script>
+
+<header class="hero">
+  <video class="hero-media" autoplay muted loop playsinline poster="assets/hero_poster.jpg" aria-hidden="true">
+    <source src="assets/hero_video_1080.mp4" type="video/mp4" media="(min-width:900px)">
+    <source src="assets/hero_video_720.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim"></div>
+  <div class="hero-in">
+    <h1>
+      <span class="l1">Stay in Production. Stay in Control.</span>
+      <span class="l2">Experience <span class="mark">True Partnership.<img class="ul" src="assets/underline.png" alt=""></span></span>
+    </h1>
+    <p><em>Stop chasing suppliers and focus on winning.</em> At Ampersand Magnetics, we build custom magnetics and cores that match your spec and arrive on your schedule, not just when the supply chain is stable, but when the world is volatile and the stakes are high. What you get isn't just parts. It's the calm of knowing you have a partner in your corner and the confidence to keep building.</p>
+    <div class="btnrow">
+      <a class="btn" href="partner.html">Partner With Us</a>
+      <a class="btn ghost" href="capabilities.html">View Capabilities</a>
+    </div>
+  </div>
+</header>
+
+<section class="missionband">
+  <div class="missionbox">
+    <span class="mline"><b>Our Mission:</b> Magnetics you never have to worry about.</span>
+  </div>
+</section>
+
+<section class="sec" id="problem">
+  <div class="bg" style="background-image:url('assets/toroids_bank.jpg')"></div>
+  <div class="wrap">
+    <h2>You don't have a demand problem.<br><span class="hi">You have a supplier problem.</span></h2>
+    <p>You know how to build a great product. You have the orders. You have customers who are counting on you.</p>
+    <p>But one outsourced part can put the whole thing at risk.</p>
+    <div class="stack">
+      <p>The quote looks good, then the lead time shifts.</p>
+      <p>The first order passes, then the next run drifts.</p>
+      <p>You ask for an update, and the answer comes too late to help.</p>
+    </div>
+    <p style="margin-top:18px">So your team absorbs the risk. You pad the schedule, chase the updates and spend time managing the supplier instead of building.</p>
+    <div class="pivot">
+      <div>The real problem isn't magnetics.</div>
+      <div>It is the absence of partnership.</div>
+      <div>Ampersand Magnetics was built to solve that problem.</div>
+    </div>
+    <p>We don't go dark when things get tough. We don't stop working until the parts arrive on your dock, in time for your production.</p>
+    <p style="margin-bottom:0">That's partnership: parts that match your spec, lead times you can trust, and a partner who goes the distance for you, each and every time.</p>
+  </div>
+</section>
+
+<section class="sec dark" id="who">
+  <div class="wrap center">
+    <h2 class="wide">Ampersand Magnetics was created for the people who need <span class="hi">suppliers to work for them, not against them.</span></h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="ph"><img src="assets/persona_design_engineer.jpg" alt="Design engineer reviewing a drawing"></div>
+        <h3>Design Engineers</h3>
+        <p>Your name is on the drawing. Your magnetics should match it exactly, from first article through final run, so your design performs the way you intended.</p>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="assets/persona_operations_manager.jpg" alt="Operations managers on a production site"></div>
+        <h3>Operations Managers</h3>
+        <p>A stopped line costs by the minute. Your magnetics should be the component you rarely have to think about: built correctly and always ready when production needs them.</p>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="assets/persona_procurement_manager.jpg" alt="Procurement manager at a workbench"></div>
+        <h3>Procurement Managers</h3>
+        <p>You are measured by what arrives and when. Your supplier should protect your priorities with the same care and urgency you do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="method">
+  <div class="wrap center">
+    <div class="eyebrow">The Ampersand Method</div>
+    <h2 class="oneline">Partnership, made repeatable.</h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="ph"><img src="assets/method_listen.jpg" alt="Two people in conversation over a document"></div>
+        <div class="step">1</div>
+        <h3>Listen</h3>
+        <p>Before we quote, we take time to understand your application, your constraints, and what success looks like for your team. We look beyond the part number so potential issues can be caught on paper instead of in production.</p>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="assets/method_build.jpg" alt="Production operator on the floor"></div>
+        <div class="step">2</div>
+        <h3>Build</h3>
+        <p>We source, wind, and test to your exact specifications. Once you approve the first article, we lock the process so the part you sign off on is the part you receive in every run after.</p>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="assets/method_deliver.jpg" alt="Parcels being delivered"></div>
+        <div class="step">3</div>
+        <h3>Deliver</h3>
+        <p>We closely monitor every run, deliver on your schedule, and communicate updates before you have to ask. This is where the pressure lifts and the partnership starts to earn your trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="frees">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>What Partnership Frees You To Do</h2>
+        <p class="lead">When your magnetics are handled, you get time and attention back.</p>
+        <ul>
+          <li>Design with confidence.</li>
+          <li>Build what only you can build.</li>
+          <li>Quote lead times you can stand behind.</li>
+          <li>Launch without supplier drama.</li>
+          <li>Reduce inspection anxiety.</li>
+          <li>Protect your production schedule.</li>
+          <li>Keep your customers happy.</li>
+          <li>Stop chasing suppliers and start winning.</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="partner.html">Partner With Us</a>
+          <a class="btn ghost" href="capabilities.html">View Capabilities</a>
+        </div>
+      </div>
+      <div class="shot"><img src="assets/frees_you_highfive.jpg" alt="Colleagues celebrating in an office"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="promise">
+  <div class="bg" style="background-image:url('assets/bobbin_rows_bench.jpg')"></div>
+  <div class="wrap center">
+    <h2>The Ampersand <span class="hi">Promise</span></h2>
+    <div class="tag">Every order like our only order</div>
+    <div class="body">
+      <p>The magnetics industry does not lack capacity. It lacks service.</p>
+      <p>Ampersand Magnetics was built for OEM teams who need more than parts. You need a supplier who understands that every drawing, delivery date, and production run connects to a promise you have already made to someone else.</p>
+      <p>We do not keep A-list and B-list customers. Whether you need 20 parts or 200,000, you get the same attention, the same standard, and the same commitment to getting it right.</p>
+    </div>
+    <div class="pillars">
+      <div>
+        <h3>Straight Answers</h3>
+        <p>If we cannot make it, find it, or meet the date, we tell you before you commit, not after.</p>
+      </div>
+      <div>
+        <h3>Real Lead Times</h3>
+        <p>We quote dates we believe we can keep. If anything changes, you hear it from us right away, along with a plan.</p>
+      </div>
+      <div>
+        <h3>One Accountable Partner</h3>
+        <p>From drawing to delivery, one partner in California owns your order. No handoffs. No silence. No bots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="close">
+  <div class="art" style="background-image:url('assets/toroid_macro_vertical.jpg')"></div>
+  <div class="txt">
+    <h2>Ready to stop chasing suppliers and start winning?</h2>
+    <p>Now is the time to experience true partnership.</p>
+    <p>Send us your drawings, specs, or target requirements. We'll review them and give you a straight answer about the path forward, from quote to production.</p>
+    <div class="btnrow">
+      <a class="btn" href="partner.html">Partner With Us</a>
+      <a class="btn ghost" href="capabilities.html">View Capabilities</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav class="fnav" aria-label="Footer">
+    <a href="index.html">Home</a><span class="dot">&middot;</span><a href="capabilities.html">Capabilities</a><span class="dot">&middot;</span><a href="about.html">About Us</a><span class="dot">&middot;</span><a href="partner.html">Partner With Us</a>
+  </nav>
+  <div class="fcontact">
+    <a href="mailto:partner@ampersand-magnetics.com">partner@ampersand-magnetics.com</a><span class="dot">&middot;</span><a href="tel:14157104393">1-415-710-4393</a>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var nav=document.querySelector('nav'),btn=document.querySelector('.navtoggle'),
+      menu=document.getElementById('mobilemenu');
+  if(!btn||!menu) return;
+  function place(){
+    var h=nav.getBoundingClientRect().height;
+    menu.style.top=h+'px';
+    menu.style.maxHeight='calc(100vh - '+h+'px)';
+  }
+  function set(open){
+    if(open) place();
+    menu.hidden=!open;
+    menu.setAttribute('data-open',open?'1':'0');
+    nav.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  btn.addEventListener('click',function(){set(menu.hidden);});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A') set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>900){set(false);}else if(!menu.hidden){place();}});
+})();
+</script>
 </body>
 </html>
